@@ -1,0 +1,135 @@
+--*****************************************************************************
+--*****************************   VHDL Source Code  ***************************
+--*****************************************************************************
+--
+--
+--      FILE NAME: add_sub_tb.vhd
+--
+------------------------------------------------------------------------------
+-- DESCRIPTION 
+--     
+--    This file will create seven segment test bench. 
+--
+--*****************************************************************************
+--*****************************************************************************
+
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+LIBRARY work;
+USE work.bcd2seven_seg_pkg.ALL;
+USE work.generic_adder_beh_pkg.ALL;
+USE work.generic_subtractor_beh_pkg.ALL;
+USE work.edge_detect_pkg.ALL;
+USE work.clock_synchronizer_pkg.ALL;
+USE work.add_sub_pkg.ALL;
+
+ENTITY add_sub_tb IS
+END add_sub_tb;
+
+ARCHITECTURE arch OF add_sub_tb IS
+  SIGNAL sim_done : boolean   := false;
+  -- Constants for test bench design
+  CONSTANT PERIOD_c    : time    := 20 ns;
+  CONSTANT MAX_COUNT_c : integer := 7;
+
+  -- signals for test bench design
+  SIGNAL a_tb : std_logic_vector(2 DOWNTO 0) := "000";
+  SIGNAL b_tb : std_logic_vector(2 DOWNTO 0) := "000";
+  SIGNAL hexOut_tb        : std_logic_vector(6 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL hexA_tb          : std_logic_vector(6 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL hexB_tb          : std_logic_vector(6 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL clk_tb		   : std_logic := '0';
+  signal reset_n_tb	   : std_logic;
+  signal add_tb		   : std_logic;
+  signal sub_tb		   : std_logic;
+
+  -- create a new type, an array seven-segment values (ie: 2D array)
+  TYPE seven_seg_t IS ARRAY (0 TO 16) OF std_logic_vector (6 DOWNTO 0);
+  SIGNAL seven_seg_values : seven_seg_t := (
+                          ZERO_c, ONE_c, TWO_c, THREE_c, FOUR_c, FIVE_c,
+                          SIX_c, SEVEN_c, EIGHT_c, NINE_c, A_c, B_c, C_c, 
+						  D_c, E_c, F_c, BLANK_c);
+
+  
+BEGIN
+clk_tb <= NOT clk_tb AFTER PERIOD_c/2 WHEN (NOT sim_done) ELSE '0';
+  -- instantiate the Unit Under Test
+  UUT : add_sub PORT MAP(
+    clk_50mhz => clk_tb,
+	a_in => a_tb,
+	b_in => b_tb,
+	reset_n => reset_n_tb,
+	add => add_tb,
+	subtract => sub_tb,
+	--
+	hexA => hexA_tb,
+	hexB => hexB_tb,
+	hexSum => hexOut_tb
+);
+   
+
+  -----------------------------------------------------------------------------
+  -- PROCESS: Stimulus will generate a counter that counts from 0 to max count
+  -- and then stop. For each input, out will be verified.
+  -----------------------------------------------------------------------------
+  stimulus : PROCESS
+  BEGIN
+	reset_n_tb <= '0';
+    -- now lets sync the stimulus to the clock
+    -- and move data off clock edge
+    WAIT UNTIL (clk_tb'event and clk_tb = '1');
+	reset_n_tb <= '1';
+    WAIT FOR PERIOD_c;
+	add_tb <= '1';
+	sub_tb <= '1';
+    
+	WAIT FOR PERIOD_c;
+	add_tb <= '0';
+	WAIT FOR 2 ns;
+	FOR idx IN 0 TO MAX_COUNT_c LOOP
+      a_tb <= std_logic_vector (to_unsigned(idx, a_tb'length));
+      WAIT FOR PERIOD_c;
+	  FOR idx IN 0 TO MAX_COUNT_c LOOP
+		  b_tb <= std_logic_vector (to_unsigned(idx, b_tb'length));
+		  WAIT FOR PERIOD_c;
+		  
+		  
+	  END LOOP;
+	  
+	END LOOP;
+	WAIT FOR 2 ns;
+	add_tb <= '1';
+	WAIT FOR 2 ns;
+	sub_tb <= '0';
+	WAIT FOR 2 ns;
+	
+	FOR idx IN 0 TO MAX_COUNT_c LOOP
+      a_tb <= std_logic_vector (to_unsigned(idx, a_tb'length));
+      WAIT FOR PERIOD_c;
+	  FOR idx IN 0 TO MAX_COUNT_c LOOP
+		  b_tb <= std_logic_vector (to_unsigned(idx, b_tb'length));
+		  WAIT FOR PERIOD_c;
+		  
+		  
+	  END LOOP;
+	  
+	END LOOP;
+	
+    --WAIT FOR 75 * PERIOD_c;
+
+
+    -- we are done to wait two more clocks & set flag sim_done to true
+    WAIT FOR 2 * PERIOD_c;
+    WAIT UNTIL clk_tb = '0';
+    sim_done <= true;
+
+    -- Added a simple message to say we are done
+    REPORT "Simulation Completed Successfully.";
+
+    WAIT;                               -- wait here forever
+END PROCESS;
+
+END ARCHITECTURE arch;

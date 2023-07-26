@@ -1,0 +1,569 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--E1_sum[0] is seven_seg_counter:top_inst|generic_adder_beh:gen_add|sum[0]
+E1_sum[0]_adder_eqn = ( !B1_sum_reg[0] ) + ( !VCC ) + ( !VCC );
+E1_sum[0] = SUM(E1_sum[0]_adder_eqn);
+
+--E1L2 is seven_seg_counter:top_inst|generic_adder_beh:gen_add|_~1
+E1L2_adder_eqn = ( !B1_sum_reg[0] ) + ( !VCC ) + ( !VCC );
+E1L2 = CARRY(E1L2_adder_eqn);
+
+--E1L3 is seven_seg_counter:top_inst|generic_adder_beh:gen_add|_~2
+E1L3_share_eqn = B1_sum_reg[0];
+E1L3 = SHARE(E1L3_share_eqn);
+
+
+--E1_sum[1] is seven_seg_counter:top_inst|generic_adder_beh:gen_add|sum[1]
+E1_sum[1]_adder_eqn = ( B1_sum_reg[1] ) + ( E1L3 ) + ( E1L2 );
+E1_sum[1] = SUM(E1_sum[1]_adder_eqn);
+
+--E1L5 is seven_seg_counter:top_inst|generic_adder_beh:gen_add|_~4
+E1L5_adder_eqn = ( B1_sum_reg[1] ) + ( E1L3 ) + ( E1L2 );
+E1L5 = CARRY(E1L5_adder_eqn);
+
+--E1L6 is seven_seg_counter:top_inst|generic_adder_beh:gen_add|_~5
+E1L6_share_eqn = GND;
+E1L6 = SHARE(E1L6_share_eqn);
+
+
+--E1_sum[2] is seven_seg_counter:top_inst|generic_adder_beh:gen_add|sum[2]
+E1_sum[2]_adder_eqn = ( B1_sum_reg[2] ) + ( E1L6 ) + ( E1L5 );
+E1_sum[2] = SUM(E1_sum[2]_adder_eqn);
+
+--E1L8 is seven_seg_counter:top_inst|generic_adder_beh:gen_add|_~7
+E1L8_adder_eqn = ( B1_sum_reg[2] ) + ( E1L6 ) + ( E1L5 );
+E1L8 = CARRY(E1L8_adder_eqn);
+
+--E1L9 is seven_seg_counter:top_inst|generic_adder_beh:gen_add|_~8
+E1L9_share_eqn = GND;
+E1L9 = SHARE(E1L9_share_eqn);
+
+
+--E1_sum[3] is seven_seg_counter:top_inst|generic_adder_beh:gen_add|sum[3]
+E1_sum[3]_adder_eqn = ( B1_sum_reg[3] ) + ( E1L9 ) + ( E1L8 );
+E1_sum[3] = SUM(E1_sum[3]_adder_eqn);
+
+
+--D1_count_sig[1] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[1]
+--register power-up is low
+
+D1_count_sig[1] = DFFEAS(D1L2, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[0] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[0]
+--register power-up is low
+
+D1_count_sig[0] = DFFEAS(D1L6, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[25] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[25]
+--register power-up is low
+
+D1_count_sig[25] = DFFEAS(D1L10, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[24] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[24]
+--register power-up is low
+
+D1_count_sig[24] = DFFEAS(D1L14, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[23] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[23]
+--register power-up is low
+
+D1_count_sig[23] = DFFEAS(D1L18, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[22] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[22]
+--register power-up is low
+
+D1_count_sig[22] = DFFEAS(D1L22, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[21] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[21]
+--register power-up is low
+
+D1_count_sig[21] = DFFEAS(D1L26, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[20] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[20]
+--register power-up is low
+
+D1_count_sig[20] = DFFEAS(D1L30, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[19] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[19]
+--register power-up is low
+
+D1_count_sig[19] = DFFEAS(D1L34, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[18] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[18]
+--register power-up is low
+
+D1_count_sig[18] = DFFEAS(D1L38, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[17] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[17]
+--register power-up is low
+
+D1_count_sig[17] = DFFEAS(D1L42, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[16] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[16]
+--register power-up is low
+
+D1_count_sig[16] = DFFEAS(D1L46, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[15] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[15]
+--register power-up is low
+
+D1_count_sig[15] = DFFEAS(D1L50, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[14] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[14]
+--register power-up is low
+
+D1_count_sig[14] = DFFEAS(D1L54, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[13] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[13]
+--register power-up is low
+
+D1_count_sig[13] = DFFEAS(D1L58, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[12] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[12]
+--register power-up is low
+
+D1_count_sig[12] = DFFEAS(D1L62, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[11] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[11]
+--register power-up is low
+
+D1_count_sig[11] = DFFEAS(D1L66, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[10] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[10]
+--register power-up is low
+
+D1_count_sig[10] = DFFEAS(D1L70, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[9] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[9]
+--register power-up is low
+
+D1_count_sig[9] = DFFEAS(D1L74, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[8] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[8]
+--register power-up is low
+
+D1_count_sig[8] = DFFEAS(D1L78, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[7] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[7]
+--register power-up is low
+
+D1_count_sig[7] = DFFEAS(D1L82, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[6] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[6]
+--register power-up is low
+
+D1_count_sig[6] = DFFEAS(D1L86, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[5] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[5]
+--register power-up is low
+
+D1_count_sig[5] = DFFEAS(D1L90, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[4] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[4]
+--register power-up is low
+
+D1_count_sig[4] = DFFEAS(D1L94, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[3] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[3]
+--register power-up is low
+
+D1_count_sig[3] = DFFEAS(D1L98, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1_count_sig[2] is seven_seg_counter:top_inst|generic_counter:cnt|count_sig[2]
+--register power-up is low
+
+D1_count_sig[2] = DFFEAS(D1L102, CLOCK_50, SW[0],  ,  ,  ,  , D1L136,  );
+
+
+--D1L2 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~1
+D1L2_adder_eqn = ( D1_count_sig[1] ) + ( GND ) + ( D1L7 );
+D1L2 = SUM(D1L2_adder_eqn);
+
+--D1L3 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~2
+D1L3_adder_eqn = ( D1_count_sig[1] ) + ( GND ) + ( D1L7 );
+D1L3 = CARRY(D1L3_adder_eqn);
+
+
+--D1L6 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~5
+D1L6_adder_eqn = ( D1_count_sig[0] ) + ( VCC ) + ( !VCC );
+D1L6 = SUM(D1L6_adder_eqn);
+
+--D1L7 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~6
+D1L7_adder_eqn = ( D1_count_sig[0] ) + ( VCC ) + ( !VCC );
+D1L7 = CARRY(D1L7_adder_eqn);
+
+
+--D1L10 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~9
+D1L10_adder_eqn = ( D1_count_sig[25] ) + ( GND ) + ( D1L15 );
+D1L10 = SUM(D1L10_adder_eqn);
+
+
+--D1L14 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~13
+D1L14_adder_eqn = ( D1_count_sig[24] ) + ( GND ) + ( D1L19 );
+D1L14 = SUM(D1L14_adder_eqn);
+
+--D1L15 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~14
+D1L15_adder_eqn = ( D1_count_sig[24] ) + ( GND ) + ( D1L19 );
+D1L15 = CARRY(D1L15_adder_eqn);
+
+
+--D1L18 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~17
+D1L18_adder_eqn = ( D1_count_sig[23] ) + ( GND ) + ( D1L23 );
+D1L18 = SUM(D1L18_adder_eqn);
+
+--D1L19 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~18
+D1L19_adder_eqn = ( D1_count_sig[23] ) + ( GND ) + ( D1L23 );
+D1L19 = CARRY(D1L19_adder_eqn);
+
+
+--D1L22 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~21
+D1L22_adder_eqn = ( D1_count_sig[22] ) + ( GND ) + ( D1L27 );
+D1L22 = SUM(D1L22_adder_eqn);
+
+--D1L23 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~22
+D1L23_adder_eqn = ( D1_count_sig[22] ) + ( GND ) + ( D1L27 );
+D1L23 = CARRY(D1L23_adder_eqn);
+
+
+--D1L26 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~25
+D1L26_adder_eqn = ( D1_count_sig[21] ) + ( GND ) + ( D1L31 );
+D1L26 = SUM(D1L26_adder_eqn);
+
+--D1L27 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~26
+D1L27_adder_eqn = ( D1_count_sig[21] ) + ( GND ) + ( D1L31 );
+D1L27 = CARRY(D1L27_adder_eqn);
+
+
+--D1L30 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~29
+D1L30_adder_eqn = ( D1_count_sig[20] ) + ( GND ) + ( D1L35 );
+D1L30 = SUM(D1L30_adder_eqn);
+
+--D1L31 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~30
+D1L31_adder_eqn = ( D1_count_sig[20] ) + ( GND ) + ( D1L35 );
+D1L31 = CARRY(D1L31_adder_eqn);
+
+
+--D1L34 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~33
+D1L34_adder_eqn = ( D1_count_sig[19] ) + ( GND ) + ( D1L39 );
+D1L34 = SUM(D1L34_adder_eqn);
+
+--D1L35 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~34
+D1L35_adder_eqn = ( D1_count_sig[19] ) + ( GND ) + ( D1L39 );
+D1L35 = CARRY(D1L35_adder_eqn);
+
+
+--D1L38 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~37
+D1L38_adder_eqn = ( D1_count_sig[18] ) + ( GND ) + ( D1L43 );
+D1L38 = SUM(D1L38_adder_eqn);
+
+--D1L39 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~38
+D1L39_adder_eqn = ( D1_count_sig[18] ) + ( GND ) + ( D1L43 );
+D1L39 = CARRY(D1L39_adder_eqn);
+
+
+--D1L42 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~41
+D1L42_adder_eqn = ( D1_count_sig[17] ) + ( GND ) + ( D1L47 );
+D1L42 = SUM(D1L42_adder_eqn);
+
+--D1L43 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~42
+D1L43_adder_eqn = ( D1_count_sig[17] ) + ( GND ) + ( D1L47 );
+D1L43 = CARRY(D1L43_adder_eqn);
+
+
+--D1L46 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~45
+D1L46_adder_eqn = ( D1_count_sig[16] ) + ( GND ) + ( D1L51 );
+D1L46 = SUM(D1L46_adder_eqn);
+
+--D1L47 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~46
+D1L47_adder_eqn = ( D1_count_sig[16] ) + ( GND ) + ( D1L51 );
+D1L47 = CARRY(D1L47_adder_eqn);
+
+
+--D1L50 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~49
+D1L50_adder_eqn = ( D1_count_sig[15] ) + ( GND ) + ( D1L55 );
+D1L50 = SUM(D1L50_adder_eqn);
+
+--D1L51 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~50
+D1L51_adder_eqn = ( D1_count_sig[15] ) + ( GND ) + ( D1L55 );
+D1L51 = CARRY(D1L51_adder_eqn);
+
+
+--D1L54 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~53
+D1L54_adder_eqn = ( D1_count_sig[14] ) + ( GND ) + ( D1L59 );
+D1L54 = SUM(D1L54_adder_eqn);
+
+--D1L55 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~54
+D1L55_adder_eqn = ( D1_count_sig[14] ) + ( GND ) + ( D1L59 );
+D1L55 = CARRY(D1L55_adder_eqn);
+
+
+--D1L58 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~57
+D1L58_adder_eqn = ( D1_count_sig[13] ) + ( GND ) + ( D1L63 );
+D1L58 = SUM(D1L58_adder_eqn);
+
+--D1L59 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~58
+D1L59_adder_eqn = ( D1_count_sig[13] ) + ( GND ) + ( D1L63 );
+D1L59 = CARRY(D1L59_adder_eqn);
+
+
+--D1L62 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~61
+D1L62_adder_eqn = ( D1_count_sig[12] ) + ( GND ) + ( D1L67 );
+D1L62 = SUM(D1L62_adder_eqn);
+
+--D1L63 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~62
+D1L63_adder_eqn = ( D1_count_sig[12] ) + ( GND ) + ( D1L67 );
+D1L63 = CARRY(D1L63_adder_eqn);
+
+
+--D1L66 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~65
+D1L66_adder_eqn = ( D1_count_sig[11] ) + ( GND ) + ( D1L71 );
+D1L66 = SUM(D1L66_adder_eqn);
+
+--D1L67 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~66
+D1L67_adder_eqn = ( D1_count_sig[11] ) + ( GND ) + ( D1L71 );
+D1L67 = CARRY(D1L67_adder_eqn);
+
+
+--D1L70 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~69
+D1L70_adder_eqn = ( D1_count_sig[10] ) + ( GND ) + ( D1L75 );
+D1L70 = SUM(D1L70_adder_eqn);
+
+--D1L71 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~70
+D1L71_adder_eqn = ( D1_count_sig[10] ) + ( GND ) + ( D1L75 );
+D1L71 = CARRY(D1L71_adder_eqn);
+
+
+--D1L74 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~73
+D1L74_adder_eqn = ( D1_count_sig[9] ) + ( GND ) + ( D1L79 );
+D1L74 = SUM(D1L74_adder_eqn);
+
+--D1L75 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~74
+D1L75_adder_eqn = ( D1_count_sig[9] ) + ( GND ) + ( D1L79 );
+D1L75 = CARRY(D1L75_adder_eqn);
+
+
+--D1L78 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~77
+D1L78_adder_eqn = ( D1_count_sig[8] ) + ( GND ) + ( D1L83 );
+D1L78 = SUM(D1L78_adder_eqn);
+
+--D1L79 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~78
+D1L79_adder_eqn = ( D1_count_sig[8] ) + ( GND ) + ( D1L83 );
+D1L79 = CARRY(D1L79_adder_eqn);
+
+
+--D1L82 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~81
+D1L82_adder_eqn = ( D1_count_sig[7] ) + ( GND ) + ( D1L87 );
+D1L82 = SUM(D1L82_adder_eqn);
+
+--D1L83 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~82
+D1L83_adder_eqn = ( D1_count_sig[7] ) + ( GND ) + ( D1L87 );
+D1L83 = CARRY(D1L83_adder_eqn);
+
+
+--D1L86 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~85
+D1L86_adder_eqn = ( D1_count_sig[6] ) + ( GND ) + ( D1L91 );
+D1L86 = SUM(D1L86_adder_eqn);
+
+--D1L87 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~86
+D1L87_adder_eqn = ( D1_count_sig[6] ) + ( GND ) + ( D1L91 );
+D1L87 = CARRY(D1L87_adder_eqn);
+
+
+--D1L90 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~89
+D1L90_adder_eqn = ( D1_count_sig[5] ) + ( GND ) + ( D1L95 );
+D1L90 = SUM(D1L90_adder_eqn);
+
+--D1L91 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~90
+D1L91_adder_eqn = ( D1_count_sig[5] ) + ( GND ) + ( D1L95 );
+D1L91 = CARRY(D1L91_adder_eqn);
+
+
+--D1L94 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~93
+D1L94_adder_eqn = ( D1_count_sig[4] ) + ( GND ) + ( D1L99 );
+D1L94 = SUM(D1L94_adder_eqn);
+
+--D1L95 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~94
+D1L95_adder_eqn = ( D1_count_sig[4] ) + ( GND ) + ( D1L99 );
+D1L95 = CARRY(D1L95_adder_eqn);
+
+
+--D1L98 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~97
+D1L98_adder_eqn = ( D1_count_sig[3] ) + ( GND ) + ( D1L103 );
+D1L98 = SUM(D1L98_adder_eqn);
+
+--D1L99 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~98
+D1L99_adder_eqn = ( D1_count_sig[3] ) + ( GND ) + ( D1L103 );
+D1L99 = CARRY(D1L99_adder_eqn);
+
+
+--D1L102 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~101
+D1L102_adder_eqn = ( D1_count_sig[2] ) + ( GND ) + ( D1L3 );
+D1L102 = SUM(D1L102_adder_eqn);
+
+--D1L103 is seven_seg_counter:top_inst|generic_counter:cnt|Add0~102
+D1L103_adder_eqn = ( D1_count_sig[2] ) + ( GND ) + ( D1L3 );
+D1L103 = CARRY(D1L103_adder_eqn);
+
+
+--HEX0[0] is HEX0[0]
+HEX0[0] = OUTPUT(C1L8);
+
+
+--HEX0[1] is HEX0[1]
+HEX0[1] = OUTPUT(C1L7);
+
+
+--HEX0[2] is HEX0[2]
+HEX0[2] = OUTPUT(C1L6);
+
+
+--HEX0[3] is HEX0[3]
+HEX0[3] = OUTPUT(C1L5);
+
+
+--HEX0[4] is HEX0[4]
+HEX0[4] = OUTPUT(C1L4);
+
+
+--HEX0[5] is HEX0[5]
+HEX0[5] = OUTPUT(C1L3);
+
+
+--HEX0[6] is HEX0[6]
+HEX0[6] = OUTPUT(C1L2);
+
+
+--B1_sum_reg[0] is seven_seg_counter:top_inst|sum_reg[0]
+--register power-up is low
+
+B1_sum_reg[0] = DFFEAS(E1_sum[0], CLOCK_50,  ,  , D1_output,  ,  ,  ,  );
+
+
+--B1_sum_reg[1] is seven_seg_counter:top_inst|sum_reg[1]
+--register power-up is low
+
+B1_sum_reg[1] = DFFEAS(B1L6, CLOCK_50,  ,  , D1_output,  ,  ,  ,  );
+
+
+--B1_sum_reg[2] is seven_seg_counter:top_inst|sum_reg[2]
+--register power-up is low
+
+B1_sum_reg[2] = DFFEAS(E1_sum[2], CLOCK_50,  ,  , D1_output,  ,  ,  ,  );
+
+
+--B1_sum_reg[3] is seven_seg_counter:top_inst|sum_reg[3]
+--register power-up is low
+
+B1_sum_reg[3] = DFFEAS(B1L7, CLOCK_50,  ,  , D1_output,  ,  ,  ,  );
+
+
+--C1L8 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux6~0
+C1L8 = (!B1_sum_reg[2] & (B1_sum_reg[0] & (!B1_sum_reg[1] $ (B1_sum_reg[3])))) # (B1_sum_reg[2] & (!B1_sum_reg[1] & (!B1_sum_reg[0] $ (B1_sum_reg[3]))));
+
+
+--C1L7 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux5~0
+C1L7 = (!B1_sum_reg[1] & (B1_sum_reg[2] & (!B1_sum_reg[0] $ (!B1_sum_reg[3])))) # (B1_sum_reg[1] & ((!B1_sum_reg[0] & (B1_sum_reg[2])) # (B1_sum_reg[0] & ((B1_sum_reg[3])))));
+
+
+--C1L6 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux4~0
+C1L6 = (!B1_sum_reg[2] & (!B1_sum_reg[0] & (B1_sum_reg[1] & !B1_sum_reg[3]))) # (B1_sum_reg[2] & (B1_sum_reg[3] & ((!B1_sum_reg[0]) # (B1_sum_reg[1]))));
+
+
+--C1L5 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux3~0
+C1L5 = (!B1_sum_reg[1] & (!B1_sum_reg[3] & (!B1_sum_reg[0] $ (!B1_sum_reg[2])))) # (B1_sum_reg[1] & ((!B1_sum_reg[0] & (!B1_sum_reg[2] & B1_sum_reg[3])) # (B1_sum_reg[0] & (B1_sum_reg[2]))));
+
+
+--C1L4 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux2~0
+C1L4 = (!B1_sum_reg[1] & ((!B1_sum_reg[2] & (B1_sum_reg[0])) # (B1_sum_reg[2] & ((!B1_sum_reg[3]))))) # (B1_sum_reg[1] & (B1_sum_reg[0] & ((!B1_sum_reg[3]))));
+
+
+--C1L3 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux1~0
+C1L3 = (!B1_sum_reg[0] & (B1_sum_reg[1] & (!B1_sum_reg[2] & !B1_sum_reg[3]))) # (B1_sum_reg[0] & (!B1_sum_reg[3] $ (((!B1_sum_reg[1] & B1_sum_reg[2])))));
+
+
+--C1L1 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux0~0
+C1L1 = (!B1_sum_reg[0] & ((!B1_sum_reg[2] $ (!B1_sum_reg[3])) # (B1_sum_reg[1]))) # (B1_sum_reg[0] & ((!B1_sum_reg[1] $ (!B1_sum_reg[2])) # (B1_sum_reg[3])));
+
+
+--CLOCK_50 is CLOCK_50
+CLOCK_50 = INPUT();
+
+
+--D1_output is seven_seg_counter:top_inst|generic_counter:cnt|output
+--register power-up is low
+
+D1_output = DFFEAS(D1L136, CLOCK_50, SW[0],  ,  ,  ,  ,  ,  );
+
+
+--B1L6 is seven_seg_counter:top_inst|sum_reg~0
+B1L6 = (E1_sum[1] & (((!E1_sum[3]) # (E1_sum[2])) # (E1_sum[0])));
+
+
+--B1L7 is seven_seg_counter:top_inst|sum_reg~1
+B1L7 = (E1_sum[3] & (((!E1_sum[1]) # (E1_sum[2])) # (E1_sum[0])));
+
+
+--D1L132 is seven_seg_counter:top_inst|generic_counter:cnt|Equal0~0
+D1L132 = ( !D1_count_sig[21] & ( !D1_count_sig[20] & ( (!D1_count_sig[25] & (!D1_count_sig[24] & (!D1_count_sig[23] & !D1_count_sig[22]))) ) ) );
+
+
+--D1L133 is seven_seg_counter:top_inst|generic_counter:cnt|Equal0~1
+D1L133 = ( !D1_count_sig[15] & ( !D1_count_sig[14] & ( (!D1_count_sig[19] & (!D1_count_sig[18] & (!D1_count_sig[17] & !D1_count_sig[16]))) ) ) );
+
+
+--D1L134 is seven_seg_counter:top_inst|generic_counter:cnt|Equal0~2
+D1L134 = ( !D1_count_sig[9] & ( !D1_count_sig[8] & ( (!D1_count_sig[13] & (!D1_count_sig[12] & (!D1_count_sig[11] & !D1_count_sig[10]))) ) ) );
+
+
+--D1L135 is seven_seg_counter:top_inst|generic_counter:cnt|Equal0~3
+D1L135 = ( !D1_count_sig[3] & ( !D1_count_sig[2] & ( (!D1_count_sig[7] & (!D1_count_sig[6] & (!D1_count_sig[5] & !D1_count_sig[4]))) ) ) );
+
+
+--D1L136 is seven_seg_counter:top_inst|generic_counter:cnt|Equal0~4
+D1L136 = ( D1L134 & ( D1L135 & ( (D1_count_sig[1] & (D1_count_sig[0] & (D1L132 & D1L133))) ) ) );
+
+
+--SW[0] is SW[0]
+SW[0] = INPUT();
+
+
+--C1L2 is seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert|Mux0~0_wirecell
+C1L2 = !C1L1;
+
+

@@ -1,0 +1,145 @@
+|top
+CLOCK_50 => seven_seg_counter:top_inst.clk_50mhz
+SW[0] => seven_seg_counter:top_inst.reset_n
+HEX0[0] <= seven_seg_counter:top_inst.seven_seg[0]
+HEX0[1] <= seven_seg_counter:top_inst.seven_seg[1]
+HEX0[2] <= seven_seg_counter:top_inst.seven_seg[2]
+HEX0[3] <= seven_seg_counter:top_inst.seven_seg[3]
+HEX0[4] <= seven_seg_counter:top_inst.seven_seg[4]
+HEX0[5] <= seven_seg_counter:top_inst.seven_seg[5]
+HEX0[6] <= seven_seg_counter:top_inst.seven_seg[6]
+
+
+|top|seven_seg_counter:top_inst
+clk_50mhz => generic_counter:cnt.clock
+clk_50mhz => sum_reg[0].CLK
+clk_50mhz => sum_reg[1].CLK
+clk_50mhz => sum_reg[2].CLK
+clk_50mhz => sum_reg[3].CLK
+offset[0] => generic_adder_beh:gen_add.a[0]
+offset[1] => generic_adder_beh:gen_add.a[1]
+offset[2] => generic_adder_beh:gen_add.a[2]
+offset[3] => generic_adder_beh:gen_add.a[3]
+reset_n => generic_counter:cnt.reset_n
+seven_seg[0] <= bcd2seven_seg:bdc_convert.seven_segment[0]
+seven_seg[1] <= bcd2seven_seg:bdc_convert.seven_segment[1]
+seven_seg[2] <= bcd2seven_seg:bdc_convert.seven_segment[2]
+seven_seg[3] <= bcd2seven_seg:bdc_convert.seven_segment[3]
+seven_seg[4] <= bcd2seven_seg:bdc_convert.seven_segment[4]
+seven_seg[5] <= bcd2seven_seg:bdc_convert.seven_segment[5]
+seven_seg[6] <= bcd2seven_seg:bdc_convert.seven_segment[6]
+
+
+|top|seven_seg_counter:top_inst|generic_adder_beh:gen_add
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+a[3] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+b[3] => _.DATAC
+cin => _.DATAB
+sum[0] <= _.SUM_OUT
+sum[1] <= _.SUM_OUT
+sum[2] <= _.SUM_OUT
+sum[3] <= _.SUM_OUT
+cout <= _.SUM_OUT
+
+
+|top|seven_seg_counter:top_inst|generic_counter:cnt
+clock => output~reg0.CLK
+clock => count_sig[0].CLK
+clock => count_sig[1].CLK
+clock => count_sig[2].CLK
+clock => count_sig[3].CLK
+clock => count_sig[4].CLK
+clock => count_sig[5].CLK
+clock => count_sig[6].CLK
+clock => count_sig[7].CLK
+clock => count_sig[8].CLK
+clock => count_sig[9].CLK
+clock => count_sig[10].CLK
+clock => count_sig[11].CLK
+clock => count_sig[12].CLK
+clock => count_sig[13].CLK
+clock => count_sig[14].CLK
+clock => count_sig[15].CLK
+clock => count_sig[16].CLK
+clock => count_sig[17].CLK
+clock => count_sig[18].CLK
+clock => count_sig[19].CLK
+clock => count_sig[20].CLK
+clock => count_sig[21].CLK
+clock => count_sig[22].CLK
+clock => count_sig[23].CLK
+clock => count_sig[24].CLK
+clock => count_sig[25].CLK
+reset_n => output~reg0.ACLR
+reset_n => count_sig[0].ACLR
+reset_n => count_sig[1].ACLR
+reset_n => count_sig[2].ACLR
+reset_n => count_sig[3].ACLR
+reset_n => count_sig[4].ACLR
+reset_n => count_sig[5].ACLR
+reset_n => count_sig[6].ACLR
+reset_n => count_sig[7].ACLR
+reset_n => count_sig[8].ACLR
+reset_n => count_sig[9].ACLR
+reset_n => count_sig[10].ACLR
+reset_n => count_sig[11].ACLR
+reset_n => count_sig[12].ACLR
+reset_n => count_sig[13].ACLR
+reset_n => count_sig[14].ACLR
+reset_n => count_sig[15].ACLR
+reset_n => count_sig[16].ACLR
+reset_n => count_sig[17].ACLR
+reset_n => count_sig[18].ACLR
+reset_n => count_sig[19].ACLR
+reset_n => count_sig[20].ACLR
+reset_n => count_sig[21].ACLR
+reset_n => count_sig[22].ACLR
+reset_n => count_sig[23].ACLR
+reset_n => count_sig[24].ACLR
+reset_n => count_sig[25].ACLR
+output <= output~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|seven_seg_counter:top_inst|bcd2seven_seg:bdc_convert
+bcd_number[0] => Mux0.IN19
+bcd_number[0] => Mux1.IN19
+bcd_number[0] => Mux2.IN19
+bcd_number[0] => Mux3.IN19
+bcd_number[0] => Mux4.IN19
+bcd_number[0] => Mux5.IN19
+bcd_number[0] => Mux6.IN19
+bcd_number[1] => Mux0.IN18
+bcd_number[1] => Mux1.IN18
+bcd_number[1] => Mux2.IN18
+bcd_number[1] => Mux3.IN18
+bcd_number[1] => Mux4.IN18
+bcd_number[1] => Mux5.IN18
+bcd_number[1] => Mux6.IN18
+bcd_number[2] => Mux0.IN17
+bcd_number[2] => Mux1.IN17
+bcd_number[2] => Mux2.IN17
+bcd_number[2] => Mux3.IN17
+bcd_number[2] => Mux4.IN17
+bcd_number[2] => Mux5.IN17
+bcd_number[2] => Mux6.IN17
+bcd_number[3] => Mux0.IN16
+bcd_number[3] => Mux1.IN16
+bcd_number[3] => Mux2.IN16
+bcd_number[3] => Mux3.IN16
+bcd_number[3] => Mux4.IN16
+bcd_number[3] => Mux5.IN16
+bcd_number[3] => Mux6.IN16
+seven_segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

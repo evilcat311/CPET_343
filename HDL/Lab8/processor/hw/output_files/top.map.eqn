@@ -1,0 +1,2691 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--GB1_ram_rom_data_reg[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]
+--register power-up is low
+
+GB1_ram_rom_data_reg[0] = AMPP_FUNCTION(A1L49, FB1_q_b[0], GB1_ram_rom_data_reg[1], GB1L18, GB1L38);
+
+
+--S1_result_reg[0] is processor:top_inst|add_sub:L7|result_reg[0]
+--register power-up is low
+
+S1_result_reg[0] = DFFEAS(U1_result[0], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L1,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[1] is processor:top_inst|add_sub:L7|result_reg[1]
+--register power-up is low
+
+S1_result_reg[1] = DFFEAS(U1_result[1], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L2,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[2] is processor:top_inst|add_sub:L7|result_reg[2]
+--register power-up is low
+
+S1_result_reg[2] = DFFEAS(U1_result[2], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L3,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[3] is processor:top_inst|add_sub:L7|result_reg[3]
+--register power-up is low
+
+S1_result_reg[3] = DFFEAS(U1_result[3], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L4,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[4] is processor:top_inst|add_sub:L7|result_reg[4]
+--register power-up is low
+
+S1_result_reg[4] = DFFEAS(U1_result[4], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L5,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[5] is processor:top_inst|add_sub:L7|result_reg[5]
+--register power-up is low
+
+S1_result_reg[5] = DFFEAS(U1_result[5], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L6,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[7] is processor:top_inst|add_sub:L7|result_reg[7]
+--register power-up is low
+
+S1_result_reg[7] = DFFEAS(U1_result[7], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L8,  ,  , S1_WideOr0);
+
+
+--S1_result_reg[6] is processor:top_inst|add_sub:L7|result_reg[6]
+--register power-up is low
+
+S1_result_reg[6] = DFFEAS(U1_result[6], CLOCK_50, !R3_RisingEdge,  , S1_next_state.write_work, Y1L7,  ,  , S1_WideOr0);
+
+
+--FB1_q_a[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[0]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[0]_PORT_A_data_in = VCC;
+FB1_q_a[0]_PORT_A_data_in_reg = DFFE(FB1_q_a[0]_PORT_A_data_in, FB1_q_a[0]_clock_0, , , );
+FB1_q_a[0]_PORT_B_data_in = GB1_ram_rom_data_reg[0];
+FB1_q_a[0]_PORT_B_data_in_reg = DFFE(FB1_q_a[0]_PORT_B_data_in, FB1_q_a[0]_clock_1, , , );
+FB1_q_a[0]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[0]_PORT_A_address_reg = DFFE(FB1_q_a[0]_PORT_A_address, FB1_q_a[0]_clock_0, , , );
+FB1_q_a[0]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[0]_PORT_B_address_reg = DFFE(FB1_q_a[0]_PORT_B_address, FB1_q_a[0]_clock_1, , , );
+FB1_q_a[0]_PORT_A_write_enable = GND;
+FB1_q_a[0]_PORT_A_write_enable_reg = DFFE(FB1_q_a[0]_PORT_A_write_enable, FB1_q_a[0]_clock_0, , , );
+FB1_q_a[0]_PORT_A_read_enable = VCC;
+FB1_q_a[0]_PORT_A_read_enable_reg = DFFE(FB1_q_a[0]_PORT_A_read_enable, FB1_q_a[0]_clock_0, , , );
+FB1_q_a[0]_PORT_B_write_enable = GB1L8;
+FB1_q_a[0]_PORT_B_write_enable_reg = DFFE(FB1_q_a[0]_PORT_B_write_enable, FB1_q_a[0]_clock_1, , , );
+FB1_q_a[0]_PORT_B_read_enable = VCC;
+FB1_q_a[0]_PORT_B_read_enable_reg = DFFE(FB1_q_a[0]_PORT_B_read_enable, FB1_q_a[0]_clock_1, , , );
+FB1_q_a[0]_clock_0 = CLOCK_50;
+FB1_q_a[0]_clock_1 = A1L49;
+FB1_q_a[0]_PORT_A_data_out = MEMORY(FB1_q_a[0]_PORT_A_data_in_reg, FB1_q_a[0]_PORT_B_data_in_reg, FB1_q_a[0]_PORT_A_address_reg, FB1_q_a[0]_PORT_B_address_reg, FB1_q_a[0]_PORT_A_write_enable_reg, FB1_q_a[0]_PORT_A_read_enable_reg, FB1_q_a[0]_PORT_B_write_enable_reg, FB1_q_a[0]_PORT_B_read_enable_reg, , , FB1_q_a[0]_clock_0, FB1_q_a[0]_clock_1, , , , , , );
+FB1_q_a[0]_PORT_A_data_out_reg = DFFE(FB1_q_a[0]_PORT_A_data_out, FB1_q_a[0]_clock_0, , , );
+FB1_q_a[0] = FB1_q_a[0]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[0]
+FB1_q_b[0]_PORT_A_data_in = VCC;
+FB1_q_b[0]_PORT_A_data_in_reg = DFFE(FB1_q_b[0]_PORT_A_data_in, FB1_q_b[0]_clock_0, , , );
+FB1_q_b[0]_PORT_B_data_in = GB1_ram_rom_data_reg[0];
+FB1_q_b[0]_PORT_B_data_in_reg = DFFE(FB1_q_b[0]_PORT_B_data_in, FB1_q_b[0]_clock_1, , , );
+FB1_q_b[0]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[0]_PORT_A_address_reg = DFFE(FB1_q_b[0]_PORT_A_address, FB1_q_b[0]_clock_0, , , );
+FB1_q_b[0]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[0]_PORT_B_address_reg = DFFE(FB1_q_b[0]_PORT_B_address, FB1_q_b[0]_clock_1, , , );
+FB1_q_b[0]_PORT_A_write_enable = GND;
+FB1_q_b[0]_PORT_A_write_enable_reg = DFFE(FB1_q_b[0]_PORT_A_write_enable, FB1_q_b[0]_clock_0, , , );
+FB1_q_b[0]_PORT_A_read_enable = VCC;
+FB1_q_b[0]_PORT_A_read_enable_reg = DFFE(FB1_q_b[0]_PORT_A_read_enable, FB1_q_b[0]_clock_0, , , );
+FB1_q_b[0]_PORT_B_write_enable = GB1L8;
+FB1_q_b[0]_PORT_B_write_enable_reg = DFFE(FB1_q_b[0]_PORT_B_write_enable, FB1_q_b[0]_clock_1, , , );
+FB1_q_b[0]_PORT_B_read_enable = VCC;
+FB1_q_b[0]_PORT_B_read_enable_reg = DFFE(FB1_q_b[0]_PORT_B_read_enable, FB1_q_b[0]_clock_1, , , );
+FB1_q_b[0]_clock_0 = CLOCK_50;
+FB1_q_b[0]_clock_1 = A1L49;
+FB1_q_b[0]_PORT_B_data_out = MEMORY(FB1_q_b[0]_PORT_A_data_in_reg, FB1_q_b[0]_PORT_B_data_in_reg, FB1_q_b[0]_PORT_A_address_reg, FB1_q_b[0]_PORT_B_address_reg, FB1_q_b[0]_PORT_A_write_enable_reg, FB1_q_b[0]_PORT_A_read_enable_reg, FB1_q_b[0]_PORT_B_write_enable_reg, FB1_q_b[0]_PORT_B_read_enable_reg, , , FB1_q_b[0]_clock_0, FB1_q_b[0]_clock_1, , , , , , );
+FB1_q_b[0] = FB1_q_b[0]_PORT_B_data_out[0];
+
+
+--GB1_ram_rom_data_reg[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[1]
+--register power-up is low
+
+GB1_ram_rom_data_reg[1] = AMPP_FUNCTION(A1L49, FB1_q_b[1], GB1_ram_rom_data_reg[2], GB1L18, GB1L38);
+
+
+--U1_result[0] is processor:top_inst|add_sub:L7|alu:alu_def|result[0]
+--register power-up is low
+
+U1_result[0] = DFFEAS(U1L2, CLOCK_50, KEY[3],  ,  , U1L387,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][0] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][0]
+--register power-up is low
+
+Y1_ram_mem[1][0] = DFFEAS(S1L21, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][0] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][0]
+--register power-up is low
+
+Y1_ram_mem[0][0] = DFFEAS(S1L21, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[1] is processor:top_inst|add_sub:L7|alu:alu_def|result[1]
+--register power-up is low
+
+U1_result[1] = DFFEAS(U1L6, CLOCK_50, KEY[3],  ,  , U1L386,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][1] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][1]
+--register power-up is low
+
+Y1_ram_mem[1][1] = DFFEAS(S1L22, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][1] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][1]
+--register power-up is low
+
+Y1_ram_mem[0][1] = DFFEAS(S1L22, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[2] is processor:top_inst|add_sub:L7|alu:alu_def|result[2]
+--register power-up is low
+
+U1_result[2] = DFFEAS(U1L10, CLOCK_50, KEY[3],  ,  , U1L385,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][2] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][2]
+--register power-up is low
+
+Y1_ram_mem[1][2] = DFFEAS(S1L23, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][2] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][2]
+--register power-up is low
+
+Y1_ram_mem[0][2] = DFFEAS(S1L23, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[3] is processor:top_inst|add_sub:L7|alu:alu_def|result[3]
+--register power-up is low
+
+U1_result[3] = DFFEAS(U1L14, CLOCK_50, KEY[3],  ,  , U1L384,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][3] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][3]
+--register power-up is low
+
+Y1_ram_mem[1][3] = DFFEAS(S1L24, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][3] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][3]
+--register power-up is low
+
+Y1_ram_mem[0][3] = DFFEAS(S1L24, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[4] is processor:top_inst|add_sub:L7|alu:alu_def|result[4]
+--register power-up is low
+
+U1_result[4] = DFFEAS(U1L18, CLOCK_50, KEY[3],  ,  , U1L383,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][4] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][4]
+--register power-up is low
+
+Y1_ram_mem[1][4] = DFFEAS(S1L25, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][4] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][4]
+--register power-up is low
+
+Y1_ram_mem[0][4] = DFFEAS(S1L25, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[5] is processor:top_inst|add_sub:L7|alu:alu_def|result[5]
+--register power-up is low
+
+U1_result[5] = DFFEAS(U1L22, CLOCK_50, KEY[3],  ,  , U1L382,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][5] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][5]
+--register power-up is low
+
+Y1_ram_mem[1][5] = DFFEAS(S1L26, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][5] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][5]
+--register power-up is low
+
+Y1_ram_mem[0][5] = DFFEAS(S1L26, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[7] is processor:top_inst|add_sub:L7|alu:alu_def|result[7]
+--register power-up is low
+
+U1_result[7] = DFFEAS(U1L26, CLOCK_50, KEY[3],  ,  , U1L380,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][7] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][7]
+--register power-up is low
+
+Y1_ram_mem[1][7] = DFFEAS(S1L28, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][7] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][7]
+--register power-up is low
+
+Y1_ram_mem[0][7] = DFFEAS(S1L28, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--U1_result[6] is processor:top_inst|add_sub:L7|alu:alu_def|result[6]
+--register power-up is low
+
+U1_result[6] = DFFEAS(U1L30, CLOCK_50, KEY[3],  ,  , U1L381,  ,  , V2_prev_data_2[1]);
+
+
+--Y1_ram_mem[1][6] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][6]
+--register power-up is low
+
+Y1_ram_mem[1][6] = DFFEAS(S1L27, CLOCK_50,  ,  , Y1L21,  ,  , !KEY[3],  );
+
+
+--Y1_ram_mem[0][6] is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][6]
+--register power-up is low
+
+Y1_ram_mem[0][6] = DFFEAS(S1L27, CLOCK_50,  ,  , Y1L17,  ,  , !KEY[3],  );
+
+
+--FB1_q_a[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[1]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[1]_PORT_A_data_in = VCC;
+FB1_q_a[1]_PORT_A_data_in_reg = DFFE(FB1_q_a[1]_PORT_A_data_in, FB1_q_a[1]_clock_0, , , );
+FB1_q_a[1]_PORT_B_data_in = GB1_ram_rom_data_reg[1];
+FB1_q_a[1]_PORT_B_data_in_reg = DFFE(FB1_q_a[1]_PORT_B_data_in, FB1_q_a[1]_clock_1, , , );
+FB1_q_a[1]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[1]_PORT_A_address_reg = DFFE(FB1_q_a[1]_PORT_A_address, FB1_q_a[1]_clock_0, , , );
+FB1_q_a[1]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[1]_PORT_B_address_reg = DFFE(FB1_q_a[1]_PORT_B_address, FB1_q_a[1]_clock_1, , , );
+FB1_q_a[1]_PORT_A_write_enable = GND;
+FB1_q_a[1]_PORT_A_write_enable_reg = DFFE(FB1_q_a[1]_PORT_A_write_enable, FB1_q_a[1]_clock_0, , , );
+FB1_q_a[1]_PORT_A_read_enable = VCC;
+FB1_q_a[1]_PORT_A_read_enable_reg = DFFE(FB1_q_a[1]_PORT_A_read_enable, FB1_q_a[1]_clock_0, , , );
+FB1_q_a[1]_PORT_B_write_enable = GB1L8;
+FB1_q_a[1]_PORT_B_write_enable_reg = DFFE(FB1_q_a[1]_PORT_B_write_enable, FB1_q_a[1]_clock_1, , , );
+FB1_q_a[1]_PORT_B_read_enable = VCC;
+FB1_q_a[1]_PORT_B_read_enable_reg = DFFE(FB1_q_a[1]_PORT_B_read_enable, FB1_q_a[1]_clock_1, , , );
+FB1_q_a[1]_clock_0 = CLOCK_50;
+FB1_q_a[1]_clock_1 = A1L49;
+FB1_q_a[1]_PORT_A_data_out = MEMORY(FB1_q_a[1]_PORT_A_data_in_reg, FB1_q_a[1]_PORT_B_data_in_reg, FB1_q_a[1]_PORT_A_address_reg, FB1_q_a[1]_PORT_B_address_reg, FB1_q_a[1]_PORT_A_write_enable_reg, FB1_q_a[1]_PORT_A_read_enable_reg, FB1_q_a[1]_PORT_B_write_enable_reg, FB1_q_a[1]_PORT_B_read_enable_reg, , , FB1_q_a[1]_clock_0, FB1_q_a[1]_clock_1, , , , , , );
+FB1_q_a[1]_PORT_A_data_out_reg = DFFE(FB1_q_a[1]_PORT_A_data_out, FB1_q_a[1]_clock_0, , , );
+FB1_q_a[1] = FB1_q_a[1]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[1]
+FB1_q_b[1]_PORT_A_data_in = VCC;
+FB1_q_b[1]_PORT_A_data_in_reg = DFFE(FB1_q_b[1]_PORT_A_data_in, FB1_q_b[1]_clock_0, , , );
+FB1_q_b[1]_PORT_B_data_in = GB1_ram_rom_data_reg[1];
+FB1_q_b[1]_PORT_B_data_in_reg = DFFE(FB1_q_b[1]_PORT_B_data_in, FB1_q_b[1]_clock_1, , , );
+FB1_q_b[1]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[1]_PORT_A_address_reg = DFFE(FB1_q_b[1]_PORT_A_address, FB1_q_b[1]_clock_0, , , );
+FB1_q_b[1]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[1]_PORT_B_address_reg = DFFE(FB1_q_b[1]_PORT_B_address, FB1_q_b[1]_clock_1, , , );
+FB1_q_b[1]_PORT_A_write_enable = GND;
+FB1_q_b[1]_PORT_A_write_enable_reg = DFFE(FB1_q_b[1]_PORT_A_write_enable, FB1_q_b[1]_clock_0, , , );
+FB1_q_b[1]_PORT_A_read_enable = VCC;
+FB1_q_b[1]_PORT_A_read_enable_reg = DFFE(FB1_q_b[1]_PORT_A_read_enable, FB1_q_b[1]_clock_0, , , );
+FB1_q_b[1]_PORT_B_write_enable = GB1L8;
+FB1_q_b[1]_PORT_B_write_enable_reg = DFFE(FB1_q_b[1]_PORT_B_write_enable, FB1_q_b[1]_clock_1, , , );
+FB1_q_b[1]_PORT_B_read_enable = VCC;
+FB1_q_b[1]_PORT_B_read_enable_reg = DFFE(FB1_q_b[1]_PORT_B_read_enable, FB1_q_b[1]_clock_1, , , );
+FB1_q_b[1]_clock_0 = CLOCK_50;
+FB1_q_b[1]_clock_1 = A1L49;
+FB1_q_b[1]_PORT_B_data_out = MEMORY(FB1_q_b[1]_PORT_A_data_in_reg, FB1_q_b[1]_PORT_B_data_in_reg, FB1_q_b[1]_PORT_A_address_reg, FB1_q_b[1]_PORT_B_address_reg, FB1_q_b[1]_PORT_A_write_enable_reg, FB1_q_b[1]_PORT_A_read_enable_reg, FB1_q_b[1]_PORT_B_write_enable_reg, FB1_q_b[1]_PORT_B_read_enable_reg, , , FB1_q_b[1]_clock_0, FB1_q_b[1]_clock_1, , , , , , );
+FB1_q_b[1] = FB1_q_b[1]_PORT_B_data_out[0];
+
+
+--GB1_ram_rom_data_reg[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[2]
+--register power-up is low
+
+GB1_ram_rom_data_reg[2] = AMPP_FUNCTION(A1L49, FB1_q_b[2], GB1_ram_rom_data_reg[3], GB1L18, GB1L38);
+
+
+--U1L2 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~1
+U1L2_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[0]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][0]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][0])) ) + ( U1L35 );
+U1L2 = SUM(U1L2_adder_eqn);
+
+--U1L3 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~2
+U1L3_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[0]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][0]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][0])) ) + ( U1L35 );
+U1L3 = CARRY(U1L3_adder_eqn);
+
+
+--CB1L162 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~1
+CB1L162_adder_eqn = ( VCC ) + ( GND ) + ( CB1L167 );
+CB1L162 = SUM(CB1L162_adder_eqn);
+
+
+--U1_mul_result[0] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[0]
+U1_mul_result[0] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[1] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[1]
+U1_mul_result[1] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[2] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[2]
+U1_mul_result[2] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[3] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[3]
+U1_mul_result[3] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[4] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[4]
+U1_mul_result[4] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[5] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[5]
+U1_mul_result[5] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[6] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[6]
+U1_mul_result[6] = EQUATION NOT SUPPORTED;
+
+--U1_mul_result[7] is processor:top_inst|add_sub:L7|alu:alu_def|mul_result[7]
+U1_mul_result[7] = EQUATION NOT SUPPORTED;
+
+
+--U1L6 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~5
+U1L6_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[1]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][1]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][1])) ) + ( U1L3 );
+U1L6 = SUM(U1L6_adder_eqn);
+
+--U1L7 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~6
+U1L7_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[1]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][1]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][1])) ) + ( U1L3 );
+U1L7 = CARRY(U1L7_adder_eqn);
+
+
+--CB1L126 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~1
+CB1L126_adder_eqn = ( VCC ) + ( GND ) + ( CB1L131 );
+CB1L126 = SUM(CB1L126_adder_eqn);
+
+
+--U1L10 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~9
+U1L10_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[2]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][2]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][2])) ) + ( U1L7 );
+U1L10 = SUM(U1L10_adder_eqn);
+
+--U1L11 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~10
+U1L11_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[2]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][2]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][2])) ) + ( U1L7 );
+U1L11 = CARRY(U1L11_adder_eqn);
+
+
+--CB1L94 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~1
+CB1L94_adder_eqn = ( VCC ) + ( GND ) + ( CB1L99 );
+CB1L94 = SUM(CB1L94_adder_eqn);
+
+
+--U1L14 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~13
+U1L14_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[3]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][3]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][3])) ) + ( U1L11 );
+U1L14 = SUM(U1L14_adder_eqn);
+
+--U1L15 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~14
+U1L15_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[3]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][3]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][3])) ) + ( U1L11 );
+U1L15 = CARRY(U1L15_adder_eqn);
+
+
+--CB1L66 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~1
+CB1L66_adder_eqn = ( VCC ) + ( GND ) + ( CB1L71 );
+CB1L66 = SUM(CB1L66_adder_eqn);
+
+
+--U1L18 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~17
+U1L18_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[4]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][4]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][4])) ) + ( U1L15 );
+U1L18 = SUM(U1L18_adder_eqn);
+
+--U1L19 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~18
+U1L19_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[4]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][4]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][4])) ) + ( U1L15 );
+U1L19 = CARRY(U1L19_adder_eqn);
+
+
+--CB1L42 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~1
+CB1L42_adder_eqn = ( VCC ) + ( GND ) + ( CB1L47 );
+CB1L42 = SUM(CB1L42_adder_eqn);
+
+
+--U1L22 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~21
+U1L22_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[5]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][5]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][5])) ) + ( U1L19 );
+U1L22 = SUM(U1L22_adder_eqn);
+
+--U1L23 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~22
+U1L23_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[5]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][5]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][5])) ) + ( U1L19 );
+U1L23 = CARRY(U1L23_adder_eqn);
+
+
+--CB1L22 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~1
+CB1L22_adder_eqn = ( VCC ) + ( GND ) + ( CB1L27 );
+CB1L22 = SUM(CB1L22_adder_eqn);
+
+
+--U1L26 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~25
+U1L26_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[7]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][7]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][7])) ) + ( U1L31 );
+U1L26 = SUM(U1L26_adder_eqn);
+
+
+--CB1L6 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_0_result_int[1]~1
+CB1L6_adder_eqn = ( VCC ) + ( CB1L4 ) + ( CB1L3 );
+CB1L6 = SUM(CB1L6_adder_eqn);
+
+
+--U1L30 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~29
+U1L30_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[6]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][6]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][6])) ) + ( U1L23 );
+U1L30 = SUM(U1L30_adder_eqn);
+
+--U1L31 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~30
+U1L31_adder_eqn = ( !V2_prev_data_2[0] $ (!V3_prev_data_2[6]) ) + ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][6]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][6])) ) + ( U1L23 );
+U1L31 = CARRY(U1L31_adder_eqn);
+
+
+--CB1L18 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[2]~1
+CB1L18_adder_eqn = ( VCC ) + ( CB1L16 ) + ( CB1L15 );
+CB1L18 = SUM(CB1L18_adder_eqn);
+
+
+--FB1_q_a[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[2]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[2]_PORT_A_data_in = VCC;
+FB1_q_a[2]_PORT_A_data_in_reg = DFFE(FB1_q_a[2]_PORT_A_data_in, FB1_q_a[2]_clock_0, , , );
+FB1_q_a[2]_PORT_B_data_in = GB1_ram_rom_data_reg[2];
+FB1_q_a[2]_PORT_B_data_in_reg = DFFE(FB1_q_a[2]_PORT_B_data_in, FB1_q_a[2]_clock_1, , , );
+FB1_q_a[2]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[2]_PORT_A_address_reg = DFFE(FB1_q_a[2]_PORT_A_address, FB1_q_a[2]_clock_0, , , );
+FB1_q_a[2]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[2]_PORT_B_address_reg = DFFE(FB1_q_a[2]_PORT_B_address, FB1_q_a[2]_clock_1, , , );
+FB1_q_a[2]_PORT_A_write_enable = GND;
+FB1_q_a[2]_PORT_A_write_enable_reg = DFFE(FB1_q_a[2]_PORT_A_write_enable, FB1_q_a[2]_clock_0, , , );
+FB1_q_a[2]_PORT_A_read_enable = VCC;
+FB1_q_a[2]_PORT_A_read_enable_reg = DFFE(FB1_q_a[2]_PORT_A_read_enable, FB1_q_a[2]_clock_0, , , );
+FB1_q_a[2]_PORT_B_write_enable = GB1L8;
+FB1_q_a[2]_PORT_B_write_enable_reg = DFFE(FB1_q_a[2]_PORT_B_write_enable, FB1_q_a[2]_clock_1, , , );
+FB1_q_a[2]_PORT_B_read_enable = VCC;
+FB1_q_a[2]_PORT_B_read_enable_reg = DFFE(FB1_q_a[2]_PORT_B_read_enable, FB1_q_a[2]_clock_1, , , );
+FB1_q_a[2]_clock_0 = CLOCK_50;
+FB1_q_a[2]_clock_1 = A1L49;
+FB1_q_a[2]_PORT_A_data_out = MEMORY(FB1_q_a[2]_PORT_A_data_in_reg, FB1_q_a[2]_PORT_B_data_in_reg, FB1_q_a[2]_PORT_A_address_reg, FB1_q_a[2]_PORT_B_address_reg, FB1_q_a[2]_PORT_A_write_enable_reg, FB1_q_a[2]_PORT_A_read_enable_reg, FB1_q_a[2]_PORT_B_write_enable_reg, FB1_q_a[2]_PORT_B_read_enable_reg, , , FB1_q_a[2]_clock_0, FB1_q_a[2]_clock_1, , , , , , );
+FB1_q_a[2]_PORT_A_data_out_reg = DFFE(FB1_q_a[2]_PORT_A_data_out, FB1_q_a[2]_clock_0, , , );
+FB1_q_a[2] = FB1_q_a[2]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[2]
+FB1_q_b[2]_PORT_A_data_in = VCC;
+FB1_q_b[2]_PORT_A_data_in_reg = DFFE(FB1_q_b[2]_PORT_A_data_in, FB1_q_b[2]_clock_0, , , );
+FB1_q_b[2]_PORT_B_data_in = GB1_ram_rom_data_reg[2];
+FB1_q_b[2]_PORT_B_data_in_reg = DFFE(FB1_q_b[2]_PORT_B_data_in, FB1_q_b[2]_clock_1, , , );
+FB1_q_b[2]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[2]_PORT_A_address_reg = DFFE(FB1_q_b[2]_PORT_A_address, FB1_q_b[2]_clock_0, , , );
+FB1_q_b[2]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[2]_PORT_B_address_reg = DFFE(FB1_q_b[2]_PORT_B_address, FB1_q_b[2]_clock_1, , , );
+FB1_q_b[2]_PORT_A_write_enable = GND;
+FB1_q_b[2]_PORT_A_write_enable_reg = DFFE(FB1_q_b[2]_PORT_A_write_enable, FB1_q_b[2]_clock_0, , , );
+FB1_q_b[2]_PORT_A_read_enable = VCC;
+FB1_q_b[2]_PORT_A_read_enable_reg = DFFE(FB1_q_b[2]_PORT_A_read_enable, FB1_q_b[2]_clock_0, , , );
+FB1_q_b[2]_PORT_B_write_enable = GB1L8;
+FB1_q_b[2]_PORT_B_write_enable_reg = DFFE(FB1_q_b[2]_PORT_B_write_enable, FB1_q_b[2]_clock_1, , , );
+FB1_q_b[2]_PORT_B_read_enable = VCC;
+FB1_q_b[2]_PORT_B_read_enable_reg = DFFE(FB1_q_b[2]_PORT_B_read_enable, FB1_q_b[2]_clock_1, , , );
+FB1_q_b[2]_clock_0 = CLOCK_50;
+FB1_q_b[2]_clock_1 = A1L49;
+FB1_q_b[2]_PORT_B_data_out = MEMORY(FB1_q_b[2]_PORT_A_data_in_reg, FB1_q_b[2]_PORT_B_data_in_reg, FB1_q_b[2]_PORT_A_address_reg, FB1_q_b[2]_PORT_B_address_reg, FB1_q_b[2]_PORT_A_write_enable_reg, FB1_q_b[2]_PORT_A_read_enable_reg, FB1_q_b[2]_PORT_B_write_enable_reg, FB1_q_b[2]_PORT_B_read_enable_reg, , , FB1_q_b[2]_clock_0, FB1_q_b[2]_clock_1, , , , , , );
+FB1_q_b[2] = FB1_q_b[2]_PORT_B_data_out[0];
+
+
+--GB1_ram_rom_data_reg[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[3]
+--register power-up is low
+
+GB1_ram_rom_data_reg[3] = AMPP_FUNCTION(A1L49, FB1_q_b[3], GB1_ram_rom_data_reg[4], GB1L18, GB1L38);
+
+
+--U1L35 is processor:top_inst|add_sub:L7|alu:alu_def|Add0~34
+U1L35_adder_eqn = ( V2_prev_data_2[0] ) + ( VCC ) + ( !VCC );
+U1L35 = CARRY(U1L35_adder_eqn);
+
+
+--CB1L167 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~6
+CB1L167_adder_eqn = ( (!CB1_selnose[54] & (((CB1L130)))) # (CB1_selnose[54] & (((CB1L235)) # (CB1L234))) ) + ( !V3_prev_data_2[7] ) + ( CB1L171 );
+CB1L167 = CARRY(CB1L167_adder_eqn);
+
+
+--CB1L130 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~5
+CB1L130_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L98))) # (CB1_sel[45] & (CB1L228)))) # (CB1L94 & (((CB1L228)))) ) + ( !V3_prev_data_2[6] ) + ( CB1L135 );
+CB1L130 = SUM(CB1L130_adder_eqn);
+
+--CB1L131 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~6
+CB1L131_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L98))) # (CB1_sel[45] & (CB1L228)))) # (CB1L94 & (((CB1L228)))) ) + ( !V3_prev_data_2[6] ) + ( CB1L135 );
+CB1L131 = CARRY(CB1L131_adder_eqn);
+
+
+--CB1L98 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~5
+CB1L98_adder_eqn = ( (!CB1_selnose[36] & (((CB1L70)))) # (CB1_selnose[36] & (((CB1L223)) # (CB1L222))) ) + ( !V3_prev_data_2[5] ) + ( CB1L103 );
+CB1L98 = SUM(CB1L98_adder_eqn);
+
+--CB1L99 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~6
+CB1L99_adder_eqn = ( (!CB1_selnose[36] & (((CB1L70)))) # (CB1_selnose[36] & (((CB1L223)) # (CB1L222))) ) + ( !V3_prev_data_2[5] ) + ( CB1L103 );
+CB1L99 = CARRY(CB1L99_adder_eqn);
+
+
+--CB1L70 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~5
+CB1L70_adder_eqn = ( (!CB1L42 & ((!CB1_sel[27] & ((CB1L46))) # (CB1_sel[27] & (CB1L218)))) # (CB1L42 & (((CB1L218)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L75 );
+CB1L70 = SUM(CB1L70_adder_eqn);
+
+--CB1L71 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~6
+CB1L71_adder_eqn = ( (!CB1L42 & ((!CB1_sel[27] & ((CB1L46))) # (CB1_sel[27] & (CB1L218)))) # (CB1L42 & (((CB1L218)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L75 );
+CB1L71 = CARRY(CB1L71_adder_eqn);
+
+
+--CB1L46 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~5
+CB1L46_adder_eqn = ( (!CB1_selnose[18] & (((CB1L26)))) # (CB1_selnose[18] & (((CB1L215)) # (CB1L214))) ) + ( !V3_prev_data_2[3] ) + ( CB1L51 );
+CB1L46 = SUM(CB1L46_adder_eqn);
+
+--CB1L47 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~6
+CB1L47_adder_eqn = ( (!CB1_selnose[18] & (((CB1L26)))) # (CB1_selnose[18] & (((CB1L215)) # (CB1L214))) ) + ( !V3_prev_data_2[3] ) + ( CB1L51 );
+CB1L47 = CARRY(CB1L47_adder_eqn);
+
+
+--CB1L26 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~5
+CB1L26_adder_eqn = ( (!CB1L18 & ((!CB1_sel[1] & (CB1L14)) # (CB1_sel[1] & ((CB1L212))))) # (CB1L18 & (((CB1L212)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L31 );
+CB1L26 = SUM(CB1L26_adder_eqn);
+
+--CB1L27 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~6
+CB1L27_adder_eqn = ( (!CB1L18 & ((!CB1_sel[1] & (CB1L14)) # (CB1_sel[1] & ((CB1L212))))) # (CB1L18 & (((CB1L212)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L31 );
+CB1L27 = CARRY(CB1L27_adder_eqn);
+
+
+--CB1L2 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_0_result_int[0]~5
+CB1L2_adder_eqn = ( !V3_prev_data_2[0] $ (!Y1L8) ) + ( !VCC ) + ( !VCC );
+CB1L2 = SUM(CB1L2_adder_eqn);
+
+--CB1L3 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_0_result_int[0]~6
+CB1L3_adder_eqn = ( !V3_prev_data_2[0] $ (!Y1L8) ) + ( !VCC ) + ( !VCC );
+CB1L3 = CARRY(CB1L3_adder_eqn);
+
+--CB1L4 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_0_result_int[0]~7
+CB1L4_share_eqn = (!V3_prev_data_2[0]) # (Y1L8);
+CB1L4 = SHARE(CB1L4_share_eqn);
+
+
+--CB1L14 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[1]~5
+CB1L14_adder_eqn = ( !V3_prev_data_2[1] $ (((!CB1_selnose[0] & (CB1L2)) # (CB1_selnose[0] & ((Y1L8))))) ) + ( CB1L12 ) + ( CB1L11 );
+CB1L14 = SUM(CB1L14_adder_eqn);
+
+--CB1L15 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[1]~6
+CB1L15_adder_eqn = ( !V3_prev_data_2[1] $ (((!CB1_selnose[0] & (CB1L2)) # (CB1_selnose[0] & ((Y1L8))))) ) + ( CB1L12 ) + ( CB1L11 );
+CB1L15 = CARRY(CB1L15_adder_eqn);
+
+--CB1L16 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[1]~7
+CB1L16_share_eqn = (!V3_prev_data_2[1] & ((!CB1_selnose[0] & (CB1L2)) # (CB1_selnose[0] & ((Y1L8)))));
+CB1L16 = SHARE(CB1L16_share_eqn);
+
+
+--FB1_q_a[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[3]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[3]_PORT_A_data_in = VCC;
+FB1_q_a[3]_PORT_A_data_in_reg = DFFE(FB1_q_a[3]_PORT_A_data_in, FB1_q_a[3]_clock_0, , , );
+FB1_q_a[3]_PORT_B_data_in = GB1_ram_rom_data_reg[3];
+FB1_q_a[3]_PORT_B_data_in_reg = DFFE(FB1_q_a[3]_PORT_B_data_in, FB1_q_a[3]_clock_1, , , );
+FB1_q_a[3]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[3]_PORT_A_address_reg = DFFE(FB1_q_a[3]_PORT_A_address, FB1_q_a[3]_clock_0, , , );
+FB1_q_a[3]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[3]_PORT_B_address_reg = DFFE(FB1_q_a[3]_PORT_B_address, FB1_q_a[3]_clock_1, , , );
+FB1_q_a[3]_PORT_A_write_enable = GND;
+FB1_q_a[3]_PORT_A_write_enable_reg = DFFE(FB1_q_a[3]_PORT_A_write_enable, FB1_q_a[3]_clock_0, , , );
+FB1_q_a[3]_PORT_A_read_enable = VCC;
+FB1_q_a[3]_PORT_A_read_enable_reg = DFFE(FB1_q_a[3]_PORT_A_read_enable, FB1_q_a[3]_clock_0, , , );
+FB1_q_a[3]_PORT_B_write_enable = GB1L8;
+FB1_q_a[3]_PORT_B_write_enable_reg = DFFE(FB1_q_a[3]_PORT_B_write_enable, FB1_q_a[3]_clock_1, , , );
+FB1_q_a[3]_PORT_B_read_enable = VCC;
+FB1_q_a[3]_PORT_B_read_enable_reg = DFFE(FB1_q_a[3]_PORT_B_read_enable, FB1_q_a[3]_clock_1, , , );
+FB1_q_a[3]_clock_0 = CLOCK_50;
+FB1_q_a[3]_clock_1 = A1L49;
+FB1_q_a[3]_PORT_A_data_out = MEMORY(FB1_q_a[3]_PORT_A_data_in_reg, FB1_q_a[3]_PORT_B_data_in_reg, FB1_q_a[3]_PORT_A_address_reg, FB1_q_a[3]_PORT_B_address_reg, FB1_q_a[3]_PORT_A_write_enable_reg, FB1_q_a[3]_PORT_A_read_enable_reg, FB1_q_a[3]_PORT_B_write_enable_reg, FB1_q_a[3]_PORT_B_read_enable_reg, , , FB1_q_a[3]_clock_0, FB1_q_a[3]_clock_1, , , , , , );
+FB1_q_a[3]_PORT_A_data_out_reg = DFFE(FB1_q_a[3]_PORT_A_data_out, FB1_q_a[3]_clock_0, , , );
+FB1_q_a[3] = FB1_q_a[3]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[3]
+FB1_q_b[3]_PORT_A_data_in = VCC;
+FB1_q_b[3]_PORT_A_data_in_reg = DFFE(FB1_q_b[3]_PORT_A_data_in, FB1_q_b[3]_clock_0, , , );
+FB1_q_b[3]_PORT_B_data_in = GB1_ram_rom_data_reg[3];
+FB1_q_b[3]_PORT_B_data_in_reg = DFFE(FB1_q_b[3]_PORT_B_data_in, FB1_q_b[3]_clock_1, , , );
+FB1_q_b[3]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[3]_PORT_A_address_reg = DFFE(FB1_q_b[3]_PORT_A_address, FB1_q_b[3]_clock_0, , , );
+FB1_q_b[3]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[3]_PORT_B_address_reg = DFFE(FB1_q_b[3]_PORT_B_address, FB1_q_b[3]_clock_1, , , );
+FB1_q_b[3]_PORT_A_write_enable = GND;
+FB1_q_b[3]_PORT_A_write_enable_reg = DFFE(FB1_q_b[3]_PORT_A_write_enable, FB1_q_b[3]_clock_0, , , );
+FB1_q_b[3]_PORT_A_read_enable = VCC;
+FB1_q_b[3]_PORT_A_read_enable_reg = DFFE(FB1_q_b[3]_PORT_A_read_enable, FB1_q_b[3]_clock_0, , , );
+FB1_q_b[3]_PORT_B_write_enable = GB1L8;
+FB1_q_b[3]_PORT_B_write_enable_reg = DFFE(FB1_q_b[3]_PORT_B_write_enable, FB1_q_b[3]_clock_1, , , );
+FB1_q_b[3]_PORT_B_read_enable = VCC;
+FB1_q_b[3]_PORT_B_read_enable_reg = DFFE(FB1_q_b[3]_PORT_B_read_enable, FB1_q_b[3]_clock_1, , , );
+FB1_q_b[3]_clock_0 = CLOCK_50;
+FB1_q_b[3]_clock_1 = A1L49;
+FB1_q_b[3]_PORT_B_data_out = MEMORY(FB1_q_b[3]_PORT_A_data_in_reg, FB1_q_b[3]_PORT_B_data_in_reg, FB1_q_b[3]_PORT_A_address_reg, FB1_q_b[3]_PORT_B_address_reg, FB1_q_b[3]_PORT_A_write_enable_reg, FB1_q_b[3]_PORT_A_read_enable_reg, FB1_q_b[3]_PORT_B_write_enable_reg, FB1_q_b[3]_PORT_B_read_enable_reg, , , FB1_q_b[3]_clock_0, FB1_q_b[3]_clock_1, , , , , , );
+FB1_q_b[3] = FB1_q_b[3]_PORT_B_data_out[0];
+
+
+--GB1_ram_rom_data_reg[4] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[4]
+--register power-up is low
+
+GB1_ram_rom_data_reg[4] = AMPP_FUNCTION(A1L49, FB1_q_b[4], GB1_ram_rom_data_reg[5], GB1L18, GB1L38);
+
+
+--FB1_q_a[10] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[10]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[10]_PORT_A_data_in = VCC;
+FB1_q_a[10]_PORT_A_data_in_reg = DFFE(FB1_q_a[10]_PORT_A_data_in, FB1_q_a[10]_clock_0, , , );
+FB1_q_a[10]_PORT_B_data_in = GB1_ram_rom_data_reg[10];
+FB1_q_a[10]_PORT_B_data_in_reg = DFFE(FB1_q_a[10]_PORT_B_data_in, FB1_q_a[10]_clock_1, , , );
+FB1_q_a[10]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[10]_PORT_A_address_reg = DFFE(FB1_q_a[10]_PORT_A_address, FB1_q_a[10]_clock_0, , , );
+FB1_q_a[10]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[10]_PORT_B_address_reg = DFFE(FB1_q_a[10]_PORT_B_address, FB1_q_a[10]_clock_1, , , );
+FB1_q_a[10]_PORT_A_write_enable = GND;
+FB1_q_a[10]_PORT_A_write_enable_reg = DFFE(FB1_q_a[10]_PORT_A_write_enable, FB1_q_a[10]_clock_0, , , );
+FB1_q_a[10]_PORT_A_read_enable = VCC;
+FB1_q_a[10]_PORT_A_read_enable_reg = DFFE(FB1_q_a[10]_PORT_A_read_enable, FB1_q_a[10]_clock_0, , , );
+FB1_q_a[10]_PORT_B_write_enable = GB1L8;
+FB1_q_a[10]_PORT_B_write_enable_reg = DFFE(FB1_q_a[10]_PORT_B_write_enable, FB1_q_a[10]_clock_1, , , );
+FB1_q_a[10]_PORT_B_read_enable = VCC;
+FB1_q_a[10]_PORT_B_read_enable_reg = DFFE(FB1_q_a[10]_PORT_B_read_enable, FB1_q_a[10]_clock_1, , , );
+FB1_q_a[10]_clock_0 = CLOCK_50;
+FB1_q_a[10]_clock_1 = A1L49;
+FB1_q_a[10]_PORT_A_data_out = MEMORY(FB1_q_a[10]_PORT_A_data_in_reg, FB1_q_a[10]_PORT_B_data_in_reg, FB1_q_a[10]_PORT_A_address_reg, FB1_q_a[10]_PORT_B_address_reg, FB1_q_a[10]_PORT_A_write_enable_reg, FB1_q_a[10]_PORT_A_read_enable_reg, FB1_q_a[10]_PORT_B_write_enable_reg, FB1_q_a[10]_PORT_B_read_enable_reg, , , FB1_q_a[10]_clock_0, FB1_q_a[10]_clock_1, , , , , , );
+FB1_q_a[10]_PORT_A_data_out_reg = DFFE(FB1_q_a[10]_PORT_A_data_out, FB1_q_a[10]_clock_0, , , );
+FB1_q_a[10] = FB1_q_a[10]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[10] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[10]
+FB1_q_b[10]_PORT_A_data_in = VCC;
+FB1_q_b[10]_PORT_A_data_in_reg = DFFE(FB1_q_b[10]_PORT_A_data_in, FB1_q_b[10]_clock_0, , , );
+FB1_q_b[10]_PORT_B_data_in = GB1_ram_rom_data_reg[10];
+FB1_q_b[10]_PORT_B_data_in_reg = DFFE(FB1_q_b[10]_PORT_B_data_in, FB1_q_b[10]_clock_1, , , );
+FB1_q_b[10]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[10]_PORT_A_address_reg = DFFE(FB1_q_b[10]_PORT_A_address, FB1_q_b[10]_clock_0, , , );
+FB1_q_b[10]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[10]_PORT_B_address_reg = DFFE(FB1_q_b[10]_PORT_B_address, FB1_q_b[10]_clock_1, , , );
+FB1_q_b[10]_PORT_A_write_enable = GND;
+FB1_q_b[10]_PORT_A_write_enable_reg = DFFE(FB1_q_b[10]_PORT_A_write_enable, FB1_q_b[10]_clock_0, , , );
+FB1_q_b[10]_PORT_A_read_enable = VCC;
+FB1_q_b[10]_PORT_A_read_enable_reg = DFFE(FB1_q_b[10]_PORT_A_read_enable, FB1_q_b[10]_clock_0, , , );
+FB1_q_b[10]_PORT_B_write_enable = GB1L8;
+FB1_q_b[10]_PORT_B_write_enable_reg = DFFE(FB1_q_b[10]_PORT_B_write_enable, FB1_q_b[10]_clock_1, , , );
+FB1_q_b[10]_PORT_B_read_enable = VCC;
+FB1_q_b[10]_PORT_B_read_enable_reg = DFFE(FB1_q_b[10]_PORT_B_read_enable, FB1_q_b[10]_clock_1, , , );
+FB1_q_b[10]_clock_0 = CLOCK_50;
+FB1_q_b[10]_clock_1 = A1L49;
+FB1_q_b[10]_PORT_B_data_out = MEMORY(FB1_q_b[10]_PORT_A_data_in_reg, FB1_q_b[10]_PORT_B_data_in_reg, FB1_q_b[10]_PORT_A_address_reg, FB1_q_b[10]_PORT_B_address_reg, FB1_q_b[10]_PORT_A_write_enable_reg, FB1_q_b[10]_PORT_A_read_enable_reg, FB1_q_b[10]_PORT_B_write_enable_reg, FB1_q_b[10]_PORT_B_read_enable_reg, , , FB1_q_b[10]_clock_0, FB1_q_b[10]_clock_1, , , , , , );
+FB1_q_b[10] = FB1_q_b[10]_PORT_B_data_out[0];
+
+
+--CB1L171 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~10
+CB1L171_adder_eqn = ( (!V3_prev_data_2[7] & ((!CB1L126 & ((CB1L134))) # (CB1L126 & (CB1L233)))) # (V3_prev_data_2[7] & (((CB1L233)))) ) + ( !V3_prev_data_2[6] ) + ( CB1L175 );
+CB1L171 = CARRY(CB1L171_adder_eqn);
+
+
+--FB1_q_a[11] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[11]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[11]_PORT_A_data_in = VCC;
+FB1_q_a[11]_PORT_A_data_in_reg = DFFE(FB1_q_a[11]_PORT_A_data_in, FB1_q_a[11]_clock_0, , , );
+FB1_q_a[11]_PORT_B_data_in = GB1_ram_rom_data_reg[11];
+FB1_q_a[11]_PORT_B_data_in_reg = DFFE(FB1_q_a[11]_PORT_B_data_in, FB1_q_a[11]_clock_1, , , );
+FB1_q_a[11]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[11]_PORT_A_address_reg = DFFE(FB1_q_a[11]_PORT_A_address, FB1_q_a[11]_clock_0, , , );
+FB1_q_a[11]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[11]_PORT_B_address_reg = DFFE(FB1_q_a[11]_PORT_B_address, FB1_q_a[11]_clock_1, , , );
+FB1_q_a[11]_PORT_A_write_enable = GND;
+FB1_q_a[11]_PORT_A_write_enable_reg = DFFE(FB1_q_a[11]_PORT_A_write_enable, FB1_q_a[11]_clock_0, , , );
+FB1_q_a[11]_PORT_A_read_enable = VCC;
+FB1_q_a[11]_PORT_A_read_enable_reg = DFFE(FB1_q_a[11]_PORT_A_read_enable, FB1_q_a[11]_clock_0, , , );
+FB1_q_a[11]_PORT_B_write_enable = GB1L8;
+FB1_q_a[11]_PORT_B_write_enable_reg = DFFE(FB1_q_a[11]_PORT_B_write_enable, FB1_q_a[11]_clock_1, , , );
+FB1_q_a[11]_PORT_B_read_enable = VCC;
+FB1_q_a[11]_PORT_B_read_enable_reg = DFFE(FB1_q_a[11]_PORT_B_read_enable, FB1_q_a[11]_clock_1, , , );
+FB1_q_a[11]_clock_0 = CLOCK_50;
+FB1_q_a[11]_clock_1 = A1L49;
+FB1_q_a[11]_PORT_A_data_out = MEMORY(FB1_q_a[11]_PORT_A_data_in_reg, FB1_q_a[11]_PORT_B_data_in_reg, FB1_q_a[11]_PORT_A_address_reg, FB1_q_a[11]_PORT_B_address_reg, FB1_q_a[11]_PORT_A_write_enable_reg, FB1_q_a[11]_PORT_A_read_enable_reg, FB1_q_a[11]_PORT_B_write_enable_reg, FB1_q_a[11]_PORT_B_read_enable_reg, , , FB1_q_a[11]_clock_0, FB1_q_a[11]_clock_1, , , , , , );
+FB1_q_a[11]_PORT_A_data_out_reg = DFFE(FB1_q_a[11]_PORT_A_data_out, FB1_q_a[11]_clock_0, , , );
+FB1_q_a[11] = FB1_q_a[11]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[11] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[11]
+FB1_q_b[11]_PORT_A_data_in = VCC;
+FB1_q_b[11]_PORT_A_data_in_reg = DFFE(FB1_q_b[11]_PORT_A_data_in, FB1_q_b[11]_clock_0, , , );
+FB1_q_b[11]_PORT_B_data_in = GB1_ram_rom_data_reg[11];
+FB1_q_b[11]_PORT_B_data_in_reg = DFFE(FB1_q_b[11]_PORT_B_data_in, FB1_q_b[11]_clock_1, , , );
+FB1_q_b[11]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[11]_PORT_A_address_reg = DFFE(FB1_q_b[11]_PORT_A_address, FB1_q_b[11]_clock_0, , , );
+FB1_q_b[11]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[11]_PORT_B_address_reg = DFFE(FB1_q_b[11]_PORT_B_address, FB1_q_b[11]_clock_1, , , );
+FB1_q_b[11]_PORT_A_write_enable = GND;
+FB1_q_b[11]_PORT_A_write_enable_reg = DFFE(FB1_q_b[11]_PORT_A_write_enable, FB1_q_b[11]_clock_0, , , );
+FB1_q_b[11]_PORT_A_read_enable = VCC;
+FB1_q_b[11]_PORT_A_read_enable_reg = DFFE(FB1_q_b[11]_PORT_A_read_enable, FB1_q_b[11]_clock_0, , , );
+FB1_q_b[11]_PORT_B_write_enable = GB1L8;
+FB1_q_b[11]_PORT_B_write_enable_reg = DFFE(FB1_q_b[11]_PORT_B_write_enable, FB1_q_b[11]_clock_1, , , );
+FB1_q_b[11]_PORT_B_read_enable = VCC;
+FB1_q_b[11]_PORT_B_read_enable_reg = DFFE(FB1_q_b[11]_PORT_B_read_enable, FB1_q_b[11]_clock_1, , , );
+FB1_q_b[11]_clock_0 = CLOCK_50;
+FB1_q_b[11]_clock_1 = A1L49;
+FB1_q_b[11]_PORT_B_data_out = MEMORY(FB1_q_b[11]_PORT_A_data_in_reg, FB1_q_b[11]_PORT_B_data_in_reg, FB1_q_b[11]_PORT_A_address_reg, FB1_q_b[11]_PORT_B_address_reg, FB1_q_b[11]_PORT_A_write_enable_reg, FB1_q_b[11]_PORT_A_read_enable_reg, FB1_q_b[11]_PORT_B_write_enable_reg, FB1_q_b[11]_PORT_B_read_enable_reg, , , FB1_q_b[11]_clock_0, FB1_q_b[11]_clock_1, , , , , , );
+FB1_q_b[11] = FB1_q_b[11]_PORT_B_data_out[0];
+
+
+--FB1_q_a[7] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[7]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[7]_PORT_A_data_in = VCC;
+FB1_q_a[7]_PORT_A_data_in_reg = DFFE(FB1_q_a[7]_PORT_A_data_in, FB1_q_a[7]_clock_0, , , );
+FB1_q_a[7]_PORT_B_data_in = GB1_ram_rom_data_reg[7];
+FB1_q_a[7]_PORT_B_data_in_reg = DFFE(FB1_q_a[7]_PORT_B_data_in, FB1_q_a[7]_clock_1, , , );
+FB1_q_a[7]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[7]_PORT_A_address_reg = DFFE(FB1_q_a[7]_PORT_A_address, FB1_q_a[7]_clock_0, , , );
+FB1_q_a[7]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[7]_PORT_B_address_reg = DFFE(FB1_q_a[7]_PORT_B_address, FB1_q_a[7]_clock_1, , , );
+FB1_q_a[7]_PORT_A_write_enable = GND;
+FB1_q_a[7]_PORT_A_write_enable_reg = DFFE(FB1_q_a[7]_PORT_A_write_enable, FB1_q_a[7]_clock_0, , , );
+FB1_q_a[7]_PORT_A_read_enable = VCC;
+FB1_q_a[7]_PORT_A_read_enable_reg = DFFE(FB1_q_a[7]_PORT_A_read_enable, FB1_q_a[7]_clock_0, , , );
+FB1_q_a[7]_PORT_B_write_enable = GB1L8;
+FB1_q_a[7]_PORT_B_write_enable_reg = DFFE(FB1_q_a[7]_PORT_B_write_enable, FB1_q_a[7]_clock_1, , , );
+FB1_q_a[7]_PORT_B_read_enable = VCC;
+FB1_q_a[7]_PORT_B_read_enable_reg = DFFE(FB1_q_a[7]_PORT_B_read_enable, FB1_q_a[7]_clock_1, , , );
+FB1_q_a[7]_clock_0 = CLOCK_50;
+FB1_q_a[7]_clock_1 = A1L49;
+FB1_q_a[7]_PORT_A_data_out = MEMORY(FB1_q_a[7]_PORT_A_data_in_reg, FB1_q_a[7]_PORT_B_data_in_reg, FB1_q_a[7]_PORT_A_address_reg, FB1_q_a[7]_PORT_B_address_reg, FB1_q_a[7]_PORT_A_write_enable_reg, FB1_q_a[7]_PORT_A_read_enable_reg, FB1_q_a[7]_PORT_B_write_enable_reg, FB1_q_a[7]_PORT_B_read_enable_reg, , , FB1_q_a[7]_clock_0, FB1_q_a[7]_clock_1, , , , , , );
+FB1_q_a[7]_PORT_A_data_out_reg = DFFE(FB1_q_a[7]_PORT_A_data_out, FB1_q_a[7]_clock_0, , , );
+FB1_q_a[7] = FB1_q_a[7]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[7] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[7]
+FB1_q_b[7]_PORT_A_data_in = VCC;
+FB1_q_b[7]_PORT_A_data_in_reg = DFFE(FB1_q_b[7]_PORT_A_data_in, FB1_q_b[7]_clock_0, , , );
+FB1_q_b[7]_PORT_B_data_in = GB1_ram_rom_data_reg[7];
+FB1_q_b[7]_PORT_B_data_in_reg = DFFE(FB1_q_b[7]_PORT_B_data_in, FB1_q_b[7]_clock_1, , , );
+FB1_q_b[7]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[7]_PORT_A_address_reg = DFFE(FB1_q_b[7]_PORT_A_address, FB1_q_b[7]_clock_0, , , );
+FB1_q_b[7]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[7]_PORT_B_address_reg = DFFE(FB1_q_b[7]_PORT_B_address, FB1_q_b[7]_clock_1, , , );
+FB1_q_b[7]_PORT_A_write_enable = GND;
+FB1_q_b[7]_PORT_A_write_enable_reg = DFFE(FB1_q_b[7]_PORT_A_write_enable, FB1_q_b[7]_clock_0, , , );
+FB1_q_b[7]_PORT_A_read_enable = VCC;
+FB1_q_b[7]_PORT_A_read_enable_reg = DFFE(FB1_q_b[7]_PORT_A_read_enable, FB1_q_b[7]_clock_0, , , );
+FB1_q_b[7]_PORT_B_write_enable = GB1L8;
+FB1_q_b[7]_PORT_B_write_enable_reg = DFFE(FB1_q_b[7]_PORT_B_write_enable, FB1_q_b[7]_clock_1, , , );
+FB1_q_b[7]_PORT_B_read_enable = VCC;
+FB1_q_b[7]_PORT_B_read_enable_reg = DFFE(FB1_q_b[7]_PORT_B_read_enable, FB1_q_b[7]_clock_1, , , );
+FB1_q_b[7]_clock_0 = CLOCK_50;
+FB1_q_b[7]_clock_1 = A1L49;
+FB1_q_b[7]_PORT_B_data_out = MEMORY(FB1_q_b[7]_PORT_A_data_in_reg, FB1_q_b[7]_PORT_B_data_in_reg, FB1_q_b[7]_PORT_A_address_reg, FB1_q_b[7]_PORT_B_address_reg, FB1_q_b[7]_PORT_A_write_enable_reg, FB1_q_b[7]_PORT_A_read_enable_reg, FB1_q_b[7]_PORT_B_write_enable_reg, FB1_q_b[7]_PORT_B_read_enable_reg, , , FB1_q_b[7]_clock_0, FB1_q_b[7]_clock_1, , , , , , );
+FB1_q_b[7] = FB1_q_b[7]_PORT_B_data_out[0];
+
+
+--CB1L134 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~9
+CB1L134_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L102))) # (CB1_sel[45] & (CB1L227)))) # (CB1L94 & (((CB1L227)))) ) + ( !V3_prev_data_2[5] ) + ( CB1L139 );
+CB1L134 = SUM(CB1L134_adder_eqn);
+
+--CB1L135 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~10
+CB1L135_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L102))) # (CB1_sel[45] & (CB1L227)))) # (CB1L94 & (((CB1L227)))) ) + ( !V3_prev_data_2[5] ) + ( CB1L139 );
+CB1L135 = CARRY(CB1L135_adder_eqn);
+
+
+--FB1_q_a[6] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[6]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[6]_PORT_A_data_in = VCC;
+FB1_q_a[6]_PORT_A_data_in_reg = DFFE(FB1_q_a[6]_PORT_A_data_in, FB1_q_a[6]_clock_0, , , );
+FB1_q_a[6]_PORT_B_data_in = GB1_ram_rom_data_reg[6];
+FB1_q_a[6]_PORT_B_data_in_reg = DFFE(FB1_q_a[6]_PORT_B_data_in, FB1_q_a[6]_clock_1, , , );
+FB1_q_a[6]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[6]_PORT_A_address_reg = DFFE(FB1_q_a[6]_PORT_A_address, FB1_q_a[6]_clock_0, , , );
+FB1_q_a[6]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[6]_PORT_B_address_reg = DFFE(FB1_q_a[6]_PORT_B_address, FB1_q_a[6]_clock_1, , , );
+FB1_q_a[6]_PORT_A_write_enable = GND;
+FB1_q_a[6]_PORT_A_write_enable_reg = DFFE(FB1_q_a[6]_PORT_A_write_enable, FB1_q_a[6]_clock_0, , , );
+FB1_q_a[6]_PORT_A_read_enable = VCC;
+FB1_q_a[6]_PORT_A_read_enable_reg = DFFE(FB1_q_a[6]_PORT_A_read_enable, FB1_q_a[6]_clock_0, , , );
+FB1_q_a[6]_PORT_B_write_enable = GB1L8;
+FB1_q_a[6]_PORT_B_write_enable_reg = DFFE(FB1_q_a[6]_PORT_B_write_enable, FB1_q_a[6]_clock_1, , , );
+FB1_q_a[6]_PORT_B_read_enable = VCC;
+FB1_q_a[6]_PORT_B_read_enable_reg = DFFE(FB1_q_a[6]_PORT_B_read_enable, FB1_q_a[6]_clock_1, , , );
+FB1_q_a[6]_clock_0 = CLOCK_50;
+FB1_q_a[6]_clock_1 = A1L49;
+FB1_q_a[6]_PORT_A_data_out = MEMORY(FB1_q_a[6]_PORT_A_data_in_reg, FB1_q_a[6]_PORT_B_data_in_reg, FB1_q_a[6]_PORT_A_address_reg, FB1_q_a[6]_PORT_B_address_reg, FB1_q_a[6]_PORT_A_write_enable_reg, FB1_q_a[6]_PORT_A_read_enable_reg, FB1_q_a[6]_PORT_B_write_enable_reg, FB1_q_a[6]_PORT_B_read_enable_reg, , , FB1_q_a[6]_clock_0, FB1_q_a[6]_clock_1, , , , , , );
+FB1_q_a[6]_PORT_A_data_out_reg = DFFE(FB1_q_a[6]_PORT_A_data_out, FB1_q_a[6]_clock_0, , , );
+FB1_q_a[6] = FB1_q_a[6]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[6] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[6]
+FB1_q_b[6]_PORT_A_data_in = VCC;
+FB1_q_b[6]_PORT_A_data_in_reg = DFFE(FB1_q_b[6]_PORT_A_data_in, FB1_q_b[6]_clock_0, , , );
+FB1_q_b[6]_PORT_B_data_in = GB1_ram_rom_data_reg[6];
+FB1_q_b[6]_PORT_B_data_in_reg = DFFE(FB1_q_b[6]_PORT_B_data_in, FB1_q_b[6]_clock_1, , , );
+FB1_q_b[6]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[6]_PORT_A_address_reg = DFFE(FB1_q_b[6]_PORT_A_address, FB1_q_b[6]_clock_0, , , );
+FB1_q_b[6]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[6]_PORT_B_address_reg = DFFE(FB1_q_b[6]_PORT_B_address, FB1_q_b[6]_clock_1, , , );
+FB1_q_b[6]_PORT_A_write_enable = GND;
+FB1_q_b[6]_PORT_A_write_enable_reg = DFFE(FB1_q_b[6]_PORT_A_write_enable, FB1_q_b[6]_clock_0, , , );
+FB1_q_b[6]_PORT_A_read_enable = VCC;
+FB1_q_b[6]_PORT_A_read_enable_reg = DFFE(FB1_q_b[6]_PORT_A_read_enable, FB1_q_b[6]_clock_0, , , );
+FB1_q_b[6]_PORT_B_write_enable = GB1L8;
+FB1_q_b[6]_PORT_B_write_enable_reg = DFFE(FB1_q_b[6]_PORT_B_write_enable, FB1_q_b[6]_clock_1, , , );
+FB1_q_b[6]_PORT_B_read_enable = VCC;
+FB1_q_b[6]_PORT_B_read_enable_reg = DFFE(FB1_q_b[6]_PORT_B_read_enable, FB1_q_b[6]_clock_1, , , );
+FB1_q_b[6]_clock_0 = CLOCK_50;
+FB1_q_b[6]_clock_1 = A1L49;
+FB1_q_b[6]_PORT_B_data_out = MEMORY(FB1_q_b[6]_PORT_A_data_in_reg, FB1_q_b[6]_PORT_B_data_in_reg, FB1_q_b[6]_PORT_A_address_reg, FB1_q_b[6]_PORT_B_address_reg, FB1_q_b[6]_PORT_A_write_enable_reg, FB1_q_b[6]_PORT_A_read_enable_reg, FB1_q_b[6]_PORT_B_write_enable_reg, FB1_q_b[6]_PORT_B_read_enable_reg, , , FB1_q_b[6]_clock_0, FB1_q_b[6]_clock_1, , , , , , );
+FB1_q_b[6] = FB1_q_b[6]_PORT_B_data_out[0];
+
+
+--CB1L102 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~9
+CB1L102_adder_eqn = ( (!CB1L66 & ((!CB1_sel[36] & ((CB1L74))) # (CB1_sel[36] & (CB1L221)))) # (CB1L66 & (((CB1L221)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L107 );
+CB1L102 = SUM(CB1L102_adder_eqn);
+
+--CB1L103 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~10
+CB1L103_adder_eqn = ( (!CB1L66 & ((!CB1_sel[36] & ((CB1L74))) # (CB1_sel[36] & (CB1L221)))) # (CB1L66 & (((CB1L221)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L107 );
+CB1L103 = CARRY(CB1L103_adder_eqn);
+
+
+--FB1_q_a[5] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[5]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[5]_PORT_A_data_in = VCC;
+FB1_q_a[5]_PORT_A_data_in_reg = DFFE(FB1_q_a[5]_PORT_A_data_in, FB1_q_a[5]_clock_0, , , );
+FB1_q_a[5]_PORT_B_data_in = GB1_ram_rom_data_reg[5];
+FB1_q_a[5]_PORT_B_data_in_reg = DFFE(FB1_q_a[5]_PORT_B_data_in, FB1_q_a[5]_clock_1, , , );
+FB1_q_a[5]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[5]_PORT_A_address_reg = DFFE(FB1_q_a[5]_PORT_A_address, FB1_q_a[5]_clock_0, , , );
+FB1_q_a[5]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[5]_PORT_B_address_reg = DFFE(FB1_q_a[5]_PORT_B_address, FB1_q_a[5]_clock_1, , , );
+FB1_q_a[5]_PORT_A_write_enable = GND;
+FB1_q_a[5]_PORT_A_write_enable_reg = DFFE(FB1_q_a[5]_PORT_A_write_enable, FB1_q_a[5]_clock_0, , , );
+FB1_q_a[5]_PORT_A_read_enable = VCC;
+FB1_q_a[5]_PORT_A_read_enable_reg = DFFE(FB1_q_a[5]_PORT_A_read_enable, FB1_q_a[5]_clock_0, , , );
+FB1_q_a[5]_PORT_B_write_enable = GB1L8;
+FB1_q_a[5]_PORT_B_write_enable_reg = DFFE(FB1_q_a[5]_PORT_B_write_enable, FB1_q_a[5]_clock_1, , , );
+FB1_q_a[5]_PORT_B_read_enable = VCC;
+FB1_q_a[5]_PORT_B_read_enable_reg = DFFE(FB1_q_a[5]_PORT_B_read_enable, FB1_q_a[5]_clock_1, , , );
+FB1_q_a[5]_clock_0 = CLOCK_50;
+FB1_q_a[5]_clock_1 = A1L49;
+FB1_q_a[5]_PORT_A_data_out = MEMORY(FB1_q_a[5]_PORT_A_data_in_reg, FB1_q_a[5]_PORT_B_data_in_reg, FB1_q_a[5]_PORT_A_address_reg, FB1_q_a[5]_PORT_B_address_reg, FB1_q_a[5]_PORT_A_write_enable_reg, FB1_q_a[5]_PORT_A_read_enable_reg, FB1_q_a[5]_PORT_B_write_enable_reg, FB1_q_a[5]_PORT_B_read_enable_reg, , , FB1_q_a[5]_clock_0, FB1_q_a[5]_clock_1, , , , , , );
+FB1_q_a[5]_PORT_A_data_out_reg = DFFE(FB1_q_a[5]_PORT_A_data_out, FB1_q_a[5]_clock_0, , , );
+FB1_q_a[5] = FB1_q_a[5]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[5] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[5]
+FB1_q_b[5]_PORT_A_data_in = VCC;
+FB1_q_b[5]_PORT_A_data_in_reg = DFFE(FB1_q_b[5]_PORT_A_data_in, FB1_q_b[5]_clock_0, , , );
+FB1_q_b[5]_PORT_B_data_in = GB1_ram_rom_data_reg[5];
+FB1_q_b[5]_PORT_B_data_in_reg = DFFE(FB1_q_b[5]_PORT_B_data_in, FB1_q_b[5]_clock_1, , , );
+FB1_q_b[5]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[5]_PORT_A_address_reg = DFFE(FB1_q_b[5]_PORT_A_address, FB1_q_b[5]_clock_0, , , );
+FB1_q_b[5]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[5]_PORT_B_address_reg = DFFE(FB1_q_b[5]_PORT_B_address, FB1_q_b[5]_clock_1, , , );
+FB1_q_b[5]_PORT_A_write_enable = GND;
+FB1_q_b[5]_PORT_A_write_enable_reg = DFFE(FB1_q_b[5]_PORT_A_write_enable, FB1_q_b[5]_clock_0, , , );
+FB1_q_b[5]_PORT_A_read_enable = VCC;
+FB1_q_b[5]_PORT_A_read_enable_reg = DFFE(FB1_q_b[5]_PORT_A_read_enable, FB1_q_b[5]_clock_0, , , );
+FB1_q_b[5]_PORT_B_write_enable = GB1L8;
+FB1_q_b[5]_PORT_B_write_enable_reg = DFFE(FB1_q_b[5]_PORT_B_write_enable, FB1_q_b[5]_clock_1, , , );
+FB1_q_b[5]_PORT_B_read_enable = VCC;
+FB1_q_b[5]_PORT_B_read_enable_reg = DFFE(FB1_q_b[5]_PORT_B_read_enable, FB1_q_b[5]_clock_1, , , );
+FB1_q_b[5]_clock_0 = CLOCK_50;
+FB1_q_b[5]_clock_1 = A1L49;
+FB1_q_b[5]_PORT_B_data_out = MEMORY(FB1_q_b[5]_PORT_A_data_in_reg, FB1_q_b[5]_PORT_B_data_in_reg, FB1_q_b[5]_PORT_A_address_reg, FB1_q_b[5]_PORT_B_address_reg, FB1_q_b[5]_PORT_A_write_enable_reg, FB1_q_b[5]_PORT_A_read_enable_reg, FB1_q_b[5]_PORT_B_write_enable_reg, FB1_q_b[5]_PORT_B_read_enable_reg, , , FB1_q_b[5]_clock_0, FB1_q_b[5]_clock_1, , , , , , );
+FB1_q_b[5] = FB1_q_b[5]_PORT_B_data_out[0];
+
+
+--CB1L74 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~9
+CB1L74_adder_eqn = ( (!CB1L42 & ((!CB1_sel[27] & ((CB1L50))) # (CB1_sel[27] & (CB1L217)))) # (CB1L42 & (((CB1L217)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L79 );
+CB1L74 = SUM(CB1L74_adder_eqn);
+
+--CB1L75 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~10
+CB1L75_adder_eqn = ( (!CB1L42 & ((!CB1_sel[27] & ((CB1L50))) # (CB1_sel[27] & (CB1L217)))) # (CB1L42 & (((CB1L217)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L79 );
+CB1L75 = CARRY(CB1L75_adder_eqn);
+
+
+--FB1_q_a[4] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[4]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[4]_PORT_A_data_in = VCC;
+FB1_q_a[4]_PORT_A_data_in_reg = DFFE(FB1_q_a[4]_PORT_A_data_in, FB1_q_a[4]_clock_0, , , );
+FB1_q_a[4]_PORT_B_data_in = GB1_ram_rom_data_reg[4];
+FB1_q_a[4]_PORT_B_data_in_reg = DFFE(FB1_q_a[4]_PORT_B_data_in, FB1_q_a[4]_clock_1, , , );
+FB1_q_a[4]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[4]_PORT_A_address_reg = DFFE(FB1_q_a[4]_PORT_A_address, FB1_q_a[4]_clock_0, , , );
+FB1_q_a[4]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[4]_PORT_B_address_reg = DFFE(FB1_q_a[4]_PORT_B_address, FB1_q_a[4]_clock_1, , , );
+FB1_q_a[4]_PORT_A_write_enable = GND;
+FB1_q_a[4]_PORT_A_write_enable_reg = DFFE(FB1_q_a[4]_PORT_A_write_enable, FB1_q_a[4]_clock_0, , , );
+FB1_q_a[4]_PORT_A_read_enable = VCC;
+FB1_q_a[4]_PORT_A_read_enable_reg = DFFE(FB1_q_a[4]_PORT_A_read_enable, FB1_q_a[4]_clock_0, , , );
+FB1_q_a[4]_PORT_B_write_enable = GB1L8;
+FB1_q_a[4]_PORT_B_write_enable_reg = DFFE(FB1_q_a[4]_PORT_B_write_enable, FB1_q_a[4]_clock_1, , , );
+FB1_q_a[4]_PORT_B_read_enable = VCC;
+FB1_q_a[4]_PORT_B_read_enable_reg = DFFE(FB1_q_a[4]_PORT_B_read_enable, FB1_q_a[4]_clock_1, , , );
+FB1_q_a[4]_clock_0 = CLOCK_50;
+FB1_q_a[4]_clock_1 = A1L49;
+FB1_q_a[4]_PORT_A_data_out = MEMORY(FB1_q_a[4]_PORT_A_data_in_reg, FB1_q_a[4]_PORT_B_data_in_reg, FB1_q_a[4]_PORT_A_address_reg, FB1_q_a[4]_PORT_B_address_reg, FB1_q_a[4]_PORT_A_write_enable_reg, FB1_q_a[4]_PORT_A_read_enable_reg, FB1_q_a[4]_PORT_B_write_enable_reg, FB1_q_a[4]_PORT_B_read_enable_reg, , , FB1_q_a[4]_clock_0, FB1_q_a[4]_clock_1, , , , , , );
+FB1_q_a[4]_PORT_A_data_out_reg = DFFE(FB1_q_a[4]_PORT_A_data_out, FB1_q_a[4]_clock_0, , , );
+FB1_q_a[4] = FB1_q_a[4]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[4] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[4]
+FB1_q_b[4]_PORT_A_data_in = VCC;
+FB1_q_b[4]_PORT_A_data_in_reg = DFFE(FB1_q_b[4]_PORT_A_data_in, FB1_q_b[4]_clock_0, , , );
+FB1_q_b[4]_PORT_B_data_in = GB1_ram_rom_data_reg[4];
+FB1_q_b[4]_PORT_B_data_in_reg = DFFE(FB1_q_b[4]_PORT_B_data_in, FB1_q_b[4]_clock_1, , , );
+FB1_q_b[4]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[4]_PORT_A_address_reg = DFFE(FB1_q_b[4]_PORT_A_address, FB1_q_b[4]_clock_0, , , );
+FB1_q_b[4]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[4]_PORT_B_address_reg = DFFE(FB1_q_b[4]_PORT_B_address, FB1_q_b[4]_clock_1, , , );
+FB1_q_b[4]_PORT_A_write_enable = GND;
+FB1_q_b[4]_PORT_A_write_enable_reg = DFFE(FB1_q_b[4]_PORT_A_write_enable, FB1_q_b[4]_clock_0, , , );
+FB1_q_b[4]_PORT_A_read_enable = VCC;
+FB1_q_b[4]_PORT_A_read_enable_reg = DFFE(FB1_q_b[4]_PORT_A_read_enable, FB1_q_b[4]_clock_0, , , );
+FB1_q_b[4]_PORT_B_write_enable = GB1L8;
+FB1_q_b[4]_PORT_B_write_enable_reg = DFFE(FB1_q_b[4]_PORT_B_write_enable, FB1_q_b[4]_clock_1, , , );
+FB1_q_b[4]_PORT_B_read_enable = VCC;
+FB1_q_b[4]_PORT_B_read_enable_reg = DFFE(FB1_q_b[4]_PORT_B_read_enable, FB1_q_b[4]_clock_1, , , );
+FB1_q_b[4]_clock_0 = CLOCK_50;
+FB1_q_b[4]_clock_1 = A1L49;
+FB1_q_b[4]_PORT_B_data_out = MEMORY(FB1_q_b[4]_PORT_A_data_in_reg, FB1_q_b[4]_PORT_B_data_in_reg, FB1_q_b[4]_PORT_A_address_reg, FB1_q_b[4]_PORT_B_address_reg, FB1_q_b[4]_PORT_A_write_enable_reg, FB1_q_b[4]_PORT_A_read_enable_reg, FB1_q_b[4]_PORT_B_write_enable_reg, FB1_q_b[4]_PORT_B_read_enable_reg, , , FB1_q_b[4]_clock_0, FB1_q_b[4]_clock_1, , , , , , );
+FB1_q_b[4] = FB1_q_b[4]_PORT_B_data_out[0];
+
+
+--CB1L50 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~9
+CB1L50_adder_eqn = ( (!CB1_sel[18] & ((!CB1L22 & (CB1L30)) # (CB1L22 & ((CB1L213))))) # (CB1_sel[18] & (((CB1L213)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L55 );
+CB1L50 = SUM(CB1L50_adder_eqn);
+
+--CB1L51 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~10
+CB1L51_adder_eqn = ( (!CB1_sel[18] & ((!CB1L22 & (CB1L30)) # (CB1L22 & ((CB1L213))))) # (CB1_sel[18] & (((CB1L213)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L55 );
+CB1L51 = CARRY(CB1L51_adder_eqn);
+
+
+--CB1L30 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~9
+CB1L30_adder_eqn = ( (!CB1L18 & ((!CB1_sel[1] & (CB1L10)) # (CB1_sel[1] & ((Y1L7))))) # (CB1L18 & (((Y1L7)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L35 );
+CB1L30 = SUM(CB1L30_adder_eqn);
+
+--CB1L31 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~10
+CB1L31_adder_eqn = ( (!CB1L18 & ((!CB1_sel[1] & (CB1L10)) # (CB1_sel[1] & ((Y1L7))))) # (CB1L18 & (((Y1L7)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L35 );
+CB1L31 = CARRY(CB1L31_adder_eqn);
+
+
+--CB1L10 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[0]~9
+CB1L10_adder_eqn = ( !Y1L7 $ (!V3_prev_data_2[0]) ) + ( !VCC ) + ( !VCC );
+CB1L10 = SUM(CB1L10_adder_eqn);
+
+--CB1L11 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[0]~10
+CB1L11_adder_eqn = ( !Y1L7 $ (!V3_prev_data_2[0]) ) + ( !VCC ) + ( !VCC );
+CB1L11 = CARRY(CB1L11_adder_eqn);
+
+--CB1L12 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|add_sub_1_result_int[0]~11
+CB1L12_share_eqn = (!V3_prev_data_2[0]) # (Y1L7);
+CB1L12 = SHARE(CB1L12_share_eqn);
+
+
+--GB1_ram_rom_data_reg[5] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]
+--register power-up is low
+
+GB1_ram_rom_data_reg[5] = AMPP_FUNCTION(A1L49, FB1_q_b[5], GB1_ram_rom_data_reg[6], GB1L18, GB1L38);
+
+
+--GB1_ram_rom_data_reg[10] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[10]
+--register power-up is low
+
+GB1_ram_rom_data_reg[10] = AMPP_FUNCTION(A1L49, FB1_q_b[10], GB1_ram_rom_data_reg[11], GB1L18, GB1L38);
+
+
+--CB1L175 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~14
+CB1L175_adder_eqn = ( (!V3_prev_data_2[7] & ((!CB1L126 & ((CB1L138))) # (CB1L126 & (CB1L232)))) # (V3_prev_data_2[7] & (((CB1L232)))) ) + ( !V3_prev_data_2[5] ) + ( CB1L179 );
+CB1L175 = CARRY(CB1L175_adder_eqn);
+
+
+--GB1_ram_rom_data_reg[11] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[11]
+--register power-up is low
+
+GB1_ram_rom_data_reg[11] = AMPP_FUNCTION(A1L49, FB1_q_b[11], A1L50, GB1L18, GB1L38);
+
+
+--GB1_ram_rom_data_reg[7] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]
+--register power-up is low
+
+GB1_ram_rom_data_reg[7] = AMPP_FUNCTION(A1L49, FB1_q_b[7], GB1_ram_rom_data_reg[8], GB1L18, GB1L38);
+
+
+--CB1L138 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~13
+CB1L138_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L106))) # (CB1_sel[45] & (CB1L226)))) # (CB1L94 & (((CB1L226)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L143 );
+CB1L138 = SUM(CB1L138_adder_eqn);
+
+--CB1L139 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~14
+CB1L139_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L106))) # (CB1_sel[45] & (CB1L226)))) # (CB1L94 & (((CB1L226)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L143 );
+CB1L139 = CARRY(CB1L139_adder_eqn);
+
+
+--GB1_ram_rom_data_reg[6] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[6]
+--register power-up is low
+
+GB1_ram_rom_data_reg[6] = AMPP_FUNCTION(A1L49, FB1_q_b[6], GB1_ram_rom_data_reg[7], GB1L18, GB1L38);
+
+
+--CB1L106 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~13
+CB1L106_adder_eqn = ( (!CB1L66 & ((!CB1_sel[36] & ((CB1L78))) # (CB1_sel[36] & (CB1L220)))) # (CB1L66 & (((CB1L220)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L111 );
+CB1L106 = SUM(CB1L106_adder_eqn);
+
+--CB1L107 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~14
+CB1L107_adder_eqn = ( (!CB1L66 & ((!CB1_sel[36] & ((CB1L78))) # (CB1_sel[36] & (CB1L220)))) # (CB1L66 & (((CB1L220)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L111 );
+CB1L107 = CARRY(CB1L107_adder_eqn);
+
+
+--CB1L78 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~13
+CB1L78_adder_eqn = ( (!CB1_sel[27] & ((!CB1L42 & (CB1L54)) # (CB1L42 & ((CB1L216))))) # (CB1_sel[27] & (((CB1L216)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L83 );
+CB1L78 = SUM(CB1L78_adder_eqn);
+
+--CB1L79 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~14
+CB1L79_adder_eqn = ( (!CB1_sel[27] & ((!CB1L42 & (CB1L54)) # (CB1L42 & ((CB1L216))))) # (CB1_sel[27] & (((CB1L216)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L83 );
+CB1L79 = CARRY(CB1L79_adder_eqn);
+
+
+--CB1L54 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~13
+CB1L54_adder_eqn = ( (!CB1_sel[18] & ((!CB1L22 & (CB1L34)) # (CB1L22 & ((Y1L6))))) # (CB1_sel[18] & (((Y1L6)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L59 );
+CB1L54 = SUM(CB1L54_adder_eqn);
+
+--CB1L55 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~14
+CB1L55_adder_eqn = ( (!CB1_sel[18] & ((!CB1L22 & (CB1L34)) # (CB1L22 & ((Y1L6))))) # (CB1_sel[18] & (((Y1L6)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L59 );
+CB1L55 = CARRY(CB1L55_adder_eqn);
+
+
+--CB1L34 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~13
+CB1L34_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][5]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][5])) ) + ( !V3_prev_data_2[0] ) + ( CB1L39 );
+CB1L34 = SUM(CB1L34_adder_eqn);
+
+--CB1L35 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~14
+CB1L35_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][5]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][5])) ) + ( !V3_prev_data_2[0] ) + ( CB1L39 );
+CB1L35 = CARRY(CB1L35_adder_eqn);
+
+
+--CB1L179 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~18
+CB1L179_adder_eqn = ( (!V3_prev_data_2[7] & ((!CB1L126 & ((CB1L142))) # (CB1L126 & (CB1L231)))) # (V3_prev_data_2[7] & (((CB1L231)))) ) + ( !V3_prev_data_2[4] ) + ( CB1L183 );
+CB1L179 = CARRY(CB1L179_adder_eqn);
+
+
+--FB1_q_a[8] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[8]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[8]_PORT_A_data_in = VCC;
+FB1_q_a[8]_PORT_A_data_in_reg = DFFE(FB1_q_a[8]_PORT_A_data_in, FB1_q_a[8]_clock_0, , , );
+FB1_q_a[8]_PORT_B_data_in = GB1_ram_rom_data_reg[8];
+FB1_q_a[8]_PORT_B_data_in_reg = DFFE(FB1_q_a[8]_PORT_B_data_in, FB1_q_a[8]_clock_1, , , );
+FB1_q_a[8]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[8]_PORT_A_address_reg = DFFE(FB1_q_a[8]_PORT_A_address, FB1_q_a[8]_clock_0, , , );
+FB1_q_a[8]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[8]_PORT_B_address_reg = DFFE(FB1_q_a[8]_PORT_B_address, FB1_q_a[8]_clock_1, , , );
+FB1_q_a[8]_PORT_A_write_enable = GND;
+FB1_q_a[8]_PORT_A_write_enable_reg = DFFE(FB1_q_a[8]_PORT_A_write_enable, FB1_q_a[8]_clock_0, , , );
+FB1_q_a[8]_PORT_A_read_enable = VCC;
+FB1_q_a[8]_PORT_A_read_enable_reg = DFFE(FB1_q_a[8]_PORT_A_read_enable, FB1_q_a[8]_clock_0, , , );
+FB1_q_a[8]_PORT_B_write_enable = GB1L8;
+FB1_q_a[8]_PORT_B_write_enable_reg = DFFE(FB1_q_a[8]_PORT_B_write_enable, FB1_q_a[8]_clock_1, , , );
+FB1_q_a[8]_PORT_B_read_enable = VCC;
+FB1_q_a[8]_PORT_B_read_enable_reg = DFFE(FB1_q_a[8]_PORT_B_read_enable, FB1_q_a[8]_clock_1, , , );
+FB1_q_a[8]_clock_0 = CLOCK_50;
+FB1_q_a[8]_clock_1 = A1L49;
+FB1_q_a[8]_PORT_A_data_out = MEMORY(FB1_q_a[8]_PORT_A_data_in_reg, FB1_q_a[8]_PORT_B_data_in_reg, FB1_q_a[8]_PORT_A_address_reg, FB1_q_a[8]_PORT_B_address_reg, FB1_q_a[8]_PORT_A_write_enable_reg, FB1_q_a[8]_PORT_A_read_enable_reg, FB1_q_a[8]_PORT_B_write_enable_reg, FB1_q_a[8]_PORT_B_read_enable_reg, , , FB1_q_a[8]_clock_0, FB1_q_a[8]_clock_1, , , , , , );
+FB1_q_a[8]_PORT_A_data_out_reg = DFFE(FB1_q_a[8]_PORT_A_data_out, FB1_q_a[8]_clock_0, , , );
+FB1_q_a[8] = FB1_q_a[8]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[8] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[8]
+FB1_q_b[8]_PORT_A_data_in = VCC;
+FB1_q_b[8]_PORT_A_data_in_reg = DFFE(FB1_q_b[8]_PORT_A_data_in, FB1_q_b[8]_clock_0, , , );
+FB1_q_b[8]_PORT_B_data_in = GB1_ram_rom_data_reg[8];
+FB1_q_b[8]_PORT_B_data_in_reg = DFFE(FB1_q_b[8]_PORT_B_data_in, FB1_q_b[8]_clock_1, , , );
+FB1_q_b[8]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[8]_PORT_A_address_reg = DFFE(FB1_q_b[8]_PORT_A_address, FB1_q_b[8]_clock_0, , , );
+FB1_q_b[8]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[8]_PORT_B_address_reg = DFFE(FB1_q_b[8]_PORT_B_address, FB1_q_b[8]_clock_1, , , );
+FB1_q_b[8]_PORT_A_write_enable = GND;
+FB1_q_b[8]_PORT_A_write_enable_reg = DFFE(FB1_q_b[8]_PORT_A_write_enable, FB1_q_b[8]_clock_0, , , );
+FB1_q_b[8]_PORT_A_read_enable = VCC;
+FB1_q_b[8]_PORT_A_read_enable_reg = DFFE(FB1_q_b[8]_PORT_A_read_enable, FB1_q_b[8]_clock_0, , , );
+FB1_q_b[8]_PORT_B_write_enable = GB1L8;
+FB1_q_b[8]_PORT_B_write_enable_reg = DFFE(FB1_q_b[8]_PORT_B_write_enable, FB1_q_b[8]_clock_1, , , );
+FB1_q_b[8]_PORT_B_read_enable = VCC;
+FB1_q_b[8]_PORT_B_read_enable_reg = DFFE(FB1_q_b[8]_PORT_B_read_enable, FB1_q_b[8]_clock_1, , , );
+FB1_q_b[8]_clock_0 = CLOCK_50;
+FB1_q_b[8]_clock_1 = A1L49;
+FB1_q_b[8]_PORT_B_data_out = MEMORY(FB1_q_b[8]_PORT_A_data_in_reg, FB1_q_b[8]_PORT_B_data_in_reg, FB1_q_b[8]_PORT_A_address_reg, FB1_q_b[8]_PORT_B_address_reg, FB1_q_b[8]_PORT_A_write_enable_reg, FB1_q_b[8]_PORT_A_read_enable_reg, FB1_q_b[8]_PORT_B_write_enable_reg, FB1_q_b[8]_PORT_B_read_enable_reg, , , FB1_q_b[8]_clock_0, FB1_q_b[8]_clock_1, , , , , , );
+FB1_q_b[8] = FB1_q_b[8]_PORT_B_data_out[0];
+
+
+--FB1_q_a[9] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_a[9]
+--RAM Block Operation Mode: True Dual-Port
+--Port A Depth: 32, Port A Width: 1, Port B Depth: 32, Port B Width: 1
+--Port A Logical Depth: 32, Port A Logical Width: 12, Port B Logical Depth: 32, Port B Logical Width: 12
+--Port A Input: Registered, Port A Output: Registered, Port B Input: Registered, Port B Output: Un-registered
+FB1_q_a[9]_PORT_A_data_in = VCC;
+FB1_q_a[9]_PORT_A_data_in_reg = DFFE(FB1_q_a[9]_PORT_A_data_in, FB1_q_a[9]_clock_0, , , );
+FB1_q_a[9]_PORT_B_data_in = GB1_ram_rom_data_reg[9];
+FB1_q_a[9]_PORT_B_data_in_reg = DFFE(FB1_q_a[9]_PORT_B_data_in, FB1_q_a[9]_clock_1, , , );
+FB1_q_a[9]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_a[9]_PORT_A_address_reg = DFFE(FB1_q_a[9]_PORT_A_address, FB1_q_a[9]_clock_0, , , );
+FB1_q_a[9]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_a[9]_PORT_B_address_reg = DFFE(FB1_q_a[9]_PORT_B_address, FB1_q_a[9]_clock_1, , , );
+FB1_q_a[9]_PORT_A_write_enable = GND;
+FB1_q_a[9]_PORT_A_write_enable_reg = DFFE(FB1_q_a[9]_PORT_A_write_enable, FB1_q_a[9]_clock_0, , , );
+FB1_q_a[9]_PORT_A_read_enable = VCC;
+FB1_q_a[9]_PORT_A_read_enable_reg = DFFE(FB1_q_a[9]_PORT_A_read_enable, FB1_q_a[9]_clock_0, , , );
+FB1_q_a[9]_PORT_B_write_enable = GB1L8;
+FB1_q_a[9]_PORT_B_write_enable_reg = DFFE(FB1_q_a[9]_PORT_B_write_enable, FB1_q_a[9]_clock_1, , , );
+FB1_q_a[9]_PORT_B_read_enable = VCC;
+FB1_q_a[9]_PORT_B_read_enable_reg = DFFE(FB1_q_a[9]_PORT_B_read_enable, FB1_q_a[9]_clock_1, , , );
+FB1_q_a[9]_clock_0 = CLOCK_50;
+FB1_q_a[9]_clock_1 = A1L49;
+FB1_q_a[9]_PORT_A_data_out = MEMORY(FB1_q_a[9]_PORT_A_data_in_reg, FB1_q_a[9]_PORT_B_data_in_reg, FB1_q_a[9]_PORT_A_address_reg, FB1_q_a[9]_PORT_B_address_reg, FB1_q_a[9]_PORT_A_write_enable_reg, FB1_q_a[9]_PORT_A_read_enable_reg, FB1_q_a[9]_PORT_B_write_enable_reg, FB1_q_a[9]_PORT_B_read_enable_reg, , , FB1_q_a[9]_clock_0, FB1_q_a[9]_clock_1, , , , , , );
+FB1_q_a[9]_PORT_A_data_out_reg = DFFE(FB1_q_a[9]_PORT_A_data_out, FB1_q_a[9]_clock_0, , , );
+FB1_q_a[9] = FB1_q_a[9]_PORT_A_data_out_reg[0];
+
+--FB1_q_b[9] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|altsyncram_pe73:altsyncram1|q_b[9]
+FB1_q_b[9]_PORT_A_data_in = VCC;
+FB1_q_b[9]_PORT_A_data_in_reg = DFFE(FB1_q_b[9]_PORT_A_data_in, FB1_q_b[9]_clock_0, , , );
+FB1_q_b[9]_PORT_B_data_in = GB1_ram_rom_data_reg[9];
+FB1_q_b[9]_PORT_B_data_in_reg = DFFE(FB1_q_b[9]_PORT_B_data_in, FB1_q_b[9]_clock_1, , , );
+FB1_q_b[9]_PORT_A_address = BUS(C1_count_sig[0], C1_count_sig[1], C1_count_sig[2], C1_count_sig[3], C1_count_sig[4]);
+FB1_q_b[9]_PORT_A_address_reg = DFFE(FB1_q_b[9]_PORT_A_address, FB1_q_b[9]_clock_0, , , );
+FB1_q_b[9]_PORT_B_address = BUS(GB1_ram_rom_addr_reg[0], GB1_ram_rom_addr_reg[1], GB1_ram_rom_addr_reg[2], GB1_ram_rom_addr_reg[3], GB1_ram_rom_addr_reg[4]);
+FB1_q_b[9]_PORT_B_address_reg = DFFE(FB1_q_b[9]_PORT_B_address, FB1_q_b[9]_clock_1, , , );
+FB1_q_b[9]_PORT_A_write_enable = GND;
+FB1_q_b[9]_PORT_A_write_enable_reg = DFFE(FB1_q_b[9]_PORT_A_write_enable, FB1_q_b[9]_clock_0, , , );
+FB1_q_b[9]_PORT_A_read_enable = VCC;
+FB1_q_b[9]_PORT_A_read_enable_reg = DFFE(FB1_q_b[9]_PORT_A_read_enable, FB1_q_b[9]_clock_0, , , );
+FB1_q_b[9]_PORT_B_write_enable = GB1L8;
+FB1_q_b[9]_PORT_B_write_enable_reg = DFFE(FB1_q_b[9]_PORT_B_write_enable, FB1_q_b[9]_clock_1, , , );
+FB1_q_b[9]_PORT_B_read_enable = VCC;
+FB1_q_b[9]_PORT_B_read_enable_reg = DFFE(FB1_q_b[9]_PORT_B_read_enable, FB1_q_b[9]_clock_1, , , );
+FB1_q_b[9]_clock_0 = CLOCK_50;
+FB1_q_b[9]_clock_1 = A1L49;
+FB1_q_b[9]_PORT_B_data_out = MEMORY(FB1_q_b[9]_PORT_A_data_in_reg, FB1_q_b[9]_PORT_B_data_in_reg, FB1_q_b[9]_PORT_A_address_reg, FB1_q_b[9]_PORT_B_address_reg, FB1_q_b[9]_PORT_A_write_enable_reg, FB1_q_b[9]_PORT_A_read_enable_reg, FB1_q_b[9]_PORT_B_write_enable_reg, FB1_q_b[9]_PORT_B_read_enable_reg, , , FB1_q_b[9]_clock_0, FB1_q_b[9]_clock_1, , , , , , );
+FB1_q_b[9] = FB1_q_b[9]_PORT_B_data_out[0];
+
+
+--GB1_ram_rom_data_reg[8] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[8]
+--register power-up is low
+
+GB1_ram_rom_data_reg[8] = AMPP_FUNCTION(A1L49, FB1_q_b[8], GB1_ram_rom_data_reg[9], GB1L18, GB1L38);
+
+
+--CB1L142 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~17
+CB1L142_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L110))) # (CB1_sel[45] & (CB1L225)))) # (CB1L94 & (((CB1L225)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L147 );
+CB1L142 = SUM(CB1L142_adder_eqn);
+
+--CB1L143 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~18
+CB1L143_adder_eqn = ( (!CB1L94 & ((!CB1_sel[45] & ((CB1L110))) # (CB1_sel[45] & (CB1L225)))) # (CB1L94 & (((CB1L225)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L147 );
+CB1L143 = CARRY(CB1L143_adder_eqn);
+
+
+--CB1L110 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~17
+CB1L110_adder_eqn = ( (!CB1_sel[36] & ((!CB1L66 & (CB1L82)) # (CB1L66 & ((CB1L219))))) # (CB1_sel[36] & (((CB1L219)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L115 );
+CB1L110 = SUM(CB1L110_adder_eqn);
+
+--CB1L111 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~18
+CB1L111_adder_eqn = ( (!CB1_sel[36] & ((!CB1L66 & (CB1L82)) # (CB1L66 & ((CB1L219))))) # (CB1_sel[36] & (((CB1L219)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L115 );
+CB1L111 = CARRY(CB1L111_adder_eqn);
+
+
+--CB1L82 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~17
+CB1L82_adder_eqn = ( (!CB1_sel[27] & ((!CB1L42 & (CB1L58)) # (CB1L42 & ((Y1L5))))) # (CB1_sel[27] & (((Y1L5)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L87 );
+CB1L82 = SUM(CB1L82_adder_eqn);
+
+--CB1L83 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~18
+CB1L83_adder_eqn = ( (!CB1_sel[27] & ((!CB1L42 & (CB1L58)) # (CB1L42 & ((Y1L5))))) # (CB1_sel[27] & (((Y1L5)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L87 );
+CB1L83 = CARRY(CB1L83_adder_eqn);
+
+
+--CB1L58 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~17
+CB1L58_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][4]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][4])) ) + ( !V3_prev_data_2[0] ) + ( CB1L63 );
+CB1L58 = SUM(CB1L58_adder_eqn);
+
+--CB1L59 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~18
+CB1L59_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][4]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][4])) ) + ( !V3_prev_data_2[0] ) + ( CB1L63 );
+CB1L59 = CARRY(CB1L59_adder_eqn);
+
+
+--CB1L39 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_3~18
+CB1L39_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+CB1L39 = CARRY(CB1L39_adder_eqn);
+
+
+--CB1L183 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~22
+CB1L183_adder_eqn = ( (!V3_prev_data_2[7] & ((!CB1L126 & ((CB1L146))) # (CB1L126 & (CB1L230)))) # (V3_prev_data_2[7] & (((CB1L230)))) ) + ( !V3_prev_data_2[3] ) + ( CB1L187 );
+CB1L183 = CARRY(CB1L183_adder_eqn);
+
+
+--GB1_ram_rom_data_reg[9] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[9]
+--register power-up is low
+
+GB1_ram_rom_data_reg[9] = AMPP_FUNCTION(A1L49, FB1_q_b[9], GB1_ram_rom_data_reg[10], GB1L18, GB1L38);
+
+
+--CB1L146 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~21
+CB1L146_adder_eqn = ( (!CB1_sel[45] & ((!CB1L94 & (CB1L114)) # (CB1L94 & ((CB1L224))))) # (CB1_sel[45] & (((CB1L224)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L151 );
+CB1L146 = SUM(CB1L146_adder_eqn);
+
+--CB1L147 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~22
+CB1L147_adder_eqn = ( (!CB1_sel[45] & ((!CB1L94 & (CB1L114)) # (CB1L94 & ((CB1L224))))) # (CB1_sel[45] & (((CB1L224)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L151 );
+CB1L147 = CARRY(CB1L147_adder_eqn);
+
+
+--CB1L114 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~21
+CB1L114_adder_eqn = ( (!CB1_sel[36] & ((!CB1L66 & (CB1L86)) # (CB1L66 & ((Y1L4))))) # (CB1_sel[36] & (((Y1L4)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L119 );
+CB1L114 = SUM(CB1L114_adder_eqn);
+
+--CB1L115 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~22
+CB1L115_adder_eqn = ( (!CB1_sel[36] & ((!CB1L66 & (CB1L86)) # (CB1L66 & ((Y1L4))))) # (CB1_sel[36] & (((Y1L4)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L119 );
+CB1L115 = CARRY(CB1L115_adder_eqn);
+
+
+--CB1L86 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~21
+CB1L86_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][3]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][3])) ) + ( !V3_prev_data_2[0] ) + ( CB1L91 );
+CB1L86 = SUM(CB1L86_adder_eqn);
+
+--CB1L87 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~22
+CB1L87_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][3]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][3])) ) + ( !V3_prev_data_2[0] ) + ( CB1L91 );
+CB1L87 = CARRY(CB1L87_adder_eqn);
+
+
+--CB1L63 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_4~22
+CB1L63_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+CB1L63 = CARRY(CB1L63_adder_eqn);
+
+
+--CB1L187 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~26
+CB1L187_adder_eqn = ( (!V3_prev_data_2[7] & ((!CB1L126 & (CB1L150)) # (CB1L126 & ((CB1L229))))) # (V3_prev_data_2[7] & (((CB1L229)))) ) + ( !V3_prev_data_2[2] ) + ( CB1L191 );
+CB1L187 = CARRY(CB1L187_adder_eqn);
+
+
+--CB1L150 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~25
+CB1L150_adder_eqn = ( (!CB1_sel[45] & ((!CB1L94 & (CB1L118)) # (CB1L94 & ((Y1L3))))) # (CB1_sel[45] & (((Y1L3)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L155 );
+CB1L150 = SUM(CB1L150_adder_eqn);
+
+--CB1L151 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~26
+CB1L151_adder_eqn = ( (!CB1_sel[45] & ((!CB1L94 & (CB1L118)) # (CB1L94 & ((Y1L3))))) # (CB1_sel[45] & (((Y1L3)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L155 );
+CB1L151 = CARRY(CB1L151_adder_eqn);
+
+
+--CB1L118 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~25
+CB1L118_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][2]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][2])) ) + ( !V3_prev_data_2[0] ) + ( CB1L123 );
+CB1L118 = SUM(CB1L118_adder_eqn);
+
+--CB1L119 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~26
+CB1L119_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][2]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][2])) ) + ( !V3_prev_data_2[0] ) + ( CB1L123 );
+CB1L119 = CARRY(CB1L119_adder_eqn);
+
+
+--CB1L91 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_5~26
+CB1L91_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+CB1L91 = CARRY(CB1L91_adder_eqn);
+
+
+--CB1L191 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~30
+CB1L191_adder_eqn = ( (!V3_prev_data_2[7] & ((!CB1L126 & (CB1L154)) # (CB1L126 & ((Y1L2))))) # (V3_prev_data_2[7] & (((Y1L2)))) ) + ( !V3_prev_data_2[1] ) + ( CB1L195 );
+CB1L191 = CARRY(CB1L191_adder_eqn);
+
+
+--CB1L154 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~29
+CB1L154_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][1]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][1])) ) + ( !V3_prev_data_2[0] ) + ( CB1L159 );
+CB1L154 = SUM(CB1L154_adder_eqn);
+
+--CB1L155 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~30
+CB1L155_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][1]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][1])) ) + ( !V3_prev_data_2[0] ) + ( CB1L159 );
+CB1L155 = CARRY(CB1L155_adder_eqn);
+
+
+--CB1L123 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_6~30
+CB1L123_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+CB1L123 = CARRY(CB1L123_adder_eqn);
+
+
+--CB1L195 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~34
+CB1L195_adder_eqn = ( (!Y1_read_addr[0] & ((Y1_ram_mem[0][0]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][0])) ) + ( !V3_prev_data_2[0] ) + ( CB1L199 );
+CB1L195 = CARRY(CB1L195_adder_eqn);
+
+
+--CB1L159 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_7~34
+CB1L159_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+CB1L159 = CARRY(CB1L159_adder_eqn);
+
+
+--CB1L199 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|op_8~38
+CB1L199_adder_eqn = ( VCC ) + ( VCC ) + ( !VCC );
+CB1L199 = CARRY(CB1L199_adder_eqn);
+
+
+--GB1L1 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|adapted_tdo~0
+GB1L1 = AMPP_FUNCTION(!A1L29, !GB1_ram_rom_data_reg[0], !N1_WORD_SR[0], !A1L33, !A1L28, !GB1_bypass_reg_out, !A1L30);
+
+
+--KEY[1] is KEY[1]
+KEY[1] = INPUT();
+
+
+--KEY[2] is KEY[2]
+KEY[2] = INPUT();
+
+
+--HEX0[0] is HEX0[0]
+HEX0[0] = OUTPUT(W3L8);
+
+
+--HEX0[1] is HEX0[1]
+HEX0[1] = OUTPUT(W3L7);
+
+
+--HEX0[2] is HEX0[2]
+HEX0[2] = OUTPUT(W3L6);
+
+
+--HEX0[3] is HEX0[3]
+HEX0[3] = OUTPUT(W3L5);
+
+
+--HEX0[4] is HEX0[4]
+HEX0[4] = OUTPUT(W3L4);
+
+
+--HEX0[5] is HEX0[5]
+HEX0[5] = OUTPUT(W3L3);
+
+
+--HEX0[6] is HEX0[6]
+HEX0[6] = OUTPUT(W3L2);
+
+
+--HEX1[0] is HEX1[0]
+HEX1[0] = OUTPUT(W2L8);
+
+
+--HEX1[1] is HEX1[1]
+HEX1[1] = OUTPUT(W2L7);
+
+
+--HEX1[2] is HEX1[2]
+HEX1[2] = OUTPUT(W2L6);
+
+
+--HEX1[3] is HEX1[3]
+HEX1[3] = OUTPUT(W2L5);
+
+
+--HEX1[4] is HEX1[4]
+HEX1[4] = OUTPUT(W2L4);
+
+
+--HEX1[5] is HEX1[5]
+HEX1[5] = OUTPUT(W2L3);
+
+
+--HEX1[6] is HEX1[6]
+HEX1[6] = OUTPUT(W2L2);
+
+
+--HEX2[0] is HEX2[0]
+HEX2[0] = OUTPUT(W1L2);
+
+
+--HEX2[1] is HEX2[1]
+HEX2[1] = OUTPUT(A1L63);
+
+
+--HEX2[2] is HEX2[2]
+HEX2[2] = OUTPUT(W1L3);
+
+
+--HEX2[3] is HEX2[3]
+HEX2[3] = OUTPUT(W1L2);
+
+
+--HEX2[4] is HEX2[4]
+HEX2[4] = OUTPUT(W1L2);
+
+
+--HEX2[5] is HEX2[5]
+HEX2[5] = OUTPUT(W1L4);
+
+
+--HEX2[6] is HEX2[6]
+HEX2[6] = OUTPUT(X1L5);
+
+
+--LEDR[0] is LEDR[0]
+LEDR[0] = OUTPUT(C1_count_sig[0]);
+
+
+--LEDR[1] is LEDR[1]
+LEDR[1] = OUTPUT(C1_count_sig[1]);
+
+
+--LEDR[2] is LEDR[2]
+LEDR[2] = OUTPUT(C1_count_sig[2]);
+
+
+--LEDR[3] is LEDR[3]
+LEDR[3] = OUTPUT(C1_count_sig[3]);
+
+
+--A1L48 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_uir
+A1L48 = INPUT();
+
+
+--A1L34 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_6_
+A1L34 = INPUT();
+
+
+--A1L35 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_7_
+A1L35 = INPUT();
+
+
+--A1L36 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_0_
+A1L36 = OUTPUT(GB1_is_in_use_reg);
+
+
+--A1L37 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_1_
+A1L37 = OUTPUT(GB1_ir_loaded_address_reg[0]);
+
+
+--A1L38 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_2_
+A1L38 = OUTPUT(GB1_ir_loaded_address_reg[1]);
+
+
+--A1L39 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_3_
+A1L39 = OUTPUT(GB1_ir_loaded_address_reg[2]);
+
+
+--A1L40 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_4_
+A1L40 = OUTPUT(GB1_ir_loaded_address_reg[3]);
+
+
+--A1L41 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_5_
+A1L41 = OUTPUT(GB1_ir_loaded_address_reg[4]);
+
+
+--A1L42 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_6_
+A1L42 = OUTPUT(A1L63);
+
+
+--A1L43 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_out_7_
+A1L43 = OUTPUT(A1L63);
+
+
+--A1L51 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_tdo
+A1L51 = OUTPUT(GB1L1);
+
+
+--S1_out_12b[0] is processor:top_inst|add_sub:L7|out_12b[0]
+--register power-up is low
+
+S1_out_12b[0] = DFFEAS(S1L21, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[1] is processor:top_inst|add_sub:L7|out_12b[1]
+--register power-up is low
+
+S1_out_12b[1] = DFFEAS(S1L22, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[2] is processor:top_inst|add_sub:L7|out_12b[2]
+--register power-up is low
+
+S1_out_12b[2] = DFFEAS(S1L23, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[3] is processor:top_inst|add_sub:L7|out_12b[3]
+--register power-up is low
+
+S1_out_12b[3] = DFFEAS(S1L24, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[4] is processor:top_inst|add_sub:L7|out_12b[4]
+--register power-up is low
+
+S1_out_12b[4] = DFFEAS(S1L25, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[5] is processor:top_inst|add_sub:L7|out_12b[5]
+--register power-up is low
+
+S1_out_12b[5] = DFFEAS(S1L26, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[7] is processor:top_inst|add_sub:L7|out_12b[7]
+--register power-up is low
+
+S1_out_12b[7] = DFFEAS(S1L28, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_out_12b[6] is processor:top_inst|add_sub:L7|out_12b[6]
+--register power-up is low
+
+S1_out_12b[6] = DFFEAS(S1L27, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--X1L1 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|bcd~0
+X1L1 = ( S1_out_12b[6] & ( (!S1_out_12b[3] & ((!S1_out_12b[4] & (!S1_out_12b[5] $ (S1_out_12b[7]))) # (S1_out_12b[4] & (!S1_out_12b[5] & S1_out_12b[7])))) # (S1_out_12b[3] & ((!S1_out_12b[4] & (S1_out_12b[5] & !S1_out_12b[7])) # (S1_out_12b[4] & (!S1_out_12b[5] $ (S1_out_12b[7]))))) ) ) # ( !S1_out_12b[6] & ( (!S1_out_12b[3] & ((!S1_out_12b[5] & ((S1_out_12b[7]))) # (S1_out_12b[5] & (S1_out_12b[4] & !S1_out_12b[7])))) # (S1_out_12b[3] & ((!S1_out_12b[5] $ (S1_out_12b[7])))) ) );
+
+
+--X1L2 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|bcd~1
+X1L2 = ( S1_out_12b[6] & ( (!S1_out_12b[3] & (!S1_out_12b[4] & ((!S1_out_12b[7]) # (S1_out_12b[5])))) # (S1_out_12b[3] & ((!S1_out_12b[4] & (S1_out_12b[5] & !S1_out_12b[7])) # (S1_out_12b[4] & (!S1_out_12b[5] & S1_out_12b[7])))) ) ) # ( !S1_out_12b[6] & ( (!S1_out_12b[3] & (S1_out_12b[4] & ((!S1_out_12b[5]) # (S1_out_12b[7])))) # (S1_out_12b[3] & (!S1_out_12b[4] $ (((!S1_out_12b[7]) # (S1_out_12b[5]))))) ) );
+
+
+--X1L3 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|LessThan12~0
+X1L3 = ( S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[3] & (((!S1_out_12b[4])))) # (S1_out_12b[3] & ((!S1_out_12b[4] & ((S1_out_12b[5]))) # (S1_out_12b[4] & (S1_out_12b[2] & !S1_out_12b[5])))) ) ) ) # ( !S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[3] & ((!S1_out_12b[4] & ((!S1_out_12b[5]) # (S1_out_12b[2]))) # (S1_out_12b[4] & ((S1_out_12b[5]))))) # (S1_out_12b[3] & (((!S1_out_12b[4])))) ) ) ) # ( S1_out_12b[7] & ( !S1_out_12b[6] & ( (!S1_out_12b[2] & (S1_out_12b[4] & ((!S1_out_12b[5]) # (S1_out_12b[3])))) # (S1_out_12b[2] & (((S1_out_12b[3] & !S1_out_12b[5])) # (S1_out_12b[4]))) ) ) ) # ( !S1_out_12b[7] & ( !S1_out_12b[6] & ( (!S1_out_12b[3] & ((!S1_out_12b[4] & ((S1_out_12b[5]))) # (S1_out_12b[4] & (S1_out_12b[2] & !S1_out_12b[5])))) # (S1_out_12b[3] & (S1_out_12b[4] & ((!S1_out_12b[5]) # (S1_out_12b[2])))) ) ) );
+
+
+--X1L6 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|ones[1]~0
+X1L6 = ( X1L3 & ( (!S1_out_12b[1] & ((!X1L2) # ((!S1_out_12b[2] & !X1L1)))) # (S1_out_12b[1] & (X1L2 & (!S1_out_12b[2] $ (!X1L1)))) ) ) # ( !X1L3 & ( (!S1_out_12b[1] & (((S1_out_12b[2] & X1L1)) # (X1L2))) # (S1_out_12b[1] & (((!X1L1 & !X1L2)))) ) );
+
+
+--X1L7 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|ones[2]~1
+X1L7 = ( X1L3 & ( (!S1_out_12b[1] & ((!S1_out_12b[2] & (X1L1 & X1L2)) # (S1_out_12b[2] & ((!X1L2))))) # (S1_out_12b[1] & (!S1_out_12b[2])) ) ) # ( !X1L3 & ( (!S1_out_12b[1] & ((!S1_out_12b[2] & ((X1L2))) # (S1_out_12b[2] & (!X1L1 & !X1L2)))) # (S1_out_12b[1] & (S1_out_12b[2])) ) );
+
+
+--X1L8 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|ones[3]~2
+X1L8 = ( X1L3 & ( (!S1_out_12b[1] & (X1L1 & ((!X1L2) # (S1_out_12b[2])))) # (S1_out_12b[1] & (!X1L2 & (!S1_out_12b[2] $ (!X1L1)))) ) ) # ( !X1L3 & ( (!X1L1 & (X1L2 & ((S1_out_12b[2]) # (S1_out_12b[1])))) # (X1L1 & (!S1_out_12b[1] & (!S1_out_12b[2]))) ) );
+
+
+--W3L8 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux6~0
+W3L8 = (!X1L7 & (S1_out_12b[0] & (!X1L6 $ (X1L8)))) # (X1L7 & (!X1L6 & (!S1_out_12b[0] $ (X1L8))));
+
+
+--W3L7 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux5~0
+W3L7 = (!X1L6 & (X1L7 & (!S1_out_12b[0] $ (!X1L8)))) # (X1L6 & ((!S1_out_12b[0] & (X1L7)) # (S1_out_12b[0] & ((X1L8)))));
+
+
+--W3L6 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux4~0
+W3L6 = (!X1L7 & (!S1_out_12b[0] & (X1L6 & !X1L8))) # (X1L7 & (X1L8 & ((!S1_out_12b[0]) # (X1L6))));
+
+
+--W3L5 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux3~0
+W3L5 = (!X1L6 & (!X1L8 & (!S1_out_12b[0] $ (!X1L7)))) # (X1L6 & ((!S1_out_12b[0] & (!X1L7 & X1L8)) # (S1_out_12b[0] & (X1L7))));
+
+
+--W3L4 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux2~0
+W3L4 = (!X1L6 & ((!X1L7 & (S1_out_12b[0])) # (X1L7 & ((!X1L8))))) # (X1L6 & (S1_out_12b[0] & ((!X1L8))));
+
+
+--W3L3 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux1~0
+W3L3 = (!S1_out_12b[0] & (X1L6 & (!X1L7 & !X1L8))) # (S1_out_12b[0] & (!X1L8 $ (((!X1L6 & X1L7)))));
+
+
+--W3L1 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux0~0
+W3L1 = (!S1_out_12b[0] & ((!X1L7 $ (!X1L8)) # (X1L6))) # (S1_out_12b[0] & ((!X1L6 $ (!X1L7)) # (X1L8)));
+
+
+--X1L9 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|tens[0]~0
+X1L9 = ( X1L3 & ( !X1L2 $ (((!S1_out_12b[1]) # ((!S1_out_12b[2]) # (!X1L1)))) ) ) # ( !X1L3 & ( !X1L2 $ (((X1L1 & ((S1_out_12b[2]) # (S1_out_12b[1]))))) ) );
+
+
+--X1L10 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|tens[1]~1
+X1L10 = ( S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[4] & (((S1_out_12b[5])))) # (S1_out_12b[4] & (S1_out_12b[2] & (S1_out_12b[3] & !S1_out_12b[5]))) ) ) ) # ( !S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[4] & ((!S1_out_12b[5]))) # (S1_out_12b[4] & (S1_out_12b[3] & S1_out_12b[5])) ) ) ) # ( S1_out_12b[7] & ( !S1_out_12b[6] & ( (!S1_out_12b[2] & ((!S1_out_12b[4]) # ((!S1_out_12b[3] & S1_out_12b[5])))) # (S1_out_12b[2] & (!S1_out_12b[4] & ((!S1_out_12b[3]) # (S1_out_12b[5])))) ) ) ) # ( !S1_out_12b[7] & ( !S1_out_12b[6] & ( (!S1_out_12b[3] & ((!S1_out_12b[4] & ((S1_out_12b[5]))) # (S1_out_12b[4] & (S1_out_12b[2] & !S1_out_12b[5])))) # (S1_out_12b[3] & (S1_out_12b[4] & ((!S1_out_12b[5]) # (S1_out_12b[2])))) ) ) );
+
+
+--X1L11 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|tens[2]~2
+X1L11 = ( S1_out_12b[7] & ( S1_out_12b[6] & ( (S1_out_12b[4] & S1_out_12b[5]) ) ) ) # ( !S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[4] & !S1_out_12b[5]) ) ) ) # ( S1_out_12b[7] & ( !S1_out_12b[6] & ( (!S1_out_12b[4] & (((S1_out_12b[2] & S1_out_12b[3])) # (S1_out_12b[5]))) # (S1_out_12b[4] & ((!S1_out_12b[5]) # ((!S1_out_12b[2] & !S1_out_12b[3])))) ) ) ) # ( !S1_out_12b[7] & ( !S1_out_12b[6] & ( (S1_out_12b[5] & ((S1_out_12b[4]) # (S1_out_12b[3]))) ) ) );
+
+
+--X1L12 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|tens[3]~3
+X1L12 = ( S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[3] & (!S1_out_12b[4] & !S1_out_12b[5])) ) ) ) # ( !S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[4] & (!S1_out_12b[2] & (!S1_out_12b[3] & S1_out_12b[5]))) # (S1_out_12b[4] & (((!S1_out_12b[5])))) ) ) ) # ( S1_out_12b[7] & ( !S1_out_12b[6] & ( (S1_out_12b[4] & (S1_out_12b[5] & ((S1_out_12b[3]) # (S1_out_12b[2])))) ) ) );
+
+
+--W2L8 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux6~0
+W2L8 = (!X1L11 & (!X1L9 & (!X1L10 $ (X1L12)))) # (X1L11 & (!X1L10 & (!X1L9 $ (!X1L12))));
+
+
+--W2L7 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux5~0
+W2L7 = (!X1L10 & (X1L11 & (!X1L9 $ (X1L12)))) # (X1L10 & ((!X1L9 & ((X1L12))) # (X1L9 & (X1L11))));
+
+
+--W2L6 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux4~0
+W2L6 = (!X1L11 & (X1L9 & (X1L10 & !X1L12))) # (X1L11 & (X1L12 & ((X1L10) # (X1L9))));
+
+
+--W2L5 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux3~0
+W2L5 = (!X1L10 & (!X1L12 & (!X1L9 $ (X1L11)))) # (X1L10 & ((!X1L9 & (X1L11)) # (X1L9 & (!X1L11 & X1L12))));
+
+
+--W2L4 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux2~0
+W2L4 = (!X1L10 & ((!X1L11 & (!X1L9)) # (X1L11 & ((!X1L12))))) # (X1L10 & (!X1L9 & ((!X1L12))));
+
+
+--W2L3 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux1~0
+W2L3 = (!X1L9 & (!X1L12 $ (((!X1L10 & X1L11))))) # (X1L9 & (X1L10 & (!X1L11 & !X1L12)));
+
+
+--W2L1 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux0~0
+W2L1 = (!X1L9 & ((!X1L10 $ (!X1L11)) # (X1L12))) # (X1L9 & ((!X1L11 $ (!X1L12)) # (X1L10)));
+
+
+--W1L1 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexHund|Mux1~0
+W1L1 = ( S1_out_12b[7] & ( S1_out_12b[6] & ( ((S1_out_12b[5]) # (S1_out_12b[4])) # (S1_out_12b[3]) ) ) ) # ( !S1_out_12b[7] & ( S1_out_12b[6] & ( (!S1_out_12b[5]) # ((!S1_out_12b[2] & (!S1_out_12b[3] & !S1_out_12b[4]))) ) ) ) # ( !S1_out_12b[7] & ( !S1_out_12b[6] ) );
+
+
+--W1L3 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexHund|Mux1~1
+W1L3 = ( S1_out_12b[7] & ( S1_out_12b[6] & ( ((S1_out_12b[5]) # (S1_out_12b[4])) # (S1_out_12b[3]) ) ) );
+
+
+--W1L4 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexHund|Mux1~2
+W1L4 = ( S1_out_12b[7] & ( S1_out_12b[6] ) ) # ( !S1_out_12b[7] & ( S1_out_12b[6] & ( (S1_out_12b[5] & (((S1_out_12b[4]) # (S1_out_12b[3])) # (S1_out_12b[2]))) ) ) ) # ( S1_out_12b[7] & ( !S1_out_12b[6] ) );
+
+
+--X1L4 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|LessThan13~0
+X1L4 = ( S1_out_12b[6] & ( (S1_out_12b[7] & (((S1_out_12b[5]) # (S1_out_12b[4])) # (S1_out_12b[3]))) ) );
+
+
+--C1_count_sig[0] is processor:top_inst|count_sig[0]
+--register power-up is low
+
+C1_count_sig[0] = DFFEAS(C1L3, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--C1_count_sig[1] is processor:top_inst|count_sig[1]
+--register power-up is low
+
+C1_count_sig[1] = DFFEAS(C1L5, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--C1_count_sig[2] is processor:top_inst|count_sig[2]
+--register power-up is low
+
+C1_count_sig[2] = DFFEAS(C1L7, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--C1_count_sig[3] is processor:top_inst|count_sig[3]
+--register power-up is low
+
+C1_count_sig[3] = DFFEAS(C1L9, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--GB1_is_in_use_reg is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|is_in_use_reg
+--register power-up is low
+
+GB1_is_in_use_reg = AMPP_FUNCTION(A1L49, GB1L16, !A1L26);
+
+
+--GB1_ir_loaded_address_reg[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ir_loaded_address_reg[0]
+--register power-up is low
+
+GB1_ir_loaded_address_reg[0] = AMPP_FUNCTION(A1L49, GB1_ram_rom_addr_reg[0], !GB1L17, A1L31);
+
+
+--GB1_ir_loaded_address_reg[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ir_loaded_address_reg[1]
+--register power-up is low
+
+GB1_ir_loaded_address_reg[1] = AMPP_FUNCTION(A1L49, GB1_ram_rom_addr_reg[1], !GB1L17, A1L31);
+
+
+--GB1_ir_loaded_address_reg[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ir_loaded_address_reg[2]
+--register power-up is low
+
+GB1_ir_loaded_address_reg[2] = AMPP_FUNCTION(A1L49, GB1_ram_rom_addr_reg[2], !GB1L17, A1L31);
+
+
+--GB1_ir_loaded_address_reg[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ir_loaded_address_reg[3]
+--register power-up is low
+
+GB1_ir_loaded_address_reg[3] = AMPP_FUNCTION(A1L49, GB1_ram_rom_addr_reg[3], !GB1L17, A1L31);
+
+
+--GB1_ir_loaded_address_reg[4] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ir_loaded_address_reg[4]
+--register power-up is low
+
+GB1_ir_loaded_address_reg[4] = AMPP_FUNCTION(A1L49, GB1_ram_rom_addr_reg[4], !GB1L17, A1L31);
+
+
+--N1_WORD_SR[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]
+--register power-up is low
+
+N1_WORD_SR[0] = AMPP_FUNCTION(A1L49, N1L22, N1L20);
+
+
+--A1L28 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_0_
+A1L28 = INPUT();
+
+
+--GB1_bypass_reg_out is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|bypass_reg_out
+--register power-up is low
+
+GB1_bypass_reg_out = AMPP_FUNCTION(A1L49, GB1L7, !A1L26);
+
+
+--A1L33 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_5_
+A1L33 = INPUT();
+
+
+--A1L29 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_1_
+A1L29 = INPUT();
+
+
+--A1L30 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_2_
+A1L30 = INPUT();
+
+
+--R3_RisingEdge is processor:top_inst|add_sub:L7|edge_detect:resetEdge|RisingEdge
+--register power-up is low
+
+R3_RisingEdge = DFFEAS(R3L4, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--S1L21 is processor:top_inst|add_sub:L7|output[0]~0
+S1L21 = (!R3_RisingEdge & S1_result_reg[0]);
+
+
+--CLOCK_50 is CLOCK_50
+CLOCK_50 = INPUT();
+
+
+--S1L22 is processor:top_inst|add_sub:L7|output[1]~1
+S1L22 = (!R3_RisingEdge & S1_result_reg[1]);
+
+
+--S1L23 is processor:top_inst|add_sub:L7|output[2]~2
+S1L23 = (!R3_RisingEdge & S1_result_reg[2]);
+
+
+--S1L24 is processor:top_inst|add_sub:L7|output[3]~3
+S1L24 = (!R3_RisingEdge & S1_result_reg[3]);
+
+
+--S1L25 is processor:top_inst|add_sub:L7|output[4]~4
+S1L25 = (!R3_RisingEdge & S1_result_reg[4]);
+
+
+--S1L26 is processor:top_inst|add_sub:L7|output[5]~5
+S1L26 = (!R3_RisingEdge & S1_result_reg[5]);
+
+
+--S1L28 is processor:top_inst|add_sub:L7|output[7]~6
+S1L28 = (!R3_RisingEdge & S1_result_reg[7]);
+
+
+--S1L27 is processor:top_inst|add_sub:L7|output[6]~7
+S1L27 = (!R3_RisingEdge & S1_result_reg[6]);
+
+
+--R2_FallingEdge is processor:top_inst|edge_detect:exeDelay|FallingEdge
+--register power-up is low
+
+R2_FallingEdge = DFFEAS(R2L2, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--C1L3 is processor:top_inst|count_sig[0]~0
+C1L3 = !C1_count_sig[0] $ (!R2_FallingEdge);
+
+
+--KEY[3] is KEY[3]
+KEY[3] = INPUT();
+
+
+--C1L5 is processor:top_inst|count_sig[1]~1
+C1L5 = !C1_count_sig[1] $ (((!C1_count_sig[0]) # (!R2_FallingEdge)));
+
+
+--C1L7 is processor:top_inst|count_sig[2]~2
+C1L7 = !C1_count_sig[2] $ (((!C1_count_sig[0]) # ((!C1_count_sig[1]) # (!R2_FallingEdge))));
+
+
+--C1L9 is processor:top_inst|count_sig[3]~3
+C1L9 = ( R2_FallingEdge & ( !C1_count_sig[3] $ (((!C1_count_sig[0]) # ((!C1_count_sig[1]) # (!C1_count_sig[2])))) ) ) # ( !R2_FallingEdge & ( C1_count_sig[3] ) );
+
+
+--A1L32 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_4_
+A1L32 = INPUT();
+
+
+--GB1L16 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|is_in_use_reg~0
+GB1L16 = AMPP_FUNCTION(!GB1_is_in_use_reg, !A1L28, !A1L32);
+
+
+--A1L49 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_raw_tck
+A1L49 = INPUT();
+
+
+--A1L26 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_clr
+A1L26 = INPUT();
+
+
+--GB1_ram_rom_addr_reg[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]
+--register power-up is low
+
+GB1_ram_rom_addr_reg[0] = AMPP_FUNCTION(A1L49, GB1L28, !A1L28, GB1L23);
+
+
+--GB1L17 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|process_0~0
+GB1L17 = AMPP_FUNCTION(!A1L28, !A1L32);
+
+
+--A1L31 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ir_in_3_
+A1L31 = INPUT();
+
+
+--GB1_ram_rom_addr_reg[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]
+--register power-up is low
+
+GB1_ram_rom_addr_reg[1] = AMPP_FUNCTION(A1L49, GB1L29, !A1L28, GB1L23);
+
+
+--GB1_ram_rom_addr_reg[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[2]
+--register power-up is low
+
+GB1_ram_rom_addr_reg[2] = AMPP_FUNCTION(A1L49, GB1L30, !A1L28, GB1L23);
+
+
+--GB1_ram_rom_addr_reg[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]
+--register power-up is low
+
+GB1_ram_rom_addr_reg[3] = AMPP_FUNCTION(A1L49, GB1L31, !A1L28, GB1L23);
+
+
+--GB1_ram_rom_addr_reg[4] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]
+--register power-up is low
+
+GB1_ram_rom_addr_reg[4] = AMPP_FUNCTION(A1L49, GB1L32, !A1L28, GB1L23);
+
+
+--A1L52 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_usr1
+A1L52 = INPUT();
+
+
+--A1L47 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_udr
+A1L47 = INPUT();
+
+
+--N1_word_counter[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3]
+--register power-up is low
+
+N1_word_counter[3] = AMPP_FUNCTION(A1L49, N1L10, N1L5);
+
+
+--A1L46 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_sdr
+A1L46 = INPUT();
+
+
+--N1_WORD_SR[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]
+--register power-up is low
+
+N1_WORD_SR[1] = AMPP_FUNCTION(A1L49, N1L24, N1L20);
+
+
+--N1_word_counter[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]
+--register power-up is low
+
+N1_word_counter[0] = AMPP_FUNCTION(A1L49, N1L11, N1L5);
+
+
+--N1_word_counter[4] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4]
+--register power-up is low
+
+N1_word_counter[4] = AMPP_FUNCTION(A1L49, N1L12, N1L5);
+
+
+--N1_word_counter[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[1]
+--register power-up is low
+
+N1_word_counter[1] = AMPP_FUNCTION(A1L49, N1L13, N1L5);
+
+
+--N1_word_counter[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2]
+--register power-up is low
+
+N1_word_counter[2] = AMPP_FUNCTION(A1L49, N1L14, N1L5);
+
+
+--N1L21 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~0
+N1L21 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[4], !N1_word_counter[1], !N1_word_counter[2]);
+
+
+--N1L22 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~1
+N1L22 = AMPP_FUNCTION(!A1L52, !A1L47, !N1_word_counter[3], !A1L46, !N1_WORD_SR[1], !N1L21);
+
+
+--A1L44 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_cdr
+A1L44 = INPUT();
+
+
+--A1L27 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_ena
+A1L27 = INPUT();
+
+
+--N1L20 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]~2
+N1L20 = AMPP_FUNCTION(!A1L52, !A1L47, !A1L46, !A1L44, !A1L27);
+
+
+--A1L50 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_tdi
+A1L50 = INPUT();
+
+
+--GB1L7 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|bypass_reg_out~0
+GB1L7 = AMPP_FUNCTION(!GB1_bypass_reg_out, !A1L27, !A1L50);
+
+
+--GB1_ram_rom_data_shift_cntr_reg[1] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]
+--register power-up is low
+
+GB1_ram_rom_data_shift_cntr_reg[1] = AMPP_FUNCTION(A1L49, GB1L52, !A1L31);
+
+
+--GB1_ram_rom_data_shift_cntr_reg[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]
+--register power-up is low
+
+GB1_ram_rom_data_shift_cntr_reg[3] = AMPP_FUNCTION(A1L49, GB1L56, !A1L31);
+
+
+--GB1_ram_rom_data_shift_cntr_reg[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]
+--register power-up is low
+
+GB1_ram_rom_data_shift_cntr_reg[2] = AMPP_FUNCTION(A1L49, GB1L54, !A1L31);
+
+
+--GB1_ram_rom_data_shift_cntr_reg[0] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]
+--register power-up is low
+
+GB1_ram_rom_data_shift_cntr_reg[0] = AMPP_FUNCTION(A1L49, GB1L50, !A1L31);
+
+
+--GB1L18 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|process_0~1
+GB1L18 = AMPP_FUNCTION(!A1L29, !A1L31, !GB1_ram_rom_data_shift_cntr_reg[1], !GB1_ram_rom_data_shift_cntr_reg[3], !GB1_ram_rom_data_shift_cntr_reg[2], !GB1_ram_rom_data_shift_cntr_reg[0]);
+
+
+--GB1L37 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[2]~0
+GB1L37 = AMPP_FUNCTION(!A1L29, !A1L30, !A1L52, !A1L46, !A1L27);
+
+
+--GB1L38 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[2]~1
+GB1L38 = AMPP_FUNCTION(!GB1L18, !GB1L37);
+
+
+--R3_PrevDataIn1 is processor:top_inst|add_sub:L7|edge_detect:resetEdge|PrevDataIn1
+--register power-up is low
+
+R3_PrevDataIn1 = DFFEAS(VCC, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R3_PrevDataIn2 is processor:top_inst|add_sub:L7|edge_detect:resetEdge|PrevDataIn2
+--register power-up is low
+
+R3_PrevDataIn2 = DFFEAS(R3_PrevDataIn1, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R3L4 is processor:top_inst|add_sub:L7|edge_detect:resetEdge|RisingEdge~0
+R3L4 = (R3_PrevDataIn1 & !R3_PrevDataIn2);
+
+
+--Y1_read_addr[0] is processor:top_inst|add_sub:L7|raminfr:ramUnit|read_addr[0]
+--register power-up is low
+
+Y1_read_addr[0] = DFFEAS(S1_WideOr0, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--Y1L1 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[0]~0
+Y1L1 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][0]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][0]));
+
+
+--S1_current_state.read_work is processor:top_inst|add_sub:L7|current_state.read_work
+--register power-up is low
+
+S1_current_state.read_work = DFFEAS(S1L38, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_current_state.write_work is processor:top_inst|add_sub:L7|current_state.write_work
+--register power-up is low
+
+S1_current_state.write_work = DFFEAS(S1_next_state.write_work, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_current_state.write_work_wait is processor:top_inst|add_sub:L7|current_state.write_work_wait
+--register power-up is low
+
+S1_current_state.write_work_wait = DFFEAS(S1L11, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_WideOr0 is processor:top_inst|add_sub:L7|WideOr0
+S1_WideOr0 = (S1_current_state.read_work & (!S1_current_state.write_work & !S1_current_state.write_work_wait));
+
+
+--S1_current_state.write_save_wait is processor:top_inst|add_sub:L7|current_state.write_save_wait
+--register power-up is low
+
+S1_current_state.write_save_wait = DFFEAS(S1_next_state.write_save_wait, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--S1_next_state.write_work is processor:top_inst|add_sub:L7|next_state.write_work
+S1_next_state.write_work = (S1_current_state.write_save_wait) # (S1_current_state.write_work_wait);
+
+
+--Y1L2 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[1]~1
+Y1L2 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][1]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][1]));
+
+
+--Y1L3 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[2]~2
+Y1L3 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][2]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][2]));
+
+
+--Y1L4 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[3]~3
+Y1L4 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][3]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][3]));
+
+
+--Y1L5 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[4]~4
+Y1L5 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][4]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][4]));
+
+
+--Y1L6 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[5]~5
+Y1L6 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][5]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][5]));
+
+
+--Y1L8 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[7]~6
+Y1L8 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][7]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][7]));
+
+
+--Y1L7 is processor:top_inst|add_sub:L7|raminfr:ramUnit|dout[6]~7
+Y1L7 = (!Y1_read_addr[0] & ((Y1_ram_mem[0][6]))) # (Y1_read_addr[0] & (Y1_ram_mem[1][6]));
+
+
+--V1_prev_data_1[2] is processor:top_inst|add_sub:L7|clock_synchronizer:pbSync|prev_data_1[2]
+--register power-up is low
+
+V1_prev_data_1[2] = DFFEAS(R1_FallingEdge, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V1_prev_data_2[2] is processor:top_inst|add_sub:L7|clock_synchronizer:pbSync|prev_data_2[2]
+--register power-up is low
+
+V1_prev_data_2[2] = DFFEAS(V1_prev_data_1[2], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R2L2 is processor:top_inst|edge_detect:exeDelay|FallingEdge~0
+R2L2 = (!V1_prev_data_1[2] & V1_prev_data_2[2]);
+
+
+--GB1L28 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg~0
+GB1L28 = AMPP_FUNCTION(!GB1_ram_rom_addr_reg[0], !A1L31, !GB1_ram_rom_addr_reg[1], !A1L52, !A1L46, !A1L27);
+
+
+--GB1L22 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]~1
+GB1L22 = AMPP_FUNCTION(!A1L30, !A1L31, !A1L52, !A1L47, !A1L46, !A1L27);
+
+
+--GB1L23 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]~2
+GB1L23 = AMPP_FUNCTION(!A1L29, !GB1_ram_rom_data_shift_cntr_reg[1], !GB1_ram_rom_data_shift_cntr_reg[3], !GB1_ram_rom_data_shift_cntr_reg[2], !GB1_ram_rom_data_shift_cntr_reg[0], !GB1L22);
+
+
+--GB1L19 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|process_0~2
+GB1L19 = AMPP_FUNCTION(!A1L31, !A1L52, !A1L46, !A1L27);
+
+
+--GB1L29 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg~3
+GB1L29 = AMPP_FUNCTION(!GB1_ram_rom_addr_reg[0], !GB1_ram_rom_addr_reg[1], !GB1_ram_rom_addr_reg[2], !GB1L19);
+
+
+--GB1L30 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg~4
+GB1L30 = AMPP_FUNCTION(!GB1_ram_rom_addr_reg[0], !GB1_ram_rom_addr_reg[1], !GB1_ram_rom_addr_reg[2], !GB1_ram_rom_addr_reg[3], !GB1L19);
+
+
+--GB1L31 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg~5
+GB1L31 = AMPP_FUNCTION(!GB1_ram_rom_addr_reg[0], !GB1_ram_rom_addr_reg[1], !GB1_ram_rom_addr_reg[2], !GB1_ram_rom_addr_reg[3], !GB1_ram_rom_addr_reg[4], !GB1L19);
+
+
+--GB1L5 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|Add0~0
+GB1L5 = AMPP_FUNCTION(!GB1_ram_rom_addr_reg[0], !GB1_ram_rom_addr_reg[1], !GB1_ram_rom_addr_reg[2], !GB1_ram_rom_addr_reg[3], !GB1_ram_rom_addr_reg[4]);
+
+
+--GB1L32 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg~6
+GB1L32 = AMPP_FUNCTION(!A1L31, !A1L52, !A1L46, !A1L27, !A1L50, !GB1L5);
+
+
+--N1_clear_signal is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|clear_signal
+N1_clear_signal = AMPP_FUNCTION(!A1L52, !A1L47);
+
+
+--N1L10 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~0
+N1L10 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[1], !N1_word_counter[2], !N1_clear_signal, !N1_word_counter[3]);
+
+
+--N1L5 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0]~1
+N1L5 = AMPP_FUNCTION(!A1L52, !A1L47, !A1L46, !A1L44, !A1L27);
+
+
+--N1_WORD_SR[2] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]
+--register power-up is low
+
+N1_WORD_SR[2] = AMPP_FUNCTION(A1L49, N1L26, N1L20);
+
+
+--N1L23 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~3
+N1L23 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[4], !N1_word_counter[1], !N1_word_counter[2]);
+
+
+--N1L24 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~4
+N1L24 = AMPP_FUNCTION(!A1L52, !A1L47, !N1_word_counter[3], !A1L46, !N1_WORD_SR[2], !N1L23);
+
+
+--N1L2 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|Equal0~0
+N1L2 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[4], !N1_word_counter[1], !N1_word_counter[2], !N1_word_counter[3]);
+
+
+--N1L11 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~2
+N1L11 = AMPP_FUNCTION(!N1_word_counter[0], !A1L52, !A1L47, !N1L2);
+
+
+--N1L12 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~3
+N1L12 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[4], !N1_word_counter[1], !N1_word_counter[2], !N1_clear_signal, !N1_word_counter[3]);
+
+
+--N1L13 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~4
+N1L13 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[1], !A1L52, !A1L47, !N1L2);
+
+
+--N1L14 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter~5
+N1L14 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[4], !N1_word_counter[1], !N1_word_counter[2], !N1_clear_signal, !N1_word_counter[3]);
+
+
+--A1L45 is jtag.bp.top_inst_rom1_altsyncram_component_auto_generated_mgl_prim2_jtag_state_e1dr
+A1L45 = INPUT();
+
+
+--GB1L8 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|enable_write~0
+GB1L8 = AMPP_FUNCTION(!A1L30, !A1L52, !A1L27, !A1L45);
+
+
+--C1_count_sig[4] is processor:top_inst|count_sig[4]
+--register power-up is low
+
+C1_count_sig[4] = DFFEAS(C1L11, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--GB1L52 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[1]~0
+GB1L52 = AMPP_FUNCTION(!GB1_ram_rom_data_shift_cntr_reg[1], !GB1_ram_rom_data_shift_cntr_reg[3], !GB1_ram_rom_data_shift_cntr_reg[2], !GB1_ram_rom_data_shift_cntr_reg[0], !GB1L37);
+
+
+--GB1L56 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[3]~1
+GB1L56 = AMPP_FUNCTION(!GB1_ram_rom_data_shift_cntr_reg[1], !GB1_ram_rom_data_shift_cntr_reg[3], !GB1_ram_rom_data_shift_cntr_reg[2], !GB1_ram_rom_data_shift_cntr_reg[0], !GB1L37);
+
+
+--GB1L54 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]~2
+GB1L54 = AMPP_FUNCTION(!GB1_ram_rom_data_shift_cntr_reg[1], !GB1_ram_rom_data_shift_cntr_reg[3], !GB1_ram_rom_data_shift_cntr_reg[2], !GB1_ram_rom_data_shift_cntr_reg[0], !GB1L37);
+
+
+--GB1L50 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]~3
+GB1L50 = AMPP_FUNCTION(!GB1_ram_rom_data_shift_cntr_reg[1], !GB1_ram_rom_data_shift_cntr_reg[3], !GB1_ram_rom_data_shift_cntr_reg[2], !GB1_ram_rom_data_shift_cntr_reg[0], !GB1L37);
+
+
+--V2_prev_data_2[0] is processor:top_inst|add_sub:L7|clock_synchronizer:opSync|prev_data_2[0]
+--register power-up is low
+
+V2_prev_data_2[0] = DFFEAS(V2_prev_data_1[0], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--U1L387 is processor:top_inst|add_sub:L7|alu:alu_def|Mux7~0
+U1L387 = (!V2_prev_data_2[0] & ((U1_mul_result[0]))) # (V2_prev_data_2[0] & (!CB1L162));
+
+
+--V2_prev_data_2[1] is processor:top_inst|add_sub:L7|clock_synchronizer:opSync|prev_data_2[1]
+--register power-up is low
+
+V2_prev_data_2[1] = DFFEAS(V2_prev_data_1[1], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--S1_current_state.write_save is processor:top_inst|add_sub:L7|current_state.write_save
+--register power-up is low
+
+S1_current_state.write_save = DFFEAS(S1L9, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--Y1L21 is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[1][0]~0
+Y1L21 = (!KEY[3]) # (S1_current_state.write_save);
+
+
+--S1_current_state.read_save is processor:top_inst|add_sub:L7|current_state.read_save
+--register power-up is low
+
+S1_current_state.read_save = DFFEAS(S1L7, CLOCK_50, !R3_RisingEdge,  ,  ,  ,  ,  ,  );
+
+
+--Y1L17 is processor:top_inst|add_sub:L7|raminfr:ramUnit|ram_mem[0][6]~1
+Y1L17 = ( S1_current_state.write_save_wait & ( S1_current_state.read_save & ( !KEY[3] ) ) ) # ( !S1_current_state.write_save_wait & ( S1_current_state.read_save & ( !KEY[3] ) ) ) # ( S1_current_state.write_save_wait & ( !S1_current_state.read_save & ( !KEY[3] ) ) ) # ( !S1_current_state.write_save_wait & ( !S1_current_state.read_save & ( (!KEY[3]) # ((S1_current_state.read_work & ((S1_current_state.write_work_wait) # (S1_current_state.write_work)))) ) ) );
+
+
+--R6_FallingEdge is processor:top_inst|add_sub:L7|edge_detect:restoreEdge|FallingEdge
+--register power-up is low
+
+R6_FallingEdge = DFFEAS(R6L2, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R5_FallingEdge is processor:top_inst|add_sub:L7|edge_detect:saveEdge|FallingEdge
+--register power-up is low
+
+R5_FallingEdge = DFFEAS(R5L2, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R4_FallingEdge is processor:top_inst|add_sub:L7|edge_detect:execEdge|FallingEdge
+--register power-up is low
+
+R4_FallingEdge = DFFEAS(R4L2, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--S1L38 is processor:top_inst|add_sub:L7|Selector0~0
+S1L38 = ( R4_FallingEdge & ( !S1_current_state.write_work ) ) # ( !R4_FallingEdge & ( (!S1_current_state.write_work & (((R5_FallingEdge) # (R6_FallingEdge)) # (S1_current_state.read_work))) ) );
+
+
+--S1L11 is processor:top_inst|add_sub:L7|next_state.write_work_wait~0
+S1L11 = (!S1_current_state.read_work & R4_FallingEdge);
+
+
+--S1_next_state.write_save_wait is processor:top_inst|add_sub:L7|next_state.write_save_wait
+S1_next_state.write_save_wait = (S1_current_state.read_save) # (S1_current_state.write_save);
+
+
+--V3_prev_data_2[7] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[7]
+--register power-up is low
+
+V3_prev_data_2[7] = DFFEAS(V3_prev_data_1[7], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--U1L386 is processor:top_inst|add_sub:L7|alu:alu_def|Mux6~0
+U1L386 = (!V2_prev_data_2[0] & (((U1_mul_result[1])))) # (V2_prev_data_2[0] & (!V3_prev_data_2[7] & (!CB1L126)));
+
+
+--V3_prev_data_2[6] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[6]
+--register power-up is low
+
+V3_prev_data_2[6] = DFFEAS(V3_prev_data_1[6], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1_sel[45] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|sel[45]
+CB1_sel[45] = (V3_prev_data_2[6]) # (V3_prev_data_2[7]);
+
+
+--U1L385 is processor:top_inst|add_sub:L7|alu:alu_def|Mux5~0
+U1L385 = (!V2_prev_data_2[0] & (((U1_mul_result[2])))) # (V2_prev_data_2[0] & (!CB1_sel[45] & (!CB1L94)));
+
+
+--V3_prev_data_2[5] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[5]
+--register power-up is low
+
+V3_prev_data_2[5] = DFFEAS(V3_prev_data_1[5], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1_sel[36] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|sel[36]
+CB1_sel[36] = (CB1_sel[45]) # (V3_prev_data_2[5]);
+
+
+--CB1_selnose[36] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|selnose[36]
+CB1_selnose[36] = (CB1L66) # (CB1_sel[36]);
+
+
+--U1L384 is processor:top_inst|add_sub:L7|alu:alu_def|Mux4~0
+U1L384 = (!V2_prev_data_2[0] & ((U1_mul_result[3]))) # (V2_prev_data_2[0] & (!CB1_selnose[36]));
+
+
+--V3_prev_data_2[4] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[4]
+--register power-up is low
+
+V3_prev_data_2[4] = DFFEAS(V3_prev_data_1[4], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1_sel[27] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|sel[27]
+CB1_sel[27] = (V3_prev_data_2[4]) # (CB1_sel[36]);
+
+
+--U1L383 is processor:top_inst|add_sub:L7|alu:alu_def|Mux3~0
+U1L383 = (!V2_prev_data_2[0] & (((U1_mul_result[4])))) # (V2_prev_data_2[0] & (!CB1_sel[27] & (!CB1L42)));
+
+
+--V3_prev_data_2[3] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[3]
+--register power-up is low
+
+V3_prev_data_2[3] = DFFEAS(V3_prev_data_1[3], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1_sel[18] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|sel[18]
+CB1_sel[18] = (((V3_prev_data_2[4]) # (V3_prev_data_2[3])) # (CB1_sel[45])) # (V3_prev_data_2[5]);
+
+
+--CB1_selnose[18] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|selnose[18]
+CB1_selnose[18] = (CB1L22) # (CB1_sel[18]);
+
+
+--U1L382 is processor:top_inst|add_sub:L7|alu:alu_def|Mux2~0
+U1L382 = (!V2_prev_data_2[0] & ((U1_mul_result[5]))) # (V2_prev_data_2[0] & (!CB1_selnose[18]));
+
+
+--V3_prev_data_2[1] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[1]
+--register power-up is low
+
+V3_prev_data_2[1] = DFFEAS(V3_prev_data_1[1], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_2[2] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[2]
+--register power-up is low
+
+V3_prev_data_2[2] = DFFEAS(V3_prev_data_1[2], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1_sel[1] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|sel[1]
+CB1_sel[1] = ( V3_prev_data_2[4] & ( V3_prev_data_2[2] ) ) # ( !V3_prev_data_2[4] & ( V3_prev_data_2[2] ) ) # ( V3_prev_data_2[4] & ( !V3_prev_data_2[2] ) ) # ( !V3_prev_data_2[4] & ( !V3_prev_data_2[2] & ( (((V3_prev_data_2[3]) # (V3_prev_data_2[6])) # (V3_prev_data_2[5])) # (V3_prev_data_2[7]) ) ) );
+
+
+--CB1_selnose[0] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|selnose[0]
+CB1_selnose[0] = ((CB1_sel[1]) # (V3_prev_data_2[1])) # (CB1L6);
+
+
+--U1L380 is processor:top_inst|add_sub:L7|alu:alu_def|Mux0~0
+U1L380 = (!V2_prev_data_2[0] & ((U1_mul_result[7]))) # (V2_prev_data_2[0] & (!CB1_selnose[0]));
+
+
+--U1L381 is processor:top_inst|add_sub:L7|alu:alu_def|Mux1~0
+U1L381 = (!V2_prev_data_2[0] & (((U1_mul_result[6])))) # (V2_prev_data_2[0] & (!CB1_sel[1] & (!CB1L18)));
+
+
+--R1_FallingEdge is processor:top_inst|edge_detect:resetEdge|FallingEdge
+--register power-up is low
+
+R1_FallingEdge = DFFEAS(R1L2, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--N1L25 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~5
+N1L25 = AMPP_FUNCTION(!N1_word_counter[2], !A1L52, !A1L47, !N1_word_counter[3], !A1L46);
+
+
+--N1_WORD_SR[3] is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[3]
+--register power-up is low
+
+N1_WORD_SR[3] = AMPP_FUNCTION(A1L49, N1L28, N1L20);
+
+
+--N1L26 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~6
+N1L26 = AMPP_FUNCTION(!N1_word_counter[4], !N1_word_counter[1], !N1_clear_signal, !A1L46, !N1L25, !N1_WORD_SR[3]);
+
+
+--C1L11 is processor:top_inst|count_sig[4]~4
+C1L11 = ( R2_FallingEdge & ( C1_count_sig[4] & ( (!C1_count_sig[0]) # ((!C1_count_sig[1]) # ((!C1_count_sig[2]) # (!C1_count_sig[3]))) ) ) ) # ( !R2_FallingEdge & ( C1_count_sig[4] ) ) # ( R2_FallingEdge & ( !C1_count_sig[4] & ( (C1_count_sig[0] & (C1_count_sig[1] & (C1_count_sig[2] & C1_count_sig[3]))) ) ) );
+
+
+--V3_prev_data_2[0] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_2[0]
+--register power-up is low
+
+V3_prev_data_2[0] = DFFEAS(V3_prev_data_1[0], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V2_prev_data_1[0] is processor:top_inst|add_sub:L7|clock_synchronizer:opSync|prev_data_1[0]
+--register power-up is low
+
+V2_prev_data_1[0] = DFFEAS(FB1_q_a[10], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V2_prev_data_1[1] is processor:top_inst|add_sub:L7|clock_synchronizer:opSync|prev_data_1[1]
+--register power-up is low
+
+V2_prev_data_1[1] = DFFEAS(FB1_q_a[11], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--S1L9 is processor:top_inst|add_sub:L7|next_state.write_save~0
+S1L9 = (!S1_current_state.read_work & (R5_FallingEdge & !R4_FallingEdge));
+
+
+--S1L7 is processor:top_inst|add_sub:L7|next_state.read_save~0
+S1L7 = (!S1_current_state.read_work & (R6_FallingEdge & (!R5_FallingEdge & !R4_FallingEdge)));
+
+
+--R6_PrevDataIn1 is processor:top_inst|add_sub:L7|edge_detect:restoreEdge|PrevDataIn1
+--register power-up is low
+
+R6_PrevDataIn1 = DFFEAS(V1_prev_data_2[0], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R6_PrevDataIn2 is processor:top_inst|add_sub:L7|edge_detect:restoreEdge|PrevDataIn2
+--register power-up is low
+
+R6_PrevDataIn2 = DFFEAS(R6_PrevDataIn1, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R6L2 is processor:top_inst|add_sub:L7|edge_detect:restoreEdge|FallingEdge~0
+R6L2 = (!R6_PrevDataIn1 & R6_PrevDataIn2);
+
+
+--R5_PrevDataIn1 is processor:top_inst|add_sub:L7|edge_detect:saveEdge|PrevDataIn1
+--register power-up is low
+
+R5_PrevDataIn1 = DFFEAS(V1_prev_data_2[1], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R5_PrevDataIn2 is processor:top_inst|add_sub:L7|edge_detect:saveEdge|PrevDataIn2
+--register power-up is low
+
+R5_PrevDataIn2 = DFFEAS(R5_PrevDataIn1, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R5L2 is processor:top_inst|add_sub:L7|edge_detect:saveEdge|FallingEdge~0
+R5L2 = (!R5_PrevDataIn1 & R5_PrevDataIn2);
+
+
+--R4_PrevDataIn1 is processor:top_inst|add_sub:L7|edge_detect:execEdge|PrevDataIn1
+--register power-up is low
+
+R4_PrevDataIn1 = DFFEAS(V1_prev_data_2[2], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R4_PrevDataIn2 is processor:top_inst|add_sub:L7|edge_detect:execEdge|PrevDataIn2
+--register power-up is low
+
+R4_PrevDataIn2 = DFFEAS(R4_PrevDataIn1, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R4L2 is processor:top_inst|add_sub:L7|edge_detect:execEdge|FallingEdge~0
+R4L2 = (!R4_PrevDataIn1 & R4_PrevDataIn2);
+
+
+--V3_prev_data_1[7] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[7]
+--register power-up is low
+
+V3_prev_data_1[7] = DFFEAS(FB1_q_a[7], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_1[6] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[6]
+--register power-up is low
+
+V3_prev_data_1[6] = DFFEAS(FB1_q_a[6], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_1[5] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[5]
+--register power-up is low
+
+V3_prev_data_1[5] = DFFEAS(FB1_q_a[5], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_1[4] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[4]
+--register power-up is low
+
+V3_prev_data_1[4] = DFFEAS(FB1_q_a[4], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_1[3] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[3]
+--register power-up is low
+
+V3_prev_data_1[3] = DFFEAS(FB1_q_a[3], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_1[1] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[1]
+--register power-up is low
+
+V3_prev_data_1[1] = DFFEAS(FB1_q_a[1], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V3_prev_data_1[2] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[2]
+--register power-up is low
+
+V3_prev_data_1[2] = DFFEAS(FB1_q_a[2], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R1_PrevDataIn1 is processor:top_inst|edge_detect:resetEdge|PrevDataIn1
+--register power-up is low
+
+R1_PrevDataIn1 = DFFEAS(KEY[0], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R1_PrevDataIn2 is processor:top_inst|edge_detect:resetEdge|PrevDataIn2
+--register power-up is low
+
+R1_PrevDataIn2 = DFFEAS(R1_PrevDataIn1, CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--R1L2 is processor:top_inst|edge_detect:resetEdge|FallingEdge~0
+R1L2 = (!R1_PrevDataIn1 & R1_PrevDataIn2);
+
+
+--N1L27 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~7
+N1L27 = AMPP_FUNCTION(!N1_word_counter[0], !N1_word_counter[4], !N1_word_counter[1]);
+
+
+--N1L28 is processor:top_inst|lab8rom:rom1|altsyncram:altsyncram_component|altsyncram_sl64:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR~8
+N1L28 = AMPP_FUNCTION(!N1_clear_signal, !A1L46, !A1L50, !N1L25, !N1L27);
+
+
+--V3_prev_data_1[0] is processor:top_inst|add_sub:L7|clock_synchronizer:ASync|prev_data_1[0]
+--register power-up is low
+
+V3_prev_data_1[0] = DFFEAS(FB1_q_a[0], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1_selnose[54] is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|selnose[54]
+CB1_selnose[54] = (CB1L126) # (V3_prev_data_2[7]);
+
+
+--CB1L234 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~0
+CB1L234 = (!CB1_sel[45] & (!CB1L94 & CB1L98));
+
+
+--CB1L222 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~1
+CB1L222 = (!CB1_sel[27] & (!CB1L42 & CB1L46));
+
+
+--CB1L214 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[9]~2
+CB1L214 = (!CB1_sel[1] & (!CB1L18 & CB1L14));
+
+
+--CB1L212 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[0]~3
+CB1L212 = ( CB1_sel[1] & ( Y1L8 ) ) # ( !CB1_sel[1] & ( (!CB1L6 & ((!V3_prev_data_2[1] & ((CB1L2))) # (V3_prev_data_2[1] & (Y1L8)))) # (CB1L6 & (Y1L8)) ) );
+
+
+--CB1L215 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[9]~4
+CB1L215 = (CB1L212 & ((CB1L18) # (CB1_sel[1])));
+
+
+--CB1L218 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[18]~5
+CB1L218 = ( CB1L215 & ( ((CB1L26) # (CB1L22)) # (CB1_sel[18]) ) ) # ( !CB1L215 & ( (!CB1_sel[18] & ((!CB1L22 & ((CB1L26))) # (CB1L22 & (CB1L214)))) # (CB1_sel[18] & (((CB1L214)))) ) );
+
+
+--CB1L223 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[27]~6
+CB1L223 = (CB1L218 & ((CB1L42) # (CB1_sel[27])));
+
+
+--CB1L228 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[36]~7
+CB1L228 = ( CB1L223 & ( ((CB1L70) # (CB1L66)) # (CB1_sel[36]) ) ) # ( !CB1L223 & ( (!CB1_sel[36] & ((!CB1L66 & ((CB1L70))) # (CB1L66 & (CB1L222)))) # (CB1_sel[36] & (((CB1L222)))) ) );
+
+
+--CB1L235 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[45]~8
+CB1L235 = (CB1L228 & ((CB1L94) # (CB1_sel[45])));
+
+
+--V1_prev_data_2[0] is processor:top_inst|add_sub:L7|clock_synchronizer:pbSync|prev_data_2[0]
+--register power-up is low
+
+V1_prev_data_2[0] = DFFEAS(V1_prev_data_1[0], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V1_prev_data_2[1] is processor:top_inst|add_sub:L7|clock_synchronizer:pbSync|prev_data_2[1]
+--register power-up is low
+
+V1_prev_data_2[1] = DFFEAS(V1_prev_data_1[1], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--KEY[0] is KEY[0]
+KEY[0] = INPUT();
+
+
+--CB1L213 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[8]~9
+CB1L213 = (!CB1_sel[1] & ((!CB1L18 & ((CB1L10))) # (CB1L18 & (Y1L7)))) # (CB1_sel[1] & (Y1L7));
+
+
+--CB1L217 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[17]~10
+CB1L217 = (!CB1_sel[18] & ((!CB1L22 & (CB1L30)) # (CB1L22 & ((CB1L213))))) # (CB1_sel[18] & (((CB1L213))));
+
+
+--CB1L221 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[26]~11
+CB1L221 = (!CB1_sel[27] & ((!CB1L42 & ((CB1L50))) # (CB1L42 & (CB1L217)))) # (CB1_sel[27] & (((CB1L217))));
+
+
+--CB1L227 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[35]~12
+CB1L227 = (!CB1_sel[36] & ((!CB1L66 & ((CB1L74))) # (CB1L66 & (CB1L221)))) # (CB1_sel[36] & (((CB1L221))));
+
+
+--CB1L233 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[44]~13
+CB1L233 = (!CB1_sel[45] & ((!CB1L94 & ((CB1L102))) # (CB1L94 & (CB1L227)))) # (CB1_sel[45] & (((CB1L227))));
+
+
+--V1_prev_data_1[0] is processor:top_inst|add_sub:L7|clock_synchronizer:pbSync|prev_data_1[0]
+--register power-up is low
+
+V1_prev_data_1[0] = DFFEAS(FB1_q_a[8], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--V1_prev_data_1[1] is processor:top_inst|add_sub:L7|clock_synchronizer:pbSync|prev_data_1[1]
+--register power-up is low
+
+V1_prev_data_1[1] = DFFEAS(FB1_q_a[9], CLOCK_50, KEY[3],  ,  ,  ,  ,  ,  );
+
+
+--CB1L216 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[16]~14
+CB1L216 = (!CB1_sel[18] & ((!CB1L22 & ((CB1L34))) # (CB1L22 & (Y1L6)))) # (CB1_sel[18] & (Y1L6));
+
+
+--CB1L220 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[25]~15
+CB1L220 = (!CB1_sel[27] & ((!CB1L42 & (CB1L54)) # (CB1L42 & ((CB1L216))))) # (CB1_sel[27] & (((CB1L216))));
+
+
+--CB1L226 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[34]~16
+CB1L226 = (!CB1_sel[36] & ((!CB1L66 & ((CB1L78))) # (CB1L66 & (CB1L220)))) # (CB1_sel[36] & (((CB1L220))));
+
+
+--CB1L232 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[43]~17
+CB1L232 = (!CB1_sel[45] & ((!CB1L94 & ((CB1L106))) # (CB1L94 & (CB1L226)))) # (CB1_sel[45] & (((CB1L226))));
+
+
+--CB1L219 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[24]~18
+CB1L219 = (!CB1_sel[27] & ((!CB1L42 & ((CB1L58))) # (CB1L42 & (Y1L5)))) # (CB1_sel[27] & (Y1L5));
+
+
+--CB1L225 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[33]~19
+CB1L225 = (!CB1_sel[36] & ((!CB1L66 & (CB1L82)) # (CB1L66 & ((CB1L219))))) # (CB1_sel[36] & (((CB1L219))));
+
+
+--CB1L231 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[42]~20
+CB1L231 = (!CB1_sel[45] & ((!CB1L94 & ((CB1L110))) # (CB1L94 & (CB1L225)))) # (CB1_sel[45] & (((CB1L225))));
+
+
+--CB1L224 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[32]~21
+CB1L224 = (!CB1_sel[36] & ((!CB1L66 & ((CB1L86))) # (CB1L66 & (Y1L4)))) # (CB1_sel[36] & (Y1L4));
+
+
+--CB1L230 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[41]~22
+CB1L230 = (!CB1_sel[45] & ((!CB1L94 & (CB1L114)) # (CB1L94 & ((CB1L224))))) # (CB1_sel[45] & (((CB1L224))));
+
+
+--CB1L229 is processor:top_inst|add_sub:L7|alu:alu_def|lpm_divide:Div0|lpm_divide_9am:auto_generated|sign_div_unsign_fkh:divider|alt_u_div_4te:divider|StageOut[40]~23
+CB1L229 = (!CB1_sel[45] & ((!CB1L94 & ((CB1L118))) # (CB1L94 & (Y1L3)))) # (CB1_sel[45] & (Y1L3));
+
+
+--A1L63 is ~GND
+A1L63 = GND;
+
+
+--W1L2 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexHund|Mux1~0_wirecell
+W1L2 = !W1L1;
+
+
+--W3L2 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexOne|Mux0~0_wirecell
+W3L2 = !W3L1;
+
+
+--W2L2 is processor:top_inst|add_sub:L7|bcd2seven_seg:hexTen|Mux0~0_wirecell
+W2L2 = !W2L1;
+
+
+--X1L5 is processor:top_inst|add_sub:L7|double_dabble:hexOuts|LessThan13~0_wirecell
+X1L5 = !X1L4;
+
+

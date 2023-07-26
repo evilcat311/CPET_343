@@ -1,0 +1,1031 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--E1L2 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~1
+E1L2_adder_eqn = ( VCC ) + ( E1L8 ) + ( E1L7 );
+E1L2 = SUM(E1L2_adder_eqn);
+
+
+--D1_cout is add_sub:top_inst|generic_adder_beh:gen_add|cout
+D1_cout_adder_eqn = ( GND ) + ( D1L6 ) + ( D1L5 );
+D1_cout = SUM(D1_cout_adder_eqn);
+
+
+--E1L6 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~5
+E1L6_adder_eqn = ( !B1_a_reg[7] $ (B1_b_reg[7]) ) + ( E1L36 ) + ( E1L35 );
+E1L6 = SUM(E1L6_adder_eqn);
+
+--E1L7 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~6
+E1L7_adder_eqn = ( !B1_a_reg[7] $ (B1_b_reg[7]) ) + ( E1L36 ) + ( E1L35 );
+E1L7 = CARRY(E1L7_adder_eqn);
+
+--E1L8 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~7
+E1L8_share_eqn = (B1_a_reg[7] & !B1_b_reg[7]);
+E1L8 = SHARE(E1L8_share_eqn);
+
+
+--D1_sum[7] is add_sub:top_inst|generic_adder_beh:gen_add|sum[7]
+D1_sum[7]_adder_eqn = ( !B1_b_reg[7] $ (!B1_a_reg[7]) ) + ( D1L27 ) + ( D1L26 );
+D1_sum[7] = SUM(D1_sum[7]_adder_eqn);
+
+--D1L5 is add_sub:top_inst|generic_adder_beh:gen_add|_~4
+D1L5_adder_eqn = ( !B1_b_reg[7] $ (!B1_a_reg[7]) ) + ( D1L27 ) + ( D1L26 );
+D1L5 = CARRY(D1L5_adder_eqn);
+
+--D1L6 is add_sub:top_inst|generic_adder_beh:gen_add|_~5
+D1L6_share_eqn = (B1_b_reg[7] & B1_a_reg[7]);
+D1L6 = SHARE(D1L6_share_eqn);
+
+
+--E1L10 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~9
+E1L10_adder_eqn = ( !B1_a_reg[0] $ (!B1_b_reg[0]) ) + ( !VCC ) + ( !VCC );
+E1L10 = SUM(E1L10_adder_eqn);
+
+--E1L11 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~10
+E1L11_adder_eqn = ( !B1_a_reg[0] $ (!B1_b_reg[0]) ) + ( !VCC ) + ( !VCC );
+E1L11 = CARRY(E1L11_adder_eqn);
+
+--E1L12 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~11
+E1L12_share_eqn = (!B1_b_reg[0]) # (B1_a_reg[0]);
+E1L12 = SHARE(E1L12_share_eqn);
+
+
+--D1_sum[0] is add_sub:top_inst|generic_adder_beh:gen_add|sum[0]
+D1_sum[0]_adder_eqn = ( !B1_b_reg[0] $ (!B1_a_reg[0]) ) + ( !VCC ) + ( !VCC );
+D1_sum[0] = SUM(D1_sum[0]_adder_eqn);
+
+--D1L8 is add_sub:top_inst|generic_adder_beh:gen_add|_~7
+D1L8_adder_eqn = ( !B1_b_reg[0] $ (!B1_a_reg[0]) ) + ( !VCC ) + ( !VCC );
+D1L8 = CARRY(D1L8_adder_eqn);
+
+--D1L9 is add_sub:top_inst|generic_adder_beh:gen_add|_~8
+D1L9_share_eqn = (B1_b_reg[0] & B1_a_reg[0]);
+D1L9 = SHARE(D1L9_share_eqn);
+
+
+--E1L14 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~13
+E1L14_adder_eqn = ( !B1_a_reg[1] $ (B1_b_reg[1]) ) + ( E1L12 ) + ( E1L11 );
+E1L14 = SUM(E1L14_adder_eqn);
+
+--E1L15 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~14
+E1L15_adder_eqn = ( !B1_a_reg[1] $ (B1_b_reg[1]) ) + ( E1L12 ) + ( E1L11 );
+E1L15 = CARRY(E1L15_adder_eqn);
+
+--E1L16 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~15
+E1L16_share_eqn = (B1_a_reg[1] & !B1_b_reg[1]);
+E1L16 = SHARE(E1L16_share_eqn);
+
+
+--D1_sum[1] is add_sub:top_inst|generic_adder_beh:gen_add|sum[1]
+D1_sum[1]_adder_eqn = ( !B1_b_reg[1] $ (!B1_a_reg[1]) ) + ( D1L9 ) + ( D1L8 );
+D1_sum[1] = SUM(D1_sum[1]_adder_eqn);
+
+--D1L11 is add_sub:top_inst|generic_adder_beh:gen_add|_~10
+D1L11_adder_eqn = ( !B1_b_reg[1] $ (!B1_a_reg[1]) ) + ( D1L9 ) + ( D1L8 );
+D1L11 = CARRY(D1L11_adder_eqn);
+
+--D1L12 is add_sub:top_inst|generic_adder_beh:gen_add|_~11
+D1L12_share_eqn = (B1_b_reg[1] & B1_a_reg[1]);
+D1L12 = SHARE(D1L12_share_eqn);
+
+
+--E1L18 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~17
+E1L18_adder_eqn = ( !B1_a_reg[2] $ (B1_b_reg[2]) ) + ( E1L16 ) + ( E1L15 );
+E1L18 = SUM(E1L18_adder_eqn);
+
+--E1L19 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~18
+E1L19_adder_eqn = ( !B1_a_reg[2] $ (B1_b_reg[2]) ) + ( E1L16 ) + ( E1L15 );
+E1L19 = CARRY(E1L19_adder_eqn);
+
+--E1L20 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~19
+E1L20_share_eqn = (B1_a_reg[2] & !B1_b_reg[2]);
+E1L20 = SHARE(E1L20_share_eqn);
+
+
+--D1_sum[2] is add_sub:top_inst|generic_adder_beh:gen_add|sum[2]
+D1_sum[2]_adder_eqn = ( !B1_b_reg[2] $ (!B1_a_reg[2]) ) + ( D1L12 ) + ( D1L11 );
+D1_sum[2] = SUM(D1_sum[2]_adder_eqn);
+
+--D1L14 is add_sub:top_inst|generic_adder_beh:gen_add|_~13
+D1L14_adder_eqn = ( !B1_b_reg[2] $ (!B1_a_reg[2]) ) + ( D1L12 ) + ( D1L11 );
+D1L14 = CARRY(D1L14_adder_eqn);
+
+--D1L15 is add_sub:top_inst|generic_adder_beh:gen_add|_~14
+D1L15_share_eqn = (B1_b_reg[2] & B1_a_reg[2]);
+D1L15 = SHARE(D1L15_share_eqn);
+
+
+--E1L22 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~21
+E1L22_adder_eqn = ( !B1_a_reg[3] $ (B1_b_reg[3]) ) + ( E1L20 ) + ( E1L19 );
+E1L22 = SUM(E1L22_adder_eqn);
+
+--E1L23 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~22
+E1L23_adder_eqn = ( !B1_a_reg[3] $ (B1_b_reg[3]) ) + ( E1L20 ) + ( E1L19 );
+E1L23 = CARRY(E1L23_adder_eqn);
+
+--E1L24 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~23
+E1L24_share_eqn = (B1_a_reg[3] & !B1_b_reg[3]);
+E1L24 = SHARE(E1L24_share_eqn);
+
+
+--D1_sum[3] is add_sub:top_inst|generic_adder_beh:gen_add|sum[3]
+D1_sum[3]_adder_eqn = ( !B1_b_reg[3] $ (!B1_a_reg[3]) ) + ( D1L15 ) + ( D1L14 );
+D1_sum[3] = SUM(D1_sum[3]_adder_eqn);
+
+--D1L17 is add_sub:top_inst|generic_adder_beh:gen_add|_~16
+D1L17_adder_eqn = ( !B1_b_reg[3] $ (!B1_a_reg[3]) ) + ( D1L15 ) + ( D1L14 );
+D1L17 = CARRY(D1L17_adder_eqn);
+
+--D1L18 is add_sub:top_inst|generic_adder_beh:gen_add|_~17
+D1L18_share_eqn = (B1_b_reg[3] & B1_a_reg[3]);
+D1L18 = SHARE(D1L18_share_eqn);
+
+
+--E1L26 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~25
+E1L26_adder_eqn = ( !B1_a_reg[4] $ (B1_b_reg[4]) ) + ( E1L24 ) + ( E1L23 );
+E1L26 = SUM(E1L26_adder_eqn);
+
+--E1L27 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~26
+E1L27_adder_eqn = ( !B1_a_reg[4] $ (B1_b_reg[4]) ) + ( E1L24 ) + ( E1L23 );
+E1L27 = CARRY(E1L27_adder_eqn);
+
+--E1L28 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~27
+E1L28_share_eqn = (B1_a_reg[4] & !B1_b_reg[4]);
+E1L28 = SHARE(E1L28_share_eqn);
+
+
+--D1_sum[4] is add_sub:top_inst|generic_adder_beh:gen_add|sum[4]
+D1_sum[4]_adder_eqn = ( !B1_b_reg[4] $ (!B1_a_reg[4]) ) + ( D1L18 ) + ( D1L17 );
+D1_sum[4] = SUM(D1_sum[4]_adder_eqn);
+
+--D1L20 is add_sub:top_inst|generic_adder_beh:gen_add|_~19
+D1L20_adder_eqn = ( !B1_b_reg[4] $ (!B1_a_reg[4]) ) + ( D1L18 ) + ( D1L17 );
+D1L20 = CARRY(D1L20_adder_eqn);
+
+--D1L21 is add_sub:top_inst|generic_adder_beh:gen_add|_~20
+D1L21_share_eqn = (B1_b_reg[4] & B1_a_reg[4]);
+D1L21 = SHARE(D1L21_share_eqn);
+
+
+--E1L30 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~29
+E1L30_adder_eqn = ( !B1_a_reg[5] $ (B1_b_reg[5]) ) + ( E1L28 ) + ( E1L27 );
+E1L30 = SUM(E1L30_adder_eqn);
+
+--E1L31 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~30
+E1L31_adder_eqn = ( !B1_a_reg[5] $ (B1_b_reg[5]) ) + ( E1L28 ) + ( E1L27 );
+E1L31 = CARRY(E1L31_adder_eqn);
+
+--E1L32 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~31
+E1L32_share_eqn = (B1_a_reg[5] & !B1_b_reg[5]);
+E1L32 = SHARE(E1L32_share_eqn);
+
+
+--D1_sum[5] is add_sub:top_inst|generic_adder_beh:gen_add|sum[5]
+D1_sum[5]_adder_eqn = ( !B1_b_reg[5] $ (!B1_a_reg[5]) ) + ( D1L21 ) + ( D1L20 );
+D1_sum[5] = SUM(D1_sum[5]_adder_eqn);
+
+--D1L23 is add_sub:top_inst|generic_adder_beh:gen_add|_~22
+D1L23_adder_eqn = ( !B1_b_reg[5] $ (!B1_a_reg[5]) ) + ( D1L21 ) + ( D1L20 );
+D1L23 = CARRY(D1L23_adder_eqn);
+
+--D1L24 is add_sub:top_inst|generic_adder_beh:gen_add|_~23
+D1L24_share_eqn = (B1_b_reg[5] & B1_a_reg[5]);
+D1L24 = SHARE(D1L24_share_eqn);
+
+
+--E1L34 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~33
+E1L34_adder_eqn = ( !B1_a_reg[6] $ (B1_b_reg[6]) ) + ( E1L32 ) + ( E1L31 );
+E1L34 = SUM(E1L34_adder_eqn);
+
+--E1L35 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~34
+E1L35_adder_eqn = ( !B1_a_reg[6] $ (B1_b_reg[6]) ) + ( E1L32 ) + ( E1L31 );
+E1L35 = CARRY(E1L35_adder_eqn);
+
+--E1L36 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~35
+E1L36_share_eqn = (B1_a_reg[6] & !B1_b_reg[6]);
+E1L36 = SHARE(E1L36_share_eqn);
+
+
+--D1_sum[6] is add_sub:top_inst|generic_adder_beh:gen_add|sum[6]
+D1_sum[6]_adder_eqn = ( !B1_b_reg[6] $ (!B1_a_reg[6]) ) + ( D1L24 ) + ( D1L23 );
+D1_sum[6] = SUM(D1_sum[6]_adder_eqn);
+
+--D1L26 is add_sub:top_inst|generic_adder_beh:gen_add|_~25
+D1L26_adder_eqn = ( !B1_b_reg[6] $ (!B1_a_reg[6]) ) + ( D1L24 ) + ( D1L23 );
+D1L26 = CARRY(D1L26_adder_eqn);
+
+--D1L27 is add_sub:top_inst|generic_adder_beh:gen_add|_~26
+D1L27_share_eqn = (B1_b_reg[6] & B1_a_reg[6]);
+D1L27 = SHARE(D1L27_share_eqn);
+
+
+--SW[8] is SW[8]
+SW[8] = INPUT();
+
+
+--HEX0[0] is HEX0[0]
+HEX0[0] = OUTPUT(F3L8);
+
+
+--HEX0[1] is HEX0[1]
+HEX0[1] = OUTPUT(F3L7);
+
+
+--HEX0[2] is HEX0[2]
+HEX0[2] = OUTPUT(F3L6);
+
+
+--HEX0[3] is HEX0[3]
+HEX0[3] = OUTPUT(F3L5);
+
+
+--HEX0[4] is HEX0[4]
+HEX0[4] = OUTPUT(F3L4);
+
+
+--HEX0[5] is HEX0[5]
+HEX0[5] = OUTPUT(F3L3);
+
+
+--HEX0[6] is HEX0[6]
+HEX0[6] = OUTPUT(F3L2);
+
+
+--HEX1[0] is HEX1[0]
+HEX1[0] = OUTPUT(F2L8);
+
+
+--HEX1[1] is HEX1[1]
+HEX1[1] = OUTPUT(F2L7);
+
+
+--HEX1[2] is HEX1[2]
+HEX1[2] = OUTPUT(F2L6);
+
+
+--HEX1[3] is HEX1[3]
+HEX1[3] = OUTPUT(F2L5);
+
+
+--HEX1[4] is HEX1[4]
+HEX1[4] = OUTPUT(F2L4);
+
+
+--HEX1[5] is HEX1[5]
+HEX1[5] = OUTPUT(F2L3);
+
+
+--HEX1[6] is HEX1[6]
+HEX1[6] = OUTPUT(F2L2);
+
+
+--HEX2[0] is HEX2[0]
+HEX2[0] = OUTPUT(F1L7);
+
+
+--HEX2[1] is HEX2[1]
+HEX2[1] = OUTPUT(F1L6);
+
+
+--HEX2[2] is HEX2[2]
+HEX2[2] = OUTPUT(F1L5);
+
+
+--HEX2[3] is HEX2[3]
+HEX2[3] = OUTPUT(F1L4);
+
+
+--HEX2[4] is HEX2[4]
+HEX2[4] = OUTPUT(F1L3);
+
+
+--HEX2[5] is HEX2[5]
+HEX2[5] = OUTPUT(F1L2);
+
+
+--HEX2[6] is HEX2[6]
+HEX2[6] = OUTPUT(F1L1);
+
+
+--LEDR[0] is LEDR[0]
+LEDR[0] = OUTPUT(B1L32);
+
+
+--LEDR[1] is LEDR[1]
+LEDR[1] = OUTPUT(B1_current_state.input_b);
+
+
+--LEDR[2] is LEDR[2]
+LEDR[2] = OUTPUT(B1_current_state.disp_sum);
+
+
+--LEDR[3] is LEDR[3]
+LEDR[3] = OUTPUT(B1_current_state.disp_diff);
+
+
+--B1_out_12b[0] is add_sub:top_inst|out_12b[0]
+--register power-up is low
+
+B1_out_12b[0] = DFFEAS(B1_output[0], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[1] is add_sub:top_inst|out_12b[1]
+--register power-up is low
+
+B1_out_12b[1] = DFFEAS(B1_output[1], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[2] is add_sub:top_inst|out_12b[2]
+--register power-up is low
+
+B1_out_12b[2] = DFFEAS(B1_output[2], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[3] is add_sub:top_inst|out_12b[3]
+--register power-up is low
+
+B1_out_12b[3] = DFFEAS(B1_output[3], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[4] is add_sub:top_inst|out_12b[4]
+--register power-up is low
+
+B1_out_12b[4] = DFFEAS(B1_output[4], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[5] is add_sub:top_inst|out_12b[5]
+--register power-up is low
+
+B1_out_12b[5] = DFFEAS(B1_output[5], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[6] is add_sub:top_inst|out_12b[6]
+--register power-up is low
+
+B1_out_12b[6] = DFFEAS(B1_output[6], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[8] is add_sub:top_inst|out_12b[8]
+--register power-up is low
+
+B1_out_12b[8] = DFFEAS(B1L64, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_out_12b[7] is add_sub:top_inst|out_12b[7]
+--register power-up is low
+
+B1_out_12b[7] = DFFEAS(B1_output[7], CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--G1L1 is add_sub:top_inst|double_dabble:hexOuts|bcd~0
+G1L1 = ( B1_out_12b[7] & ( (!B1_out_12b[4] & ((!B1_out_12b[5] & (!B1_out_12b[6] $ (B1_out_12b[8]))) # (B1_out_12b[5] & (!B1_out_12b[6] & B1_out_12b[8])))) # (B1_out_12b[4] & ((!B1_out_12b[5] & (B1_out_12b[6] & !B1_out_12b[8])) # (B1_out_12b[5] & (!B1_out_12b[6] $ (B1_out_12b[8]))))) ) ) # ( !B1_out_12b[7] & ( (!B1_out_12b[4] & ((!B1_out_12b[6] & ((B1_out_12b[8]))) # (B1_out_12b[6] & (B1_out_12b[5] & !B1_out_12b[8])))) # (B1_out_12b[4] & ((!B1_out_12b[6] $ (B1_out_12b[8])))) ) );
+
+
+--G1L2 is add_sub:top_inst|double_dabble:hexOuts|bcd~1
+G1L2 = ( B1_out_12b[7] & ( (!B1_out_12b[4] & (!B1_out_12b[5] & ((!B1_out_12b[8]) # (B1_out_12b[6])))) # (B1_out_12b[4] & ((!B1_out_12b[5] & (B1_out_12b[6] & !B1_out_12b[8])) # (B1_out_12b[5] & (!B1_out_12b[6] & B1_out_12b[8])))) ) ) # ( !B1_out_12b[7] & ( (!B1_out_12b[4] & (B1_out_12b[5] & ((!B1_out_12b[6]) # (B1_out_12b[8])))) # (B1_out_12b[4] & (!B1_out_12b[5] $ (((!B1_out_12b[8]) # (B1_out_12b[6]))))) ) );
+
+
+--G1L9 is add_sub:top_inst|double_dabble:hexOuts|LessThan9~0
+G1L9 = ( B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[4] & (((!B1_out_12b[5])))) # (B1_out_12b[4] & ((!B1_out_12b[5] & ((B1_out_12b[6]))) # (B1_out_12b[5] & (B1_out_12b[3] & !B1_out_12b[6])))) ) ) ) # ( !B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[4] & ((!B1_out_12b[5] & ((!B1_out_12b[6]) # (B1_out_12b[3]))) # (B1_out_12b[5] & ((B1_out_12b[6]))))) # (B1_out_12b[4] & (((!B1_out_12b[5])))) ) ) ) # ( B1_out_12b[8] & ( !B1_out_12b[7] & ( (!B1_out_12b[3] & (B1_out_12b[5] & ((!B1_out_12b[6]) # (B1_out_12b[4])))) # (B1_out_12b[3] & (((B1_out_12b[4] & !B1_out_12b[6])) # (B1_out_12b[5]))) ) ) ) # ( !B1_out_12b[8] & ( !B1_out_12b[7] & ( (!B1_out_12b[4] & ((!B1_out_12b[5] & ((B1_out_12b[6]))) # (B1_out_12b[5] & (B1_out_12b[3] & !B1_out_12b[6])))) # (B1_out_12b[4] & (B1_out_12b[5] & ((!B1_out_12b[6]) # (B1_out_12b[3])))) ) ) );
+
+
+--G1L11 is add_sub:top_inst|double_dabble:hexOuts|ones[1]~0
+G1L11 = ( G1L2 & ( G1L9 & ( (!B1_out_12b[1] & (G1L1 & (!B1_out_12b[2] $ (!B1_out_12b[3])))) # (B1_out_12b[1] & ((!B1_out_12b[2] & ((!G1L1))) # (B1_out_12b[2] & (B1_out_12b[3])))) ) ) ) # ( !G1L2 & ( G1L9 & ( (!B1_out_12b[3] & ((!B1_out_12b[1] & ((G1L1))) # (B1_out_12b[1] & (!B1_out_12b[2] & !G1L1)))) # (B1_out_12b[3] & (!B1_out_12b[1] $ (((B1_out_12b[2] & G1L1))))) ) ) ) # ( G1L2 & ( !G1L9 & ( (!B1_out_12b[1] & ((!G1L1) # ((!B1_out_12b[2] & !B1_out_12b[3])))) # (B1_out_12b[1] & (G1L1 & (!B1_out_12b[2] $ (!B1_out_12b[3])))) ) ) ) # ( !G1L2 & ( !G1L9 & ( (!B1_out_12b[1] & ((!B1_out_12b[2] & (!B1_out_12b[3] & G1L1)) # (B1_out_12b[2] & (B1_out_12b[3] & !G1L1)))) # (B1_out_12b[1] & (!B1_out_12b[3] $ (((!B1_out_12b[2] & G1L1))))) ) ) );
+
+
+--G1L12 is add_sub:top_inst|double_dabble:hexOuts|ones[2]~1
+G1L12 = ( G1L2 & ( G1L9 & ( (!G1L1 & ((!B1_out_12b[2] $ (B1_out_12b[3])))) # (G1L1 & ((!B1_out_12b[1] & (!B1_out_12b[2] & B1_out_12b[3])) # (B1_out_12b[1] & (B1_out_12b[2] & !B1_out_12b[3])))) ) ) ) # ( !G1L2 & ( G1L9 & ( (!B1_out_12b[1] & ((!B1_out_12b[2] & (!B1_out_12b[3] & !G1L1)) # (B1_out_12b[2] & (!B1_out_12b[3] $ (!G1L1))))) # (B1_out_12b[1] & (!B1_out_12b[2])) ) ) ) # ( G1L2 & ( !G1L9 & ( (!B1_out_12b[1] & ((!B1_out_12b[2] & (B1_out_12b[3] & G1L1)) # (B1_out_12b[2] & ((!G1L1))))) # (B1_out_12b[1] & (!B1_out_12b[2])) ) ) ) # ( !G1L2 & ( !G1L9 & ( (!B1_out_12b[2] & (G1L1 & ((!B1_out_12b[1]) # (B1_out_12b[3])))) # (B1_out_12b[2] & (!G1L1 & ((!B1_out_12b[3]) # (B1_out_12b[1])))) ) ) );
+
+
+--G1L13 is add_sub:top_inst|double_dabble:hexOuts|ones[3]~2
+G1L13 = ( G1L2 & ( G1L9 & ( (!B1_out_12b[1] & (!B1_out_12b[3] & (!B1_out_12b[2] $ (!G1L1)))) # (B1_out_12b[1] & (!B1_out_12b[2] & (B1_out_12b[3] & G1L1))) ) ) ) # ( !G1L2 & ( G1L9 & ( (!B1_out_12b[2] & (((!B1_out_12b[3] & G1L1)))) # (B1_out_12b[2] & ((!B1_out_12b[1] & (!B1_out_12b[3])) # (B1_out_12b[1] & (B1_out_12b[3] & !G1L1)))) ) ) ) # ( G1L2 & ( !G1L9 & ( (!B1_out_12b[1] & (B1_out_12b[3] & ((!G1L1) # (B1_out_12b[2])))) # (B1_out_12b[1] & (!G1L1 & (!B1_out_12b[2] $ (!B1_out_12b[3])))) ) ) ) # ( !G1L2 & ( !G1L9 & ( (!B1_out_12b[1] & (B1_out_12b[3] & (!B1_out_12b[2] $ (G1L1)))) # (B1_out_12b[1] & (!B1_out_12b[2] & (!B1_out_12b[3] & G1L1))) ) ) );
+
+
+--F3L8 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux6~0
+F3L8 = (!G1L12 & (B1_out_12b[0] & (!G1L11 $ (G1L13)))) # (G1L12 & (!G1L11 & (!B1_out_12b[0] $ (G1L13))));
+
+
+--F3L7 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux5~0
+F3L7 = (!G1L11 & (G1L12 & (!B1_out_12b[0] $ (!G1L13)))) # (G1L11 & ((!B1_out_12b[0] & (G1L12)) # (B1_out_12b[0] & ((G1L13)))));
+
+
+--F3L6 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux4~0
+F3L6 = (!G1L12 & (!B1_out_12b[0] & (G1L11 & !G1L13))) # (G1L12 & (G1L13 & ((!B1_out_12b[0]) # (G1L11))));
+
+
+--F3L5 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux3~0
+F3L5 = (!G1L11 & (!G1L13 & (!B1_out_12b[0] $ (!G1L12)))) # (G1L11 & ((!B1_out_12b[0] & (!G1L12 & G1L13)) # (B1_out_12b[0] & (G1L12))));
+
+
+--F3L4 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux2~0
+F3L4 = (!G1L11 & ((!G1L12 & (B1_out_12b[0])) # (G1L12 & ((!G1L13))))) # (G1L11 & (B1_out_12b[0] & ((!G1L13))));
+
+
+--F3L3 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux1~0
+F3L3 = (!B1_out_12b[0] & (G1L11 & (!G1L12 & !G1L13))) # (B1_out_12b[0] & (!G1L13 $ (((!G1L11 & G1L12)))));
+
+
+--F3L1 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux0~0
+F3L1 = (!B1_out_12b[0] & ((!G1L12 $ (!G1L13)) # (G1L11))) # (B1_out_12b[0] & ((!G1L11 $ (!G1L12)) # (G1L13)));
+
+
+--G1L14 is add_sub:top_inst|double_dabble:hexOuts|tens[0]~0
+G1L14 = ( G1L2 & ( G1L9 & ( (!B1_out_12b[1] & (G1L1 & (!B1_out_12b[2] $ (!B1_out_12b[3])))) # (B1_out_12b[1] & ((!B1_out_12b[2] & ((G1L1))) # (B1_out_12b[2] & (!B1_out_12b[3])))) ) ) ) # ( !G1L2 & ( G1L9 & ( !G1L1 $ (((!B1_out_12b[3] & ((!B1_out_12b[1]) # (!B1_out_12b[2]))))) ) ) ) # ( G1L2 & ( !G1L9 & ( !G1L1 $ (((B1_out_12b[1] & (B1_out_12b[2] & B1_out_12b[3])))) ) ) ) # ( !G1L2 & ( !G1L9 & ( (!B1_out_12b[2] & ((!B1_out_12b[3] & ((G1L1))) # (B1_out_12b[3] & (B1_out_12b[1] & !G1L1)))) # (B1_out_12b[2] & (B1_out_12b[3] & ((!G1L1) # (B1_out_12b[1])))) ) ) );
+
+
+--G1L3 is add_sub:top_inst|double_dabble:hexOuts|bcd~2
+G1L3 = ( G1L9 & ( !G1L2 $ (((!B1_out_12b[2]) # ((!B1_out_12b[3]) # (!G1L1)))) ) ) # ( !G1L9 & ( !G1L2 $ (((G1L1 & ((B1_out_12b[3]) # (B1_out_12b[2]))))) ) );
+
+
+--G1L4 is add_sub:top_inst|double_dabble:hexOuts|bcd~3
+G1L4 = ( B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[5] & (((B1_out_12b[6])))) # (B1_out_12b[5] & (B1_out_12b[3] & (B1_out_12b[4] & !B1_out_12b[6]))) ) ) ) # ( !B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[5] & ((!B1_out_12b[6]))) # (B1_out_12b[5] & (B1_out_12b[4] & B1_out_12b[6])) ) ) ) # ( B1_out_12b[8] & ( !B1_out_12b[7] & ( (!B1_out_12b[3] & ((!B1_out_12b[5]) # ((!B1_out_12b[4] & B1_out_12b[6])))) # (B1_out_12b[3] & (!B1_out_12b[5] & ((!B1_out_12b[4]) # (B1_out_12b[6])))) ) ) ) # ( !B1_out_12b[8] & ( !B1_out_12b[7] & ( (!B1_out_12b[4] & ((!B1_out_12b[5] & ((B1_out_12b[6]))) # (B1_out_12b[5] & (B1_out_12b[3] & !B1_out_12b[6])))) # (B1_out_12b[4] & (B1_out_12b[5] & ((!B1_out_12b[6]) # (B1_out_12b[3])))) ) ) );
+
+
+--G1L10 is add_sub:top_inst|double_dabble:hexOuts|LessThan16~0
+G1L10 = ( G1L9 & ( !G1L4 & ( !G1L2 $ (((!B1_out_12b[2]) # ((!B1_out_12b[3]) # (!G1L1)))) ) ) ) # ( !G1L9 & ( !G1L4 & ( !G1L2 $ (((G1L1 & ((B1_out_12b[3]) # (B1_out_12b[2]))))) ) ) );
+
+
+--G1L5 is add_sub:top_inst|double_dabble:hexOuts|bcd~4
+G1L5 = ( B1_out_12b[8] & ( B1_out_12b[7] & ( (B1_out_12b[5] & B1_out_12b[6]) ) ) ) # ( !B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[5] & !B1_out_12b[6]) ) ) ) # ( B1_out_12b[8] & ( !B1_out_12b[7] & ( (!B1_out_12b[5] & (((B1_out_12b[3] & B1_out_12b[4])) # (B1_out_12b[6]))) # (B1_out_12b[5] & ((!B1_out_12b[6]) # ((!B1_out_12b[3] & !B1_out_12b[4])))) ) ) ) # ( !B1_out_12b[8] & ( !B1_out_12b[7] & ( (B1_out_12b[6] & ((B1_out_12b[5]) # (B1_out_12b[4]))) ) ) );
+
+
+--G1L6 is add_sub:top_inst|double_dabble:hexOuts|bcd~5
+G1L6 = ( B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[4] & (!B1_out_12b[5] & !B1_out_12b[6])) ) ) ) # ( !B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[5] & (!B1_out_12b[3] & (!B1_out_12b[4] & B1_out_12b[6]))) # (B1_out_12b[5] & (((!B1_out_12b[6])))) ) ) ) # ( B1_out_12b[8] & ( !B1_out_12b[7] & ( (B1_out_12b[5] & (B1_out_12b[6] & ((B1_out_12b[4]) # (B1_out_12b[3])))) ) ) );
+
+
+--G1L15 is add_sub:top_inst|double_dabble:hexOuts|tens[1]~1
+G1L15 = !G1L3 $ (((!G1L6 & ((!G1L5) # (G1L10)))));
+
+
+--G1L16 is add_sub:top_inst|double_dabble:hexOuts|tens[2]~2
+G1L16 = (!G1L3 & (G1L4)) # (G1L3 & ((!G1L4 & ((G1L6))) # (G1L4 & (!G1L5 & !G1L6))));
+
+
+--G1L17 is add_sub:top_inst|double_dabble:hexOuts|tens[3]~3
+G1L17 = (!G1L10 & (!G1L5 & G1L6)) # (G1L10 & (G1L5));
+
+
+--F2L8 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux6~0
+F2L8 = (!G1L16 & (G1L14 & (!G1L15 $ (!G1L17)))) # (G1L16 & (G1L15 & (!G1L14 $ (G1L17))));
+
+
+--F2L7 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux5~0
+F2L7 = (!G1L15 & ((!G1L14 & (G1L16)) # (G1L14 & ((G1L17))))) # (G1L15 & (G1L16 & (!G1L14 $ (!G1L17))));
+
+
+--F2L6 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux4~0
+F2L6 = (!G1L16 & (!G1L14 & (!G1L15 & !G1L17))) # (G1L16 & (G1L17 & ((!G1L14) # (!G1L15))));
+
+
+--F2L5 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux3~0
+F2L5 = (!G1L15 & ((!G1L14 & (!G1L16 & G1L17)) # (G1L14 & (G1L16)))) # (G1L15 & (!G1L17 & (!G1L14 $ (!G1L16))));
+
+
+--F2L4 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux2~0
+F2L4 = (!G1L15 & (G1L14 & ((!G1L17)))) # (G1L15 & ((!G1L16 & (G1L14)) # (G1L16 & ((!G1L17)))));
+
+
+--F2L3 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux1~0
+F2L3 = (!G1L14 & (!G1L15 & (!G1L16 & !G1L17))) # (G1L14 & (!G1L17 $ (((G1L15 & G1L16)))));
+
+
+--F2L1 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux0~0
+F2L1 = (!G1L14 & ((!G1L15) # (!G1L16 $ (!G1L17)))) # (G1L14 & ((!G1L15 $ (G1L16)) # (G1L17)));
+
+
+--G1L7 is add_sub:top_inst|double_dabble:hexOuts|bcd~6
+G1L7 = ( B1_out_12b[8] & ( B1_out_12b[7] & ( (!B1_out_12b[4] & (!B1_out_12b[5] & !B1_out_12b[6])) ) ) ) # ( !B1_out_12b[8] & ( B1_out_12b[7] & ( (B1_out_12b[6] & (((B1_out_12b[5]) # (B1_out_12b[4])) # (B1_out_12b[3]))) ) ) ) # ( B1_out_12b[8] & ( !B1_out_12b[7] ) );
+
+
+--G1L8 is add_sub:top_inst|double_dabble:hexOuts|bcd~7
+G1L8 = ( B1_out_12b[7] & ( (B1_out_12b[8] & (((B1_out_12b[6]) # (B1_out_12b[5])) # (B1_out_12b[4]))) ) );
+
+
+--F1L7 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux6~0
+F1L7 = ( G1L8 & ( (!G1L7 & (!G1L6 $ (((!G1L10 & G1L5))))) ) ) # ( !G1L8 & ( (!G1L7 & (!G1L6 $ (((!G1L5) # (G1L10))))) ) );
+
+
+--F1L6 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux5~0
+F1L6 = ( G1L8 & ( !G1L6 $ (!G1L7 $ (((!G1L10 & G1L5)))) ) );
+
+
+--F1L5 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux4~0
+F1L5 = ( !G1L8 & ( (G1L7 & (!G1L6 $ (((!G1L10 & G1L5))))) ) );
+
+
+--F1L4 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux3~0
+F1L4 = ( G1L8 & ( !G1L6 $ (!G1L7 $ (((!G1L5) # (G1L10)))) ) ) # ( !G1L8 & ( (!G1L7 & (!G1L6 $ (((!G1L5) # (G1L10))))) ) );
+
+
+--F1L3 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux2~0
+F1L3 = ( G1L8 & ( (!G1L7) # (!G1L6 $ (((!G1L5) # (G1L10)))) ) ) # ( !G1L8 & ( !G1L6 $ (((!G1L5) # (G1L10))) ) );
+
+
+--F1L2 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux1~0
+F1L2 = ( G1L8 & ( (G1L7 & (!G1L6 $ (((!G1L5) # (G1L10))))) ) ) # ( !G1L8 & ( (!G1L6 $ (((!G1L5) # (G1L10)))) # (G1L7) ) );
+
+
+--F1L1 is add_sub:top_inst|bcd2seven_seg:hexHund|Mux0~0
+F1L1 = ( G1L8 & ( (G1L7 & (!G1L6 $ (((!G1L5) # (G1L10))))) ) ) # ( !G1L8 & ( !G1L7 ) );
+
+
+--B1_current_state.input_a is add_sub:top_inst|current_state.input_a
+--register power-up is low
+
+B1_current_state.input_a = DFFEAS(B1L31, CLOCK_50,  ,  , H1_FallingEdge,  ,  ,  ,  );
+
+
+--B1_current_state.input_b is add_sub:top_inst|current_state.input_b
+--register power-up is low
+
+B1_current_state.input_b = DFFEAS(B1L34, CLOCK_50,  ,  , H1_FallingEdge,  ,  ,  ,  );
+
+
+--B1_current_state.disp_sum is add_sub:top_inst|current_state.disp_sum
+--register power-up is low
+
+B1_current_state.disp_sum = DFFEAS(B1_current_state.input_b, CLOCK_50,  ,  , H1_FallingEdge,  ,  ,  ,  );
+
+
+--B1_current_state.disp_diff is add_sub:top_inst|current_state.disp_diff
+--register power-up is low
+
+B1_current_state.disp_diff = DFFEAS(B1_current_state.disp_sum, CLOCK_50,  ,  , H1_FallingEdge,  ,  ,  ,  );
+
+
+--B1_output[0] is add_sub:top_inst|output[0]
+--register power-up is low
+
+B1_output[0] = DFFEAS(B1L63, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--CLOCK_50 is CLOCK_50
+CLOCK_50 = INPUT();
+
+
+--B1_output[1] is add_sub:top_inst|output[1]
+--register power-up is low
+
+B1_output[1] = DFFEAS(B1L62, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_output[2] is add_sub:top_inst|output[2]
+--register power-up is low
+
+B1_output[2] = DFFEAS(B1L61, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_output[3] is add_sub:top_inst|output[3]
+--register power-up is low
+
+B1_output[3] = DFFEAS(B1L60, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_output[4] is add_sub:top_inst|output[4]
+--register power-up is low
+
+B1_output[4] = DFFEAS(B1L59, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_output[5] is add_sub:top_inst|output[5]
+--register power-up is low
+
+B1_output[5] = DFFEAS(B1L58, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1_output[6] is add_sub:top_inst|output[6]
+--register power-up is low
+
+B1_output[6] = DFFEAS(B1L57, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--B1L64 is add_sub:top_inst|Selector12~0
+B1L64 = (!B1_current_state.disp_sum & (B1_current_state.disp_diff & (E1L2))) # (B1_current_state.disp_sum & (((B1_current_state.disp_diff & E1L2)) # (D1_cout)));
+
+
+--B1_output[7] is add_sub:top_inst|output[7]
+--register power-up is low
+
+B1_output[7] = DFFEAS(B1L56, CLOCK_50,  ,  ,  ,  ,  ,  ,  );
+
+
+--H1_FallingEdge is add_sub:top_inst|edge_detect:pushButton|FallingEdge
+--register power-up is low
+
+H1_FallingEdge = DFFEAS(H1L2, CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--B1_a_reg[0] is add_sub:top_inst|a_reg[0]
+--register power-up is low
+
+B1_a_reg[0] = DFFEAS(C1_prev_data_2[0], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[0] is add_sub:top_inst|b_reg[0]
+--register power-up is low
+
+B1_b_reg[0] = DFFEAS(C1_prev_data_2[0], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[0] is add_sub:top_inst|sub_reg[0]
+--register power-up is low
+
+B1_sub_reg[0] = DFFEAS(E1L10, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[0] is add_sub:top_inst|add_reg[0]
+--register power-up is low
+
+B1_add_reg[0] = DFFEAS(D1_sum[0], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L47 is add_sub:top_inst|output[0]~0
+B1L47 = (!B1_current_state.input_b & !B1_current_state.disp_sum);
+
+
+--B1L48 is add_sub:top_inst|output[0]~1
+B1L48 = (!B1_current_state.disp_sum & !B1_current_state.disp_diff);
+
+
+--B1L63 is add_sub:top_inst|Selector11~0
+B1L63 = ( B1L47 & ( B1L48 & ( B1_a_reg[0] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[0] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[0] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[0] ) ) );
+
+
+--B1_a_reg[1] is add_sub:top_inst|a_reg[1]
+--register power-up is low
+
+B1_a_reg[1] = DFFEAS(C1_prev_data_2[1], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[1] is add_sub:top_inst|b_reg[1]
+--register power-up is low
+
+B1_b_reg[1] = DFFEAS(C1_prev_data_2[1], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[1] is add_sub:top_inst|sub_reg[1]
+--register power-up is low
+
+B1_sub_reg[1] = DFFEAS(E1L14, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[1] is add_sub:top_inst|add_reg[1]
+--register power-up is low
+
+B1_add_reg[1] = DFFEAS(D1_sum[1], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L62 is add_sub:top_inst|Selector10~0
+B1L62 = ( B1L47 & ( B1L48 & ( B1_a_reg[1] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[1] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[1] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[1] ) ) );
+
+
+--B1_a_reg[2] is add_sub:top_inst|a_reg[2]
+--register power-up is low
+
+B1_a_reg[2] = DFFEAS(C1_prev_data_2[2], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[2] is add_sub:top_inst|b_reg[2]
+--register power-up is low
+
+B1_b_reg[2] = DFFEAS(C1_prev_data_2[2], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[2] is add_sub:top_inst|sub_reg[2]
+--register power-up is low
+
+B1_sub_reg[2] = DFFEAS(E1L18, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[2] is add_sub:top_inst|add_reg[2]
+--register power-up is low
+
+B1_add_reg[2] = DFFEAS(D1_sum[2], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L61 is add_sub:top_inst|Selector9~0
+B1L61 = ( B1L47 & ( B1L48 & ( B1_a_reg[2] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[2] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[2] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[2] ) ) );
+
+
+--B1_a_reg[3] is add_sub:top_inst|a_reg[3]
+--register power-up is low
+
+B1_a_reg[3] = DFFEAS(C1_prev_data_2[3], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[3] is add_sub:top_inst|b_reg[3]
+--register power-up is low
+
+B1_b_reg[3] = DFFEAS(C1_prev_data_2[3], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[3] is add_sub:top_inst|sub_reg[3]
+--register power-up is low
+
+B1_sub_reg[3] = DFFEAS(E1L22, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[3] is add_sub:top_inst|add_reg[3]
+--register power-up is low
+
+B1_add_reg[3] = DFFEAS(D1_sum[3], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L60 is add_sub:top_inst|Selector8~0
+B1L60 = ( B1L47 & ( B1L48 & ( B1_a_reg[3] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[3] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[3] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[3] ) ) );
+
+
+--B1_a_reg[4] is add_sub:top_inst|a_reg[4]
+--register power-up is low
+
+B1_a_reg[4] = DFFEAS(C1_prev_data_2[4], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[4] is add_sub:top_inst|b_reg[4]
+--register power-up is low
+
+B1_b_reg[4] = DFFEAS(C1_prev_data_2[4], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[4] is add_sub:top_inst|sub_reg[4]
+--register power-up is low
+
+B1_sub_reg[4] = DFFEAS(E1L26, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[4] is add_sub:top_inst|add_reg[4]
+--register power-up is low
+
+B1_add_reg[4] = DFFEAS(D1_sum[4], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L59 is add_sub:top_inst|Selector7~0
+B1L59 = ( B1L47 & ( B1L48 & ( B1_a_reg[4] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[4] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[4] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[4] ) ) );
+
+
+--B1_a_reg[5] is add_sub:top_inst|a_reg[5]
+--register power-up is low
+
+B1_a_reg[5] = DFFEAS(C1_prev_data_2[5], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[5] is add_sub:top_inst|b_reg[5]
+--register power-up is low
+
+B1_b_reg[5] = DFFEAS(C1_prev_data_2[5], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[5] is add_sub:top_inst|sub_reg[5]
+--register power-up is low
+
+B1_sub_reg[5] = DFFEAS(E1L30, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[5] is add_sub:top_inst|add_reg[5]
+--register power-up is low
+
+B1_add_reg[5] = DFFEAS(D1_sum[5], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L58 is add_sub:top_inst|Selector6~0
+B1L58 = ( B1L47 & ( B1L48 & ( B1_a_reg[5] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[5] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[5] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[5] ) ) );
+
+
+--B1_a_reg[6] is add_sub:top_inst|a_reg[6]
+--register power-up is low
+
+B1_a_reg[6] = DFFEAS(C1_prev_data_2[6], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[6] is add_sub:top_inst|b_reg[6]
+--register power-up is low
+
+B1_b_reg[6] = DFFEAS(C1_prev_data_2[6], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[6] is add_sub:top_inst|sub_reg[6]
+--register power-up is low
+
+B1_sub_reg[6] = DFFEAS(E1L34, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[6] is add_sub:top_inst|add_reg[6]
+--register power-up is low
+
+B1_add_reg[6] = DFFEAS(D1_sum[6], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L57 is add_sub:top_inst|Selector5~0
+B1L57 = ( B1L47 & ( B1L48 & ( B1_a_reg[6] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[6] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[6] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[6] ) ) );
+
+
+--B1_a_reg[7] is add_sub:top_inst|a_reg[7]
+--register power-up is low
+
+B1_a_reg[7] = DFFEAS(C1_prev_data_2[7], CLOCK_50,  ,  , !B1_current_state.input_a,  ,  ,  ,  );
+
+
+--B1_b_reg[7] is add_sub:top_inst|b_reg[7]
+--register power-up is low
+
+B1_b_reg[7] = DFFEAS(C1_prev_data_2[7], CLOCK_50,  ,  , B1_current_state.input_b,  ,  ,  ,  );
+
+
+--B1_sub_reg[7] is add_sub:top_inst|sub_reg[7]
+--register power-up is low
+
+B1_sub_reg[7] = DFFEAS(E1L6, CLOCK_50,  ,  , B1_current_state.disp_diff,  ,  ,  ,  );
+
+
+--B1_add_reg[7] is add_sub:top_inst|add_reg[7]
+--register power-up is low
+
+B1_add_reg[7] = DFFEAS(D1_sum[7], CLOCK_50,  ,  , B1_current_state.disp_sum,  ,  ,  ,  );
+
+
+--B1L56 is add_sub:top_inst|Selector4~0
+B1L56 = ( B1L47 & ( B1L48 & ( B1_a_reg[7] ) ) ) # ( !B1L47 & ( B1L48 & ( B1_b_reg[7] ) ) ) # ( B1L47 & ( !B1L48 & ( B1_sub_reg[7] ) ) ) # ( !B1L47 & ( !B1L48 & ( B1_add_reg[7] ) ) );
+
+
+--H1_PrevDataIn1 is add_sub:top_inst|edge_detect:pushButton|PrevDataIn1
+--register power-up is low
+
+H1_PrevDataIn1 = DFFEAS(KEY[0], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--H1_PrevDataIn2 is add_sub:top_inst|edge_detect:pushButton|PrevDataIn2
+--register power-up is low
+
+H1_PrevDataIn2 = DFFEAS(H1_PrevDataIn1, CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--H1L2 is add_sub:top_inst|edge_detect:pushButton|FallingEdge~0
+H1L2 = (!H1_PrevDataIn1 & H1_PrevDataIn2);
+
+
+--SW[9] is SW[9]
+SW[9] = INPUT();
+
+
+--C1_prev_data_2[0] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[0]
+--register power-up is low
+
+C1_prev_data_2[0] = DFFEAS(C1_prev_data_1[0], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[1] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[1]
+--register power-up is low
+
+C1_prev_data_2[1] = DFFEAS(C1_prev_data_1[1], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[2] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[2]
+--register power-up is low
+
+C1_prev_data_2[2] = DFFEAS(C1_prev_data_1[2], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[3] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[3]
+--register power-up is low
+
+C1_prev_data_2[3] = DFFEAS(C1_prev_data_1[3], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[4] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[4]
+--register power-up is low
+
+C1_prev_data_2[4] = DFFEAS(C1_prev_data_1[4], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[5] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[5]
+--register power-up is low
+
+C1_prev_data_2[5] = DFFEAS(C1_prev_data_1[5], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[6] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[6]
+--register power-up is low
+
+C1_prev_data_2[6] = DFFEAS(C1_prev_data_1[6], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_2[7] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[7]
+--register power-up is low
+
+C1_prev_data_2[7] = DFFEAS(C1_prev_data_1[7], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--KEY[0] is KEY[0]
+KEY[0] = INPUT();
+
+
+--C1_prev_data_1[0] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[0]
+--register power-up is low
+
+C1_prev_data_1[0] = DFFEAS(SW[0], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[1] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[1]
+--register power-up is low
+
+C1_prev_data_1[1] = DFFEAS(SW[1], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[2] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[2]
+--register power-up is low
+
+C1_prev_data_1[2] = DFFEAS(SW[2], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[3] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[3]
+--register power-up is low
+
+C1_prev_data_1[3] = DFFEAS(SW[3], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[4] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[4]
+--register power-up is low
+
+C1_prev_data_1[4] = DFFEAS(SW[4], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[5] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[5]
+--register power-up is low
+
+C1_prev_data_1[5] = DFFEAS(SW[5], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[6] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[6]
+--register power-up is low
+
+C1_prev_data_1[6] = DFFEAS(SW[6], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--C1_prev_data_1[7] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[7]
+--register power-up is low
+
+C1_prev_data_1[7] = DFFEAS(SW[7], CLOCK_50, SW[9],  ,  ,  ,  ,  ,  );
+
+
+--SW[0] is SW[0]
+SW[0] = INPUT();
+
+
+--SW[1] is SW[1]
+SW[1] = INPUT();
+
+
+--SW[2] is SW[2]
+SW[2] = INPUT();
+
+
+--SW[3] is SW[3]
+SW[3] = INPUT();
+
+
+--SW[4] is SW[4]
+SW[4] = INPUT();
+
+
+--SW[5] is SW[5]
+SW[5] = INPUT();
+
+
+--SW[6] is SW[6]
+SW[6] = INPUT();
+
+
+--SW[7] is SW[7]
+SW[7] = INPUT();
+
+
+--B1L31 is add_sub:top_inst|current_state.input_a~0
+B1L31 = !B1_current_state.disp_diff;
+
+
+--B1L34 is add_sub:top_inst|current_state.input_b~0
+B1L34 = !B1_current_state.input_a;
+
+
+--F3L2 is add_sub:top_inst|bcd2seven_seg:hexOne|Mux0~0_wirecell
+F3L2 = !F3L1;
+
+
+--F2L2 is add_sub:top_inst|bcd2seven_seg:hexTen|Mux0~0_wirecell
+F2L2 = !F2L1;
+
+
+--B1L32 is add_sub:top_inst|current_state.input_a~_wirecell
+B1L32 = !B1_current_state.input_a;
+
+

@@ -1,0 +1,7 @@
+
+State Machine - |top|add_sub:top_inst|current_state
+Name current_state.disp_diff current_state.disp_sum current_state.input_b current_state.input_a 
+current_state.input_a 0 0 0 0 
+current_state.input_b 0 0 1 1 
+current_state.disp_sum 0 1 0 1 
+current_state.disp_diff 1 0 0 1 

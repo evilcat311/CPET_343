@@ -1,0 +1,40 @@
+# do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:18:55 on Jun 07,2023
+# vcom -reportprogress 300 -93 -work work ../../src/generic_adder_beh.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity generic_adder_beh
+# -- Compiling architecture beh of generic_adder_beh
+# End time: 16:18:55 on Jun 07,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:18:55 on Jun 07,2023
+# vcom -reportprogress 300 -93 -work work ../src/generic_adder_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity generic_adder_tb
+# -- Compiling architecture arch of generic_adder_tb
+# End time: 16:18:56 on Jun 07,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -msgmode both generic_adder_tb 
+# Start time: 16:18:56 on Jun 07,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.generic_adder_tb(arch)
+# Loading work.generic_adder_beh(beh)
+# ** Note: ****************** sequential testbench start ****************
+#    Time: 0 ps  Iteration: 0  Region: /generic_adder_tb/sequential_stimuli
+# ** Note: ****************** sequential testbench stop ****************
+#    Time: 5130 ns  Iteration: 0  Region: /generic_adder_tb/sequential_stimuli
+# End time: 16:26:06 on Jun 07,2023, Elapsed time: 0:07:10
+# Errors: 0, Warnings: 0

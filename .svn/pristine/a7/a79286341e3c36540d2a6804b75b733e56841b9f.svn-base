@@ -1,0 +1,311 @@
+|top
+CLOCK_50 => add_sub:top_inst.clk_50mhz
+SW[0] => add_sub:top_inst.reset_n
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => add_sub:top_inst.b_in[0]
+SW[5] => add_sub:top_inst.b_in[1]
+SW[6] => add_sub:top_inst.b_in[2]
+SW[7] => add_sub:top_inst.a_in[0]
+SW[8] => add_sub:top_inst.a_in[1]
+SW[9] => add_sub:top_inst.a_in[2]
+KEY[0] => add_sub:top_inst.subtract
+KEY[1] => add_sub:top_inst.add
+HEX0[0] << add_sub:top_inst.hexSum[0]
+HEX0[1] << add_sub:top_inst.hexSum[1]
+HEX0[2] << add_sub:top_inst.hexSum[2]
+HEX0[3] << add_sub:top_inst.hexSum[3]
+HEX0[4] << add_sub:top_inst.hexSum[4]
+HEX0[5] << add_sub:top_inst.hexSum[5]
+HEX0[6] << add_sub:top_inst.hexSum[6]
+HEX2[0] << add_sub:top_inst.hexB[0]
+HEX2[1] << add_sub:top_inst.hexB[1]
+HEX2[2] << add_sub:top_inst.hexB[2]
+HEX2[3] << add_sub:top_inst.hexB[3]
+HEX2[4] << add_sub:top_inst.hexB[4]
+HEX2[5] << add_sub:top_inst.hexB[5]
+HEX2[6] << add_sub:top_inst.hexB[6]
+HEX4[0] << add_sub:top_inst.hexA[0]
+HEX4[1] << add_sub:top_inst.hexA[1]
+HEX4[2] << add_sub:top_inst.hexA[2]
+HEX4[3] << add_sub:top_inst.hexA[3]
+HEX4[4] << add_sub:top_inst.hexA[4]
+HEX4[5] << add_sub:top_inst.hexA[5]
+HEX4[6] << add_sub:top_inst.hexA[6]
+
+
+|top|add_sub:top_inst
+clk_50mhz => edge_detect:resetEdge.clock
+clk_50mhz => clock_synchronizer:ASync.clock
+clk_50mhz => clock_synchronizer:BSync.clock
+clk_50mhz => edge_detect:addEdge.clock
+clk_50mhz => edge_detect:subEdge.clock
+a_in[0] => clock_synchronizer:ASync.async_in[0]
+a_in[1] => clock_synchronizer:ASync.async_in[1]
+a_in[2] => clock_synchronizer:ASync.async_in[2]
+b_in[0] => clock_synchronizer:BSync.async_in[0]
+b_in[1] => clock_synchronizer:BSync.async_in[1]
+b_in[2] => clock_synchronizer:BSync.async_in[2]
+reset_n => edge_detect:resetEdge.DataIn
+reset_n => clock_synchronizer:ASync.reset_n
+reset_n => clock_synchronizer:BSync.reset_n
+reset_n => edge_detect:addEdge.reset_n
+reset_n => edge_detect:subEdge.reset_n
+add => edge_detect:addEdge.DataIn
+subtract => edge_detect:subEdge.DataIn
+hexA[0] <= bcd2seven_seg:aConvert.seven_segment[0]
+hexA[1] <= bcd2seven_seg:aConvert.seven_segment[1]
+hexA[2] <= bcd2seven_seg:aConvert.seven_segment[2]
+hexA[3] <= bcd2seven_seg:aConvert.seven_segment[3]
+hexA[4] <= bcd2seven_seg:aConvert.seven_segment[4]
+hexA[5] <= bcd2seven_seg:aConvert.seven_segment[5]
+hexA[6] <= bcd2seven_seg:aConvert.seven_segment[6]
+hexB[0] <= bcd2seven_seg:bConvert.seven_segment[0]
+hexB[1] <= bcd2seven_seg:bConvert.seven_segment[1]
+hexB[2] <= bcd2seven_seg:bConvert.seven_segment[2]
+hexB[3] <= bcd2seven_seg:bConvert.seven_segment[3]
+hexB[4] <= bcd2seven_seg:bConvert.seven_segment[4]
+hexB[5] <= bcd2seven_seg:bConvert.seven_segment[5]
+hexB[6] <= bcd2seven_seg:bConvert.seven_segment[6]
+hexSum[0] <= bcd2seven_seg:hexOutput.seven_segment[0]
+hexSum[1] <= bcd2seven_seg:hexOutput.seven_segment[1]
+hexSum[2] <= bcd2seven_seg:hexOutput.seven_segment[2]
+hexSum[3] <= bcd2seven_seg:hexOutput.seven_segment[3]
+hexSum[4] <= bcd2seven_seg:hexOutput.seven_segment[4]
+hexSum[5] <= bcd2seven_seg:hexOutput.seven_segment[5]
+hexSum[6] <= bcd2seven_seg:hexOutput.seven_segment[6]
+
+
+|top|add_sub:top_inst|generic_adder_beh:gen_add
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+a[3] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+b[3] => _.DATAC
+cin => _.DATAB
+sum[0] <= _.SUM_OUT
+sum[1] <= _.SUM_OUT
+sum[2] <= _.SUM_OUT
+sum[3] <= _.SUM_OUT
+cout <= _.SUM_OUT
+
+
+|top|add_sub:top_inst|generic_subtractor_beh:gen_sub
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+b[0] => Add0.IN4
+b[1] => Add0.IN3
+b[2] => Add0.IN2
+b[3] => Add0.IN1
+cin => Add1.IN10
+sum[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|bcd2seven_seg:hexOutput
+bcd_number[0] => Mux0.IN19
+bcd_number[0] => Mux1.IN19
+bcd_number[0] => Mux2.IN19
+bcd_number[0] => Mux3.IN19
+bcd_number[0] => Mux4.IN19
+bcd_number[0] => Mux5.IN19
+bcd_number[0] => Mux6.IN19
+bcd_number[1] => Mux0.IN18
+bcd_number[1] => Mux1.IN18
+bcd_number[1] => Mux2.IN18
+bcd_number[1] => Mux3.IN18
+bcd_number[1] => Mux4.IN18
+bcd_number[1] => Mux5.IN18
+bcd_number[1] => Mux6.IN18
+bcd_number[2] => Mux0.IN17
+bcd_number[2] => Mux1.IN17
+bcd_number[2] => Mux2.IN17
+bcd_number[2] => Mux3.IN17
+bcd_number[2] => Mux4.IN17
+bcd_number[2] => Mux5.IN17
+bcd_number[2] => Mux6.IN17
+bcd_number[3] => Mux0.IN16
+bcd_number[3] => Mux1.IN16
+bcd_number[3] => Mux2.IN16
+bcd_number[3] => Mux3.IN16
+bcd_number[3] => Mux4.IN16
+bcd_number[3] => Mux5.IN16
+bcd_number[3] => Mux6.IN16
+seven_segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|bcd2seven_seg:aConvert
+bcd_number[0] => Mux0.IN19
+bcd_number[0] => Mux1.IN19
+bcd_number[0] => Mux2.IN19
+bcd_number[0] => Mux3.IN19
+bcd_number[0] => Mux4.IN19
+bcd_number[0] => Mux5.IN19
+bcd_number[0] => Mux6.IN19
+bcd_number[1] => Mux0.IN18
+bcd_number[1] => Mux1.IN18
+bcd_number[1] => Mux2.IN18
+bcd_number[1] => Mux3.IN18
+bcd_number[1] => Mux4.IN18
+bcd_number[1] => Mux5.IN18
+bcd_number[1] => Mux6.IN18
+bcd_number[2] => Mux0.IN17
+bcd_number[2] => Mux1.IN17
+bcd_number[2] => Mux2.IN17
+bcd_number[2] => Mux3.IN17
+bcd_number[2] => Mux4.IN17
+bcd_number[2] => Mux5.IN17
+bcd_number[2] => Mux6.IN17
+bcd_number[3] => Mux0.IN16
+bcd_number[3] => Mux1.IN16
+bcd_number[3] => Mux2.IN16
+bcd_number[3] => Mux3.IN16
+bcd_number[3] => Mux4.IN16
+bcd_number[3] => Mux5.IN16
+bcd_number[3] => Mux6.IN16
+seven_segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|bcd2seven_seg:bConvert
+bcd_number[0] => Mux0.IN19
+bcd_number[0] => Mux1.IN19
+bcd_number[0] => Mux2.IN19
+bcd_number[0] => Mux3.IN19
+bcd_number[0] => Mux4.IN19
+bcd_number[0] => Mux5.IN19
+bcd_number[0] => Mux6.IN19
+bcd_number[1] => Mux0.IN18
+bcd_number[1] => Mux1.IN18
+bcd_number[1] => Mux2.IN18
+bcd_number[1] => Mux3.IN18
+bcd_number[1] => Mux4.IN18
+bcd_number[1] => Mux5.IN18
+bcd_number[1] => Mux6.IN18
+bcd_number[2] => Mux0.IN17
+bcd_number[2] => Mux1.IN17
+bcd_number[2] => Mux2.IN17
+bcd_number[2] => Mux3.IN17
+bcd_number[2] => Mux4.IN17
+bcd_number[2] => Mux5.IN17
+bcd_number[2] => Mux6.IN17
+bcd_number[3] => Mux0.IN16
+bcd_number[3] => Mux1.IN16
+bcd_number[3] => Mux2.IN16
+bcd_number[3] => Mux3.IN16
+bcd_number[3] => Mux4.IN16
+bcd_number[3] => Mux5.IN16
+bcd_number[3] => Mux6.IN16
+seven_segment[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seven_segment[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|edge_detect:resetEdge
+clock => FallingEdge~reg0.CLK
+clock => RisingEdge~reg0.CLK
+clock => PrevDataIn2.CLK
+clock => PrevDataIn1.CLK
+reset_n => FallingEdge~reg0.ACLR
+reset_n => RisingEdge~reg0.ACLR
+reset_n => PrevDataIn2.ACLR
+reset_n => PrevDataIn1.ACLR
+DataIn => PrevDataIn1.DATAIN
+RisingEdge <= RisingEdge~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FallingEdge <= FallingEdge~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|clock_synchronizer:ASync
+clock => prev_data_2[0].CLK
+clock => prev_data_2[1].CLK
+clock => prev_data_2[2].CLK
+clock => prev_data_1[0].CLK
+clock => prev_data_1[1].CLK
+clock => prev_data_1[2].CLK
+reset_n => prev_data_2[0].ACLR
+reset_n => prev_data_2[1].ACLR
+reset_n => prev_data_2[2].ACLR
+reset_n => prev_data_1[0].ACLR
+reset_n => prev_data_1[1].ACLR
+reset_n => prev_data_1[2].ACLR
+async_in[0] => prev_data_1[0].DATAIN
+async_in[1] => prev_data_1[1].DATAIN
+async_in[2] => prev_data_1[2].DATAIN
+sync_out[0] <= prev_data_2[0].DB_MAX_OUTPUT_PORT_TYPE
+sync_out[1] <= prev_data_2[1].DB_MAX_OUTPUT_PORT_TYPE
+sync_out[2] <= prev_data_2[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|clock_synchronizer:BSync
+clock => prev_data_2[0].CLK
+clock => prev_data_2[1].CLK
+clock => prev_data_2[2].CLK
+clock => prev_data_1[0].CLK
+clock => prev_data_1[1].CLK
+clock => prev_data_1[2].CLK
+reset_n => prev_data_2[0].ACLR
+reset_n => prev_data_2[1].ACLR
+reset_n => prev_data_2[2].ACLR
+reset_n => prev_data_1[0].ACLR
+reset_n => prev_data_1[1].ACLR
+reset_n => prev_data_1[2].ACLR
+async_in[0] => prev_data_1[0].DATAIN
+async_in[1] => prev_data_1[1].DATAIN
+async_in[2] => prev_data_1[2].DATAIN
+sync_out[0] <= prev_data_2[0].DB_MAX_OUTPUT_PORT_TYPE
+sync_out[1] <= prev_data_2[1].DB_MAX_OUTPUT_PORT_TYPE
+sync_out[2] <= prev_data_2[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|edge_detect:addEdge
+clock => FallingEdge~reg0.CLK
+clock => RisingEdge~reg0.CLK
+clock => PrevDataIn2.CLK
+clock => PrevDataIn1.CLK
+reset_n => FallingEdge~reg0.ACLR
+reset_n => RisingEdge~reg0.ACLR
+reset_n => PrevDataIn2.ACLR
+reset_n => PrevDataIn1.ACLR
+DataIn => PrevDataIn1.DATAIN
+RisingEdge <= RisingEdge~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FallingEdge <= FallingEdge~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|add_sub:top_inst|edge_detect:subEdge
+clock => FallingEdge~reg0.CLK
+clock => RisingEdge~reg0.CLK
+clock => PrevDataIn2.CLK
+clock => PrevDataIn1.CLK
+reset_n => FallingEdge~reg0.ACLR
+reset_n => RisingEdge~reg0.ACLR
+reset_n => PrevDataIn2.ACLR
+reset_n => PrevDataIn1.ACLR
+DataIn => PrevDataIn1.DATAIN
+RisingEdge <= RisingEdge~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FallingEdge <= FallingEdge~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
