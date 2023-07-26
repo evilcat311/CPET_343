@@ -1,0 +1,9 @@
+
+State Machine - |top|processor:top_inst|add_sub:L7|current_state
+Name current_state.write_save_wait current_state.write_save current_state.read_save current_state.write_work_wait current_state.write_work current_state.read_work 
+current_state.read_work 0 0 0 0 0 0 
+current_state.write_work 0 0 0 0 1 1 
+current_state.write_work_wait 0 0 0 1 0 1 
+current_state.read_save 0 0 1 0 0 1 
+current_state.write_save 0 1 0 0 0 1 
+current_state.write_save_wait 1 0 0 0 0 1 
