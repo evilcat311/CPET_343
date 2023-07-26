@@ -1,0 +1,9 @@
+
+State Machine - |top|lab7:calculator|fsm:state_machine|curr_state
+Name curr_state.WR_WORK_SAVE curr_state.RE_SAVE_MEM curr_state.WR_SAVE_MEM curr_state.EXECUTE curr_state.WR_WORKING_MEM curr_state.RE_WORKING_MEM 
+curr_state.RE_WORKING_MEM 0 0 0 0 0 0 
+curr_state.WR_WORKING_MEM 0 0 0 0 1 1 
+curr_state.EXECUTE 0 0 0 1 0 1 
+curr_state.WR_SAVE_MEM 0 0 1 0 0 1 
+curr_state.RE_SAVE_MEM 0 1 0 0 0 1 
+curr_state.WR_WORK_SAVE 1 0 0 0 0 1 

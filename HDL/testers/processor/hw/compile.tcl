@@ -32,8 +32,8 @@ set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
 # --------------------------------------------------------------------------
 # STEP 2: Update the the relative path to the source files here
 # --------------------------------------------------------------------------
-# set_global_assignment -name QIP_FILE ../../src/rom_data/rom_data.qip
-# set_global_assignment -name VERILOG_FILE ../../src/audio_ip/clock_generator.v
+ set_global_assignment -name QIP_FILE ../../src/rom_data/rom_data.qip
+ set_global_assignment -name VERILOG_FILE ../../src/audio_ip/clock_generator.v
 # set_global_assignment -name VHDL_FILE ../../src/top.vhd
 set_global_assignment -name VHDL_FILE ../../src/common.vhd
 set_global_assignment -name VHDL_FILE ../../src/raminfr.vhd
@@ -84,27 +84,27 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
 # #============================================================
 # # SW
 # #============================================================
-# set_location_assignment PIN_AB12 -to SW[0]
-# set_location_assignment PIN_AC12 -to SW[1]
-# set_location_assignment PIN_AF9 -to SW[2]
-# set_location_assignment PIN_AF10 -to SW[3]
-# set_location_assignment PIN_AD11 -to SW[4]
-# set_location_assignment PIN_AD12 -to SW[5]
-# set_location_assignment PIN_AE11 -to SW[6]
-# set_location_assignment PIN_AC9 -to SW[7]
-# set_location_assignment PIN_AD10 -to SW[8]
-# set_location_assignment PIN_AE12 -to SW[9]
+ set_location_assignment PIN_AB12 -to SW[0]
+ set_location_assignment PIN_AC12 -to SW[1]
+ set_location_assignment PIN_AF9 -to SW[2]
+ set_location_assignment PIN_AF10 -to SW[3]
+ set_location_assignment PIN_AD11 -to SW[4]
+ set_location_assignment PIN_AD12 -to SW[5]
+ set_location_assignment PIN_AE11 -to SW[6]
+ set_location_assignment PIN_AC9 -to SW[7]
+ set_location_assignment PIN_AD10 -to SW[8]
+ set_location_assignment PIN_AE12 -to SW[9]
 
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
-# set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[0]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[1]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
+ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
 
 
 #============================================================
