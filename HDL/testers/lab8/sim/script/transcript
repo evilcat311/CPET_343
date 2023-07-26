@@ -1,0 +1,36 @@
+# do sim.do
+# vsim -voptargs="+acc" -msgmode both top_tb 
+# Start time: 17:24:02 on Jul 25,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.top_pkg
+# Loading work.top_tb(test)
+# Loading ieee.numeric_std(body)
+# Loading work.lab7_pkg
+# Loading work.rising_edge_synchronizer_pkg
+# Loading altera_mf.altera_mf_components
+# Loading work.top(arch)
+# Loading work.rising_edge_synchronizer(beh)
+# Loading work.rom(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.clock_synchronizer_pkg
+# Loading work.alu_pkg
+# Loading work.three_digit_display_pkg
+# Loading work.fsm_pkg
+# Loading work.memory_pkg
+# Loading work.lab7(arch)
+# Loading work.clock_synchronizer(behav)
+# Loading work.fsm(behave)
+# Loading work.memory(beh)
+# Loading work.alu(beh)
+# Loading work.seven_seg_pkg
+# Loading work.three_digit_display(behave)
+# Loading work.seven_seg(behave)
+# ** Warning: (vsim-8684) No drivers exist on out port /top_tb/UUT/LEDR(8 downto 5), and its initial value is not used.
+# Therefore, simulation behavior may occur that is not in compliance with
+# the VHDL standard as the initial values come from the base signal /top_tb/led_tb(8 downto 5).

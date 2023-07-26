@@ -1,0 +1,497 @@
+# //  ModelSim SE-64 2019.2 Apr 17 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do sim.do
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 14:20:09 on Nov 01,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../../src/processor.vhd(131): (vopt-3473) Component instance "/processor_tb/UUT/rom1 : lab8rom" is not bound.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "add_sub(count)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# ** Warning: (vsim-3473) Component instance "rom1 : lab8rom" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT File: ../../src/processor.vhd
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 1840 ns  Iteration: 0  Instance: /processor_tb
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {S:/CPET 343 HDL/Labs/Lab 8/processor/sim/script/wave.do}
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:22:12 on Nov 01,2021, Elapsed time: 0:02:03
+# Errors: 5, Warnings: 3
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 14:22:12 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ../../src/processor.vhd(131): (vopt-3473) Component instance "/processor_tb/UUT/rom1 : lab8rom" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# ** Warning: (vsim-3473) Component instance "rom1 : lab8rom" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT File: ../../src/processor.vhd
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 30 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 1840 ns  Iteration: 0  Instance: /processor_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:23:42 on Nov 01,2021, Elapsed time: 0:01:30
+# Errors: 1, Warnings: 3
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 14:23:42 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ../../src/processor.vhd(131): (vopt-3473) Component instance "/processor_tb/UUT/rom1 : lab8rom" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# ** Warning: (vsim-3473) Component instance "rom1 : lab8rom" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT File: ../../src/processor.vhd
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 1840 ns  Iteration: 0  Instance: /processor_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:26:17 on Nov 01,2021, Elapsed time: 0:02:35
+# Errors: 2, Warnings: 3
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 14:26:17 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ../../src/processor.vhd(131): (vopt-3473) Component instance "/processor_tb/UUT/rom1 : lab8rom" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# ** Warning: (vsim-3473) Component instance "rom1 : lab8rom" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT File: ../../src/processor.vhd
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 1840 ns  Iteration: 0  Instance: /processor_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: ../../src/rom/init.mif(1): near "DEPTH": syntax error
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 13
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/rom/init.mif"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: ../../src/rom/init.mif(1): near "WIDTH": syntax error
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 13
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/rom/init.mif"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: ../../src/rom/init.mif(1): near "WIDTH": syntax error
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 13
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/rom/init.mif"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: ../../src/rom/init.mif(1): near "WIDTH": syntax error
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 12
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/rom/init.mif"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: ../../src/rom/blink.mif(1): near "DEPTH": syntax error
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 12
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/rom/blink.mif"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:44:08 on Nov 01,2021, Elapsed time: 0:17:51
+# Errors: 59, Warnings: 3
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 14:44:08 on Nov 01,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# ** Warning: (vsim-3473) Component instance "rom1 : lab8rom" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT File: ../../src/processor.vhd
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 1840 ns  Iteration: 0  Instance: /processor_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error (suppressible): ../../src/processor.vhd(128): (vcom-1272) Length of formal "address" is 4; length of actual is 5.
+# ** Error (suppressible): ../../src/processor.vhd(183): (vcom-1272) Length of expected is 4; length of actual is 5.
+# ** Note: ../../src/processor.vhd(184): VHDL Compiler exiting
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 14
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/processor.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error (suppressible): ../../src/processor.vhd(183): (vcom-1272) Length of expected is 4; length of actual is 5.
+# ** Note: ../../src/processor.vhd(184): VHDL Compiler exiting
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 14
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/processor.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 14:56:58 on Nov 01,2021, Elapsed time: 0:12:50
+# Errors: 7, Warnings: 2
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 14:56:58 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# Loading altera_mf.altera_mf_components
+# Loading work.lab8rom(syn)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)#1
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 390 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 1050 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 1490 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 1840 ns  Iteration: 0  Instance: /processor_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 15:01:31 on Nov 01,2021, Elapsed time: 0:04:33
+# Errors: 45, Warnings: 1
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 15:01:31 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# Loading altera_mf.altera_mf_components
+# Loading work.lab8rom(syn)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)#1
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vish-4014) No objects found matching '/processor_tb/UUT/opcode'.
+# Executing ONERROR command at macro ./wave.do line 26
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 450 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 1290 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 1850 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 2320 ns  Iteration: 0  Instance: /processor_tb
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# ** Error: ../../src/processor.vhd(115): Symbol "resetEdge" has already been declared in this region.
+# ** Note: ../../src/processor.vhd(194): VHDL Compiler exiting
+# ** Error: c:/software/Modelsim/win64/vcom failed.
+# Error in macro ./sim.do line 14
+# c:/software/Modelsim/win64/vcom failed.
+#     while executing
+# "vcom -2008 -quiet -work work ../../src/processor.vhd"
+do sim.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# End time: 15:10:58 on Nov 01,2021, Elapsed time: 0:09:27
+# Errors: 134, Warnings: 1
+# vsim -voptargs="+acc" -msgmode both processor_tb 
+# Start time: 15:10:58 on Nov 01,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.bcd2seven_seg_pkg
+# Loading work.generic_adder_beh_pkg
+# Loading work.generic_subtractor_beh_pkg
+# Loading work.edge_detect_pkg
+# Loading work.clock_synchronizer_pkg
+# Loading work.add_sub_pkg
+# Loading work.processor_pkg
+# Loading work.processor_tb(arch)#1
+# Loading work.common_pkg
+# Loading work.double_dabble_pkg
+# Loading work.alu_pkg
+# Loading work.raminfr_pkg
+# Loading work.processor(proc)#1
+# Loading work.edge_detect(behave)#1
+# Loading altera_mf.altera_mf_components
+# Loading work.lab8rom(syn)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)#1
+# Loading work.add_sub(count)#1
+# Loading work.alu(behav)#1
+# Loading work.raminfr(behav)#1
+# Loading work.double_dabble(beh)#1
+# Loading work.bcd2seven_seg(convert)#1
+# Loading work.clock_synchronizer(behav)#1
+# Loading work.clock_synchronizer(behav)#2
+# Loading work.clock_synchronizer(behav)#3
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Error: (vish-4014) No objects found matching '/processor_tb/UUT/opcode'.
+# Executing ONERROR command at macro ./wave.do line 26
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /processor_tb/UUT/L7/ramUnit
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 10 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 510 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 1350 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Error: DIV, MOD, or REM by zero
+#    Time: 1910 ns  Iteration: 2  Instance: /processor_tb/UUT/L7/alu_def
+# ** Note: Simulation Completed Successfully.
+#    Time: 2320 ns  Iteration: 0  Instance: /processor_tb

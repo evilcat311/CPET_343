@@ -1,0 +1,213 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/zdw7287/Downloads/Hardware-Description-Language/lab5/sim/script
+Erising_edge_synchronizer
+Z0 w1688571089
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/projects/HDL_Course/HDL/testers/lab5/sim/script
+Z4 8../../src/rising_edge_synchronizer.vhd
+Z5 F../../src/rising_edge_synchronizer.vhd
+l0
+L5
+V0iM^dKNZZc;?A[GF^J^R51
+!s100 MM3GDK@i]W8<zPWWh?CFH2
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1688577444
+!i10b 1
+Z8 !s108 1688577444.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|../../src/rising_edge_synchronizer.vhd|
+Z10 !s107 ../../src/rising_edge_synchronizer.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abeh
+R1
+R2
+DEx4 work 24 rising_edge_synchronizer 0 22 0iM^dKNZZc;?A[GF^J^R51
+l20
+L14
+VL1o3[A>nG4=fB1ZZXNVBB2
+!s100 dPh;LUnYN3SoNAU3WKY:Y1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eseven_seg
+Z13 w1688571088
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R1
+R2
+R3
+Z16 8../../src/seven_seg.vhd
+Z17 F../../src/seven_seg.vhd
+l0
+L8
+VXRoQ>UIhnR[6jXVgb:56=3
+!s100 :DkhjJE3K<Wi=Y<b]Go653
+R6
+31
+Z18 !s110 1688577442
+!i10b 1
+Z19 !s108 1688577442.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|../../src/seven_seg.vhd|
+Z21 !s107 ../../src/seven_seg.vhd|
+!i113 1
+R11
+R12
+Abeh
+R14
+R15
+R1
+R2
+DEx4 work 9 seven_seg 0 22 XRoQ>UIhnR[6jXVgb:56=3
+l20
+L18
+V94ic>A6C0L2a?`[=b5@6G3
+!s100 EKR56Y6MkgUNUJiQKIeQb2
+R6
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R11
+R12
+Esynchronizer
+Z22 w1688571086
+R1
+R2
+R3
+Z23 8../../src/synchronizer.vhd
+Z24 F../../src/synchronizer.vhd
+l0
+L5
+VJGZGj0b0Ycg`7ZnXDk3B42
+!s100 L[CIc:U[SzdJ@kb_h6<E?1
+R6
+31
+R18
+!i10b 1
+R19
+Z25 !s90 -reportprogress|300|-93|-work|work|../../src/synchronizer.vhd|
+Z26 !s107 ../../src/synchronizer.vhd|
+!i113 1
+R11
+R12
+Abeh
+R1
+R2
+DEx4 work 12 synchronizer 0 22 JGZGj0b0Ycg`7ZnXDk3B42
+l19
+L14
+VnAmEd?L;TaHV9=BS<l5k_3
+!s100 VbB0H?neXYO;lL_BN<<5K0
+R6
+31
+R18
+!i10b 1
+R19
+R25
+R26
+!i113 1
+R11
+R12
+Etop
+Z27 w1688571111
+Z28 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z29 8../../src/top.vhd
+Z30 F../../src/top.vhd
+l0
+L6
+VGi6`PzLZmomX>Rb_?JLPF2
+!s100 IjPMA:mD7joMl1T=:H4>72
+R6
+31
+R18
+!i10b 1
+R19
+Z31 !s90 -reportprogress|300|-93|-work|work|../../src/top.vhd|
+Z32 !s107 ../../src/top.vhd|
+!i113 1
+R11
+R12
+Abeh
+R28
+R1
+R2
+DEx4 work 3 top 0 22 Gi6`PzLZmomX>Rb_?JLPF2
+l72
+L19
+VYK^jm1hz=`A0ZYa3_aB?L2
+!s100 L;`lThzUJkTj<iM=BE[^h3
+R6
+31
+R18
+!i10b 1
+R19
+R31
+R32
+!i113 1
+R11
+R12
+Etop_tb
+Z33 w1688577419
+R28
+R1
+R2
+R3
+Z34 8../src/top_tb.vhd
+Z35 F../src/top_tb.vhd
+l0
+L7
+V=H?W1?DPCg=iJWd?XfA;Q3
+!s100 O9f=@?;aU[jcaQWgBCB[S1
+R6
+31
+R7
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-93|-work|work|../src/top_tb.vhd|
+Z37 !s107 ../src/top_tb.vhd|
+!i113 1
+R11
+R12
+Aarch
+R28
+R1
+R2
+Z38 DEx4 work 6 top_tb 0 22 =H?W1?DPCg=iJWd?XfA;Q3
+l39
+L10
+V1H1UJWWfQfeAn`E`nHb5@3
+!s100 lLkM^GEUiV<4jz>Kn1glz0
+R6
+31
+R7
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12

@@ -1,0 +1,7 @@
+|HWp6
+a => temp1.IN0
+b => temp1.IN1
+c => z.IN1
+z << z.DB_MAX_OUTPUT_PORT_TYPE
+
+

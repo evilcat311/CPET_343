@@ -1,0 +1,50 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--A1L9 is z~0 at MLABCELL_X6_Y1_N0
+A1L9 = ( A1L7 & ( (A1L5 & A1L3) ) ) # ( !A1L7 );
+
+
+--A1L10 is z~output at IOOBUF_X6_Y0_N19
+A1L10 = OUTPUT_BUFFER.O(.I(A1L9), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--z is z at PIN_T7
+z = OUTPUT();
+
+
+--A1L3 is a~input at IOIBUF_X6_Y0_N1
+A1L3 = INPUT_BUFFER(.I(a), );
+
+
+--a is a at PIN_T8
+a = INPUT();
+
+
+--A1L5 is b~input at IOIBUF_X6_Y0_N35
+A1L5 = INPUT_BUFFER(.I(b), );
+
+
+--b is b at PIN_V6
+b = INPUT();
+
+
+--A1L7 is c~input at IOIBUF_X6_Y0_N52
+A1L7 = INPUT_BUFFER(.I(c), );
+
+
+--c is c at PIN_U6
+c = INPUT();
+
+
+

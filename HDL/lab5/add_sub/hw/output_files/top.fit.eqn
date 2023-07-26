@@ -1,0 +1,585 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--G1_sum[0] is add_sub:top_inst|generic_adder_beh:gen_add|sum[0] at LABCELL_X73_Y15_N0
+G1_sum[0]_adder_eqn = ( !F2_prev_data_2[0] $ (!F1_prev_data_2[0]) ) + ( !VCC ) + ( !VCC );
+G1_sum[0] = SUM(G1_sum[0]_adder_eqn);
+
+--G1L2 is add_sub:top_inst|generic_adder_beh:gen_add|_~1 at LABCELL_X73_Y15_N0
+G1L2_adder_eqn = ( !F2_prev_data_2[0] $ (!F1_prev_data_2[0]) ) + ( !VCC ) + ( !VCC );
+G1L2 = CARRY(G1L2_adder_eqn);
+
+--G1L3 is add_sub:top_inst|generic_adder_beh:gen_add|_~2 at LABCELL_X73_Y15_N0
+G1L3_share_eqn = (F2_prev_data_2[0] & F1_prev_data_2[0]);
+G1L3 = SHARE(G1L3_share_eqn);
+
+
+--G1_sum[1] is add_sub:top_inst|generic_adder_beh:gen_add|sum[1] at LABCELL_X73_Y15_N3
+G1_sum[1]_adder_eqn = ( !F1_prev_data_2[1] $ (!F2_prev_data_2[1]) ) + ( G1L3 ) + ( G1L2 );
+G1_sum[1] = SUM(G1_sum[1]_adder_eqn);
+
+--G1L5 is add_sub:top_inst|generic_adder_beh:gen_add|_~4 at LABCELL_X73_Y15_N3
+G1L5_adder_eqn = ( !F1_prev_data_2[1] $ (!F2_prev_data_2[1]) ) + ( G1L3 ) + ( G1L2 );
+G1L5 = CARRY(G1L5_adder_eqn);
+
+--G1L6 is add_sub:top_inst|generic_adder_beh:gen_add|_~5 at LABCELL_X73_Y15_N3
+G1L6_share_eqn = (F1_prev_data_2[1] & F2_prev_data_2[1]);
+G1L6 = SHARE(G1L6_share_eqn);
+
+
+--G1_sum[2] is add_sub:top_inst|generic_adder_beh:gen_add|sum[2] at LABCELL_X73_Y15_N6
+G1_sum[2]_adder_eqn = ( !F2_prev_data_2[2] $ (!F1_prev_data_2[2]) ) + ( G1L6 ) + ( G1L5 );
+G1_sum[2] = SUM(G1_sum[2]_adder_eqn);
+
+--G1L8 is add_sub:top_inst|generic_adder_beh:gen_add|_~7 at LABCELL_X73_Y15_N6
+G1L8_adder_eqn = ( !F2_prev_data_2[2] $ (!F1_prev_data_2[2]) ) + ( G1L6 ) + ( G1L5 );
+G1L8 = CARRY(G1L8_adder_eqn);
+
+--G1L9 is add_sub:top_inst|generic_adder_beh:gen_add|_~8 at LABCELL_X73_Y15_N6
+G1L9_share_eqn = (F2_prev_data_2[2] & F1_prev_data_2[2]);
+G1L9 = SHARE(G1L9_share_eqn);
+
+
+--G1_sum[3] is add_sub:top_inst|generic_adder_beh:gen_add|sum[3] at LABCELL_X73_Y15_N9
+G1_sum[3]_adder_eqn = ( GND ) + ( G1L9 ) + ( G1L8 );
+G1_sum[3] = SUM(G1_sum[3]_adder_eqn);
+
+
+--D1L7 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux6~0 at LABCELL_X74_Y15_N0
+D1L7 = ( !C1_sum[2] & ( C1_sum[1] & ( (C1_sum[0] & C1_sum[3]) ) ) ) # ( C1_sum[2] & ( !C1_sum[1] & ( !C1_sum[0] $ (C1_sum[3]) ) ) ) # ( !C1_sum[2] & ( !C1_sum[1] & ( (C1_sum[0] & !C1_sum[3]) ) ) );
+
+
+--D1L6 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux5~0 at LABCELL_X74_Y15_N9
+D1L6 = ( C1_sum[2] & ( C1_sum[1] & ( (!C1_sum[0]) # (C1_sum[3]) ) ) ) # ( !C1_sum[2] & ( C1_sum[1] & ( (C1_sum[3] & C1_sum[0]) ) ) ) # ( C1_sum[2] & ( !C1_sum[1] & ( !C1_sum[3] $ (!C1_sum[0]) ) ) );
+
+
+--D1L5 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux4~0 at LABCELL_X74_Y15_N24
+D1L5 = ( C1_sum[2] & ( C1_sum[1] & ( C1_sum[3] ) ) ) # ( !C1_sum[2] & ( C1_sum[1] & ( (!C1_sum[0] & !C1_sum[3]) ) ) ) # ( C1_sum[2] & ( !C1_sum[1] & ( (!C1_sum[0] & C1_sum[3]) ) ) );
+
+
+--D1L4 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux3~0 at LABCELL_X74_Y15_N21
+D1L4 = ( C1_sum[2] & ( C1_sum[1] & ( C1_sum[0] ) ) ) # ( !C1_sum[2] & ( C1_sum[1] & ( (C1_sum[3] & !C1_sum[0]) ) ) ) # ( C1_sum[2] & ( !C1_sum[1] & ( (!C1_sum[3] & !C1_sum[0]) ) ) ) # ( !C1_sum[2] & ( !C1_sum[1] & ( (!C1_sum[3] & C1_sum[0]) ) ) );
+
+
+--D1L3 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux2~0 at LABCELL_X74_Y15_N51
+D1L3 = ( C1_sum[2] & ( C1_sum[1] & ( (!C1_sum[3] & C1_sum[0]) ) ) ) # ( !C1_sum[2] & ( C1_sum[1] & ( (!C1_sum[3] & C1_sum[0]) ) ) ) # ( C1_sum[2] & ( !C1_sum[1] & ( !C1_sum[3] ) ) ) # ( !C1_sum[2] & ( !C1_sum[1] & ( C1_sum[0] ) ) );
+
+
+--D1L2 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux1~0 at LABCELL_X74_Y15_N54
+D1L2 = ( C1_sum[1] & ( (!C1_sum[3] & ((!C1_sum[2]) # (C1_sum[0]))) ) ) # ( !C1_sum[1] & ( (C1_sum[0] & (!C1_sum[3] $ (C1_sum[2]))) ) );
+
+
+--D1L1 is add_sub:top_inst|bcd2seven_seg:hexOutput|Mux0~0 at LABCELL_X74_Y15_N12
+D1L1 = ( C1_sum[2] & ( C1_sum[1] & ( (!C1_sum[0]) # (C1_sum[3]) ) ) ) # ( !C1_sum[2] & ( C1_sum[1] ) ) # ( C1_sum[2] & ( !C1_sum[1] & ( (!C1_sum[3]) # (C1_sum[0]) ) ) ) # ( !C1_sum[2] & ( !C1_sum[1] & ( C1_sum[3] ) ) );
+
+
+--F2_prev_data_2[1] is add_sub:top_inst|clock_synchronizer:BSync|prev_data_2[1] at FF_X73_Y15_N14
+--register power-up is low
+
+F2_prev_data_2[1] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , F2_prev_data_1[1],  ,  , VCC);
+
+
+--F2_prev_data_2[2] is add_sub:top_inst|clock_synchronizer:BSync|prev_data_2[2] at FF_X73_Y15_N26
+--register power-up is low
+
+F2_prev_data_2[2] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , F2_prev_data_1[2],  ,  , VCC);
+
+
+--F2_prev_data_2[0] is add_sub:top_inst|clock_synchronizer:BSync|prev_data_2[0] at FF_X73_Y15_N41
+--register power-up is low
+
+F2_prev_data_2[0] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , F2_prev_data_1[0],  ,  , VCC);
+
+
+--D3L7 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux6~0 at LABCELL_X74_Y15_N57
+D3L7 = ( F2_prev_data_2[0] & ( (!F2_prev_data_2[1] & !F2_prev_data_2[2]) ) ) # ( !F2_prev_data_2[0] & ( (!F2_prev_data_2[1] & F2_prev_data_2[2]) ) );
+
+
+--D3L6 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux5~0 at LABCELL_X74_Y15_N30
+D3L6 = ( F2_prev_data_2[0] & ( (!F2_prev_data_2[1] & F2_prev_data_2[2]) ) ) # ( !F2_prev_data_2[0] & ( (F2_prev_data_2[1] & F2_prev_data_2[2]) ) );
+
+
+--D3L5 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux4~0 at LABCELL_X74_Y15_N33
+D3L5 = ( !F2_prev_data_2[0] & ( (F2_prev_data_2[1] & !F2_prev_data_2[2]) ) );
+
+
+--D3L4 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux3~0 at LABCELL_X74_Y15_N36
+D3L4 = ( F2_prev_data_2[0] & ( !F2_prev_data_2[1] $ (F2_prev_data_2[2]) ) ) # ( !F2_prev_data_2[0] & ( (!F2_prev_data_2[1] & F2_prev_data_2[2]) ) );
+
+
+--D3L3 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux2~0 at LABCELL_X74_Y15_N39
+D3L3 = ( F2_prev_data_2[0] ) # ( !F2_prev_data_2[0] & ( (!F2_prev_data_2[1] & F2_prev_data_2[2]) ) );
+
+
+--D3L2 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux1~0 at LABCELL_X74_Y15_N42
+D3L2 = ( F2_prev_data_2[0] & ( (!F2_prev_data_2[2]) # (F2_prev_data_2[1]) ) ) # ( !F2_prev_data_2[0] & ( (F2_prev_data_2[1] & !F2_prev_data_2[2]) ) );
+
+
+--D3L1 is add_sub:top_inst|bcd2seven_seg:bConvert|Mux0~0 at LABCELL_X74_Y15_N45
+D3L1 = ( F2_prev_data_2[0] & ( !F2_prev_data_2[1] $ (F2_prev_data_2[2]) ) ) # ( !F2_prev_data_2[0] & ( (!F2_prev_data_2[1] & !F2_prev_data_2[2]) ) );
+
+
+--F1_prev_data_2[1] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[1] at FF_X73_Y15_N53
+--register power-up is low
+
+F1_prev_data_2[1] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , F1_prev_data_1[1],  ,  , VCC);
+
+
+--F1_prev_data_2[2] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[2] at FF_X73_Y15_N56
+--register power-up is low
+
+F1_prev_data_2[2] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , F1_prev_data_1[2],  ,  , VCC);
+
+
+--F1_prev_data_2[0] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_2[0] at FF_X73_Y15_N38
+--register power-up is low
+
+F1_prev_data_2[0] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , F1_prev_data_1[0],  ,  , VCC);
+
+
+--D2L7 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux6~0 at LABCELL_X88_Y15_N27
+D2L7 = ( !F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) ) # ( F1_prev_data_2[0] & ( !F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) );
+
+
+--D2L6 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux5~0 at LABCELL_X88_Y15_N30
+D2L6 = ( F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) ) # ( !F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( F1_prev_data_2[1] ) ) );
+
+
+--D2L5 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux4~0 at LABCELL_X88_Y15_N39
+D2L5 = ( !F1_prev_data_2[0] & ( !F1_prev_data_2[2] & ( F1_prev_data_2[1] ) ) );
+
+
+--D2L4 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux3~0 at LABCELL_X88_Y15_N54
+D2L4 = ( F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( F1_prev_data_2[1] ) ) ) # ( !F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) ) # ( F1_prev_data_2[0] & ( !F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) );
+
+
+--D2L3 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux2~0 at LABCELL_X88_Y15_N51
+D2L3 = ( F1_prev_data_2[0] & ( F1_prev_data_2[2] ) ) # ( !F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) ) # ( F1_prev_data_2[0] & ( !F1_prev_data_2[2] ) );
+
+
+--D2L2 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux1~0 at LABCELL_X88_Y15_N18
+D2L2 = ( F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( F1_prev_data_2[1] ) ) ) # ( F1_prev_data_2[0] & ( !F1_prev_data_2[2] ) ) # ( !F1_prev_data_2[0] & ( !F1_prev_data_2[2] & ( F1_prev_data_2[1] ) ) );
+
+
+--D2L1 is add_sub:top_inst|bcd2seven_seg:aConvert|Mux0~0 at LABCELL_X88_Y15_N12
+D2L1 = ( F1_prev_data_2[0] & ( F1_prev_data_2[2] & ( F1_prev_data_2[1] ) ) ) # ( F1_prev_data_2[0] & ( !F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) ) # ( !F1_prev_data_2[0] & ( !F1_prev_data_2[2] & ( !F1_prev_data_2[1] ) ) );
+
+
+--C1L16 is add_sub:top_inst|sum[0]~0 at LABCELL_X73_Y15_N42
+C1L16 = ( C1_add_hold & ( (!C1_sub_hold & (((G1_sum[0])))) # (C1_sub_hold & (!F2_prev_data_2[0] $ ((!F1_prev_data_2[0])))) ) ) # ( !C1_add_hold & ( !F2_prev_data_2[0] $ (!F1_prev_data_2[0]) ) );
+
+
+--C1L18 is add_sub:top_inst|sum[1]~1 at LABCELL_X73_Y15_N18
+C1L18 = !C1_add_hold $ (!C1_sub_hold);
+
+
+--H1L1 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~0 at LABCELL_X73_Y15_N12
+H1L1 = ( F1_prev_data_2[0] & ( !F1_prev_data_2[1] $ (F2_prev_data_2[1]) ) ) # ( !F1_prev_data_2[0] & ( !F1_prev_data_2[1] $ (!F2_prev_data_2[0] $ (!F2_prev_data_2[1])) ) );
+
+
+--C1L19 is add_sub:top_inst|sum[1]~2 at LABCELL_X73_Y15_N15
+C1L19 = ( C1_add_hold & ( (!C1_sub_hold & ((G1_sum[1]))) # (C1_sub_hold & (!H1L1)) ) ) # ( !C1_add_hold & ( !H1L1 ) );
+
+
+--H1L2 is add_sub:top_inst|generic_subtractor_beh:gen_sub|Add0~1 at LABCELL_X73_Y15_N36
+H1L2 = ( F2_prev_data_2[1] & ( (!F1_prev_data_2[1]) # ((F2_prev_data_2[0] & !F1_prev_data_2[0])) ) ) # ( !F2_prev_data_2[1] & ( (F2_prev_data_2[0] & (!F1_prev_data_2[1] & !F1_prev_data_2[0])) ) );
+
+
+--C1L21 is add_sub:top_inst|sum[2]~3 at LABCELL_X73_Y15_N54
+C1L21 = ( F1_prev_data_2[2] & ( C1_add_hold & ( (!C1_sub_hold & (((G1_sum[2])))) # (C1_sub_hold & (!F2_prev_data_2[2] $ ((H1L2)))) ) ) ) # ( !F1_prev_data_2[2] & ( C1_add_hold & ( (!C1_sub_hold & (((G1_sum[2])))) # (C1_sub_hold & (!F2_prev_data_2[2] $ ((!H1L2)))) ) ) ) # ( F1_prev_data_2[2] & ( !C1_add_hold & ( !F2_prev_data_2[2] $ (H1L2) ) ) ) # ( !F1_prev_data_2[2] & ( !C1_add_hold & ( !F2_prev_data_2[2] $ (!H1L2) ) ) );
+
+
+--C1L23 is add_sub:top_inst|sum[3]~4 at LABCELL_X73_Y15_N30
+C1L23 = ( C1_add_hold & ( G1_sum[3] & ( (!C1_sub_hold) # ((!F2_prev_data_2[2] & (!F1_prev_data_2[2] & H1L2)) # (F2_prev_data_2[2] & ((!F1_prev_data_2[2]) # (H1L2)))) ) ) ) # ( !C1_add_hold & ( G1_sum[3] & ( (!F2_prev_data_2[2] & (!F1_prev_data_2[2] & H1L2)) # (F2_prev_data_2[2] & ((!F1_prev_data_2[2]) # (H1L2))) ) ) ) # ( C1_add_hold & ( !G1_sum[3] & ( (C1_sub_hold & ((!F2_prev_data_2[2] & (!F1_prev_data_2[2] & H1L2)) # (F2_prev_data_2[2] & ((!F1_prev_data_2[2]) # (H1L2))))) ) ) ) # ( !C1_add_hold & ( !G1_sum[3] & ( (!F2_prev_data_2[2] & (!F1_prev_data_2[2] & H1L2)) # (F2_prev_data_2[2] & ((!F1_prev_data_2[2]) # (H1L2))) ) ) );
+
+
+--F2_prev_data_1[1] is add_sub:top_inst|clock_synchronizer:BSync|prev_data_1[1] at FF_X73_Y15_N59
+--register power-up is low
+
+F2_prev_data_1[1] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L67,  ,  , VCC);
+
+
+--F2_prev_data_1[2] is add_sub:top_inst|clock_synchronizer:BSync|prev_data_1[2] at FF_X73_Y15_N35
+--register power-up is low
+
+F2_prev_data_1[2] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L69,  ,  , VCC);
+
+
+--F2_prev_data_1[0] is add_sub:top_inst|clock_synchronizer:BSync|prev_data_1[0] at FF_X73_Y15_N23
+--register power-up is low
+
+F2_prev_data_1[0] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L65,  ,  , VCC);
+
+
+--F1_prev_data_1[1] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[1] at FF_X73_Y15_N20
+--register power-up is low
+
+F1_prev_data_1[1] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L73,  ,  , VCC);
+
+
+--F1_prev_data_1[2] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[2] at FF_X73_Y15_N50
+--register power-up is low
+
+F1_prev_data_1[2] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L75,  ,  , VCC);
+
+
+--F1_prev_data_1[0] is add_sub:top_inst|clock_synchronizer:ASync|prev_data_1[0] at FF_X73_Y15_N29
+--register power-up is low
+
+F1_prev_data_1[0] = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L71,  ,  , VCC);
+
+
+--E2_FallingEdge is add_sub:top_inst|edge_detect:addEdge|FallingEdge at FF_X68_Y12_N43
+--register power-up is low
+
+E2_FallingEdge = DFFEAS(E2L2, GLOBAL(A1L4), A1L57,  ,  ,  ,  ,  ,  );
+
+
+--E3_FallingEdge is add_sub:top_inst|edge_detect:subEdge|FallingEdge at FF_X68_Y12_N29
+--register power-up is low
+
+E3_FallingEdge = DFFEAS(E3L2, GLOBAL(A1L4), A1L57,  ,  ,  ,  ,  ,  );
+
+
+--C1L7 is add_sub:top_inst|comb~0 at LABCELL_X68_Y12_N12
+C1L7 = ( E3_FallingEdge & ( !E2_FallingEdge ) );
+
+
+--E2_PrevDataIn1 is add_sub:top_inst|edge_detect:addEdge|PrevDataIn1 at FF_X68_Y12_N47
+--register power-up is low
+
+E2_PrevDataIn1 = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , A1L54,  ,  , VCC);
+
+
+--E2_PrevDataIn2 is add_sub:top_inst|edge_detect:addEdge|PrevDataIn2 at FF_X68_Y12_N19
+--register power-up is low
+
+E2_PrevDataIn2 = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , E2_PrevDataIn1,  ,  , VCC);
+
+
+--E2L2 is add_sub:top_inst|edge_detect:addEdge|FallingEdge~0 at LABCELL_X68_Y12_N42
+E2L2 = ( !E2_PrevDataIn1 & ( E2_PrevDataIn2 ) );
+
+
+--E3_PrevDataIn1 is add_sub:top_inst|edge_detect:subEdge|PrevDataIn1 at FF_X68_Y12_N5
+--register power-up is low
+
+E3_PrevDataIn1 = DFFEAS(E3L4, GLOBAL(A1L4), A1L57,  ,  ,  ,  ,  ,  );
+
+
+--E3_PrevDataIn2 is add_sub:top_inst|edge_detect:subEdge|PrevDataIn2 at FF_X68_Y12_N25
+--register power-up is low
+
+E3_PrevDataIn2 = DFFEAS( , GLOBAL(A1L4), A1L57,  ,  , E3_PrevDataIn1,  ,  , VCC);
+
+
+--E3L2 is add_sub:top_inst|edge_detect:subEdge|FallingEdge~0 at LABCELL_X68_Y12_N27
+E3L2 = ( !E3_PrevDataIn1 & ( E3_PrevDataIn2 ) );
+
+
+--C1_sum[0] is add_sub:top_inst|sum[0] at LABCELL_X73_Y15_N24
+C1_sum[0] = ( C1L18 & ( C1L16 ) ) # ( !C1L18 & ( C1L16 & ( C1_sum[0] ) ) ) # ( !C1L18 & ( !C1L16 & ( C1_sum[0] ) ) );
+
+
+--C1_sum[1] is add_sub:top_inst|sum[1] at LABCELL_X73_Y15_N51
+C1_sum[1] = ( C1L18 & ( C1L19 ) ) # ( !C1L18 & ( C1L19 & ( C1_sum[1] ) ) ) # ( !C1L18 & ( !C1L19 & ( C1_sum[1] ) ) );
+
+
+--C1_sum[2] is add_sub:top_inst|sum[2] at LABCELL_X73_Y15_N21
+C1_sum[2] = ( C1L21 & ( (C1L18) # (C1_sum[2]) ) ) # ( !C1L21 & ( (C1_sum[2] & !C1L18) ) );
+
+
+--C1_sum[3] is add_sub:top_inst|sum[3] at LABCELL_X73_Y15_N39
+C1_sum[3] = ( C1L23 & ( (C1L18) # (C1_sum[3]) ) ) # ( !C1L23 & ( (C1_sum[3] & !C1L18) ) );
+
+
+--C1_add_hold is add_sub:top_inst|add_hold at LABCELL_X73_Y15_N45
+C1_add_hold = ( E2_FallingEdge & ( !C1L7 ) ) # ( !E2_FallingEdge & ( (C1_add_hold & !C1L7) ) );
+
+
+--C1_sub_hold is add_sub:top_inst|sub_hold at LABCELL_X68_Y12_N39
+C1_sub_hold = ( E3_FallingEdge & ( C1_sub_hold & ( !E2_FallingEdge ) ) ) # ( !E3_FallingEdge & ( C1_sub_hold & ( !E2_FallingEdge ) ) ) # ( E3_FallingEdge & ( !C1_sub_hold & ( !E2_FallingEdge ) ) );
+
+
+
+--SW[1] is SW[1] at PIN_AC12
+SW[1] = INPUT();
+
+
+
+--SW[2] is SW[2] at PIN_AF9
+SW[2] = INPUT();
+
+
+
+--SW[3] is SW[3] at PIN_AF10
+SW[3] = INPUT();
+
+
+--A1L7 is HEX0[0]~output at IOOBUF_X89_Y8_N39
+A1L7 = OUTPUT_BUFFER.O(.I(D1L7), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[0] is HEX0[0] at PIN_AE26
+HEX0[0] = OUTPUT();
+
+
+--A1L9 is HEX0[1]~output at IOOBUF_X89_Y11_N79
+A1L9 = OUTPUT_BUFFER.O(.I(D1L6), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[1] is HEX0[1] at PIN_AE27
+HEX0[1] = OUTPUT();
+
+
+--A1L11 is HEX0[2]~output at IOOBUF_X89_Y11_N96
+A1L11 = OUTPUT_BUFFER.O(.I(D1L5), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[2] is HEX0[2] at PIN_AE28
+HEX0[2] = OUTPUT();
+
+
+--A1L13 is HEX0[3]~output at IOOBUF_X89_Y4_N79
+A1L13 = OUTPUT_BUFFER.O(.I(D1L4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[3] is HEX0[3] at PIN_AG27
+HEX0[3] = OUTPUT();
+
+
+--A1L15 is HEX0[4]~output at IOOBUF_X89_Y13_N56
+A1L15 = OUTPUT_BUFFER.O(.I(D1L3), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[4] is HEX0[4] at PIN_AF28
+HEX0[4] = OUTPUT();
+
+
+--A1L17 is HEX0[5]~output at IOOBUF_X89_Y13_N39
+A1L17 = OUTPUT_BUFFER.O(.I(D1L2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[5] is HEX0[5] at PIN_AG28
+HEX0[5] = OUTPUT();
+
+
+--A1L19 is HEX0[6]~output at IOOBUF_X89_Y4_N96
+A1L19 = OUTPUT_BUFFER.O(.I(!D1L1), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX0[6] is HEX0[6] at PIN_AH28
+HEX0[6] = OUTPUT();
+
+
+--A1L22 is HEX2[0]~output at IOOBUF_X89_Y9_N22
+A1L22 = OUTPUT_BUFFER.O(.I(D3L7), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[0] is HEX2[0] at PIN_AB23
+HEX2[0] = OUTPUT();
+
+
+--A1L24 is HEX2[1]~output at IOOBUF_X89_Y23_N39
+A1L24 = OUTPUT_BUFFER.O(.I(D3L6), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[1] is HEX2[1] at PIN_AE29
+HEX2[1] = OUTPUT();
+
+
+--A1L26 is HEX2[2]~output at IOOBUF_X89_Y23_N56
+A1L26 = OUTPUT_BUFFER.O(.I(D3L5), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[2] is HEX2[2] at PIN_AD29
+HEX2[2] = OUTPUT();
+
+
+--A1L28 is HEX2[3]~output at IOOBUF_X89_Y20_N79
+A1L28 = OUTPUT_BUFFER.O(.I(D3L4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[3] is HEX2[3] at PIN_AC28
+HEX2[3] = OUTPUT();
+
+
+--A1L30 is HEX2[4]~output at IOOBUF_X89_Y25_N39
+A1L30 = OUTPUT_BUFFER.O(.I(D3L3), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[4] is HEX2[4] at PIN_AD30
+HEX2[4] = OUTPUT();
+
+
+--A1L32 is HEX2[5]~output at IOOBUF_X89_Y20_N96
+A1L32 = OUTPUT_BUFFER.O(.I(D3L2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[5] is HEX2[5] at PIN_AC29
+HEX2[5] = OUTPUT();
+
+
+--A1L34 is HEX2[6]~output at IOOBUF_X89_Y25_N56
+A1L34 = OUTPUT_BUFFER.O(.I(D3L1), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX2[6] is HEX2[6] at PIN_AC30
+HEX2[6] = OUTPUT();
+
+
+--A1L37 is HEX4[0]~output at IOOBUF_X89_Y11_N45
+A1L37 = OUTPUT_BUFFER.O(.I(D2L7), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[0] is HEX4[0] at PIN_AA24
+HEX4[0] = OUTPUT();
+
+
+--A1L39 is HEX4[1]~output at IOOBUF_X89_Y13_N5
+A1L39 = OUTPUT_BUFFER.O(.I(D2L6), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[1] is HEX4[1] at PIN_Y23
+HEX4[1] = OUTPUT();
+
+
+--A1L41 is HEX4[2]~output at IOOBUF_X89_Y13_N22
+A1L41 = OUTPUT_BUFFER.O(.I(D2L5), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[2] is HEX4[2] at PIN_Y24
+HEX4[2] = OUTPUT();
+
+
+--A1L43 is HEX4[3]~output at IOOBUF_X89_Y8_N22
+A1L43 = OUTPUT_BUFFER.O(.I(D2L4), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[3] is HEX4[3] at PIN_W22
+HEX4[3] = OUTPUT();
+
+
+--A1L45 is HEX4[4]~output at IOOBUF_X89_Y15_N22
+A1L45 = OUTPUT_BUFFER.O(.I(D2L3), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[4] is HEX4[4] at PIN_W24
+HEX4[4] = OUTPUT();
+
+
+--A1L47 is HEX4[5]~output at IOOBUF_X89_Y15_N5
+A1L47 = OUTPUT_BUFFER.O(.I(D2L2), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[5] is HEX4[5] at PIN_V23
+HEX4[5] = OUTPUT();
+
+
+--A1L49 is HEX4[6]~output at IOOBUF_X89_Y20_N45
+A1L49 = OUTPUT_BUFFER.O(.I(D2L1), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , );
+
+
+--HEX4[6] is HEX4[6] at PIN_W25
+HEX4[6] = OUTPUT();
+
+
+--A1L3 is CLOCK_50~input at IOIBUF_X32_Y0_N1
+A1L3 = INPUT_BUFFER(.I(CLOCK_50), );
+
+
+--CLOCK_50 is CLOCK_50 at PIN_AF14
+CLOCK_50 = INPUT();
+
+
+--A1L57 is SW[0]~input at IOIBUF_X12_Y0_N18
+A1L57 = INPUT_BUFFER(.I(SW[0]), );
+
+
+--SW[0] is SW[0] at PIN_AB12
+SW[0] = INPUT();
+
+
+--A1L67 is SW[5]~input at IOIBUF_X16_Y0_N18
+A1L67 = INPUT_BUFFER(.I(SW[5]), );
+
+
+--SW[5] is SW[5] at PIN_AD12
+SW[5] = INPUT();
+
+
+--A1L69 is SW[6]~input at IOIBUF_X4_Y0_N35
+A1L69 = INPUT_BUFFER(.I(SW[6]), );
+
+
+--SW[6] is SW[6] at PIN_AE11
+SW[6] = INPUT();
+
+
+--A1L65 is SW[4]~input at IOIBUF_X2_Y0_N41
+A1L65 = INPUT_BUFFER(.I(SW[4]), );
+
+
+--SW[4] is SW[4] at PIN_AD11
+SW[4] = INPUT();
+
+
+--A1L73 is SW[8]~input at IOIBUF_X4_Y0_N18
+A1L73 = INPUT_BUFFER(.I(SW[8]), );
+
+
+--SW[8] is SW[8] at PIN_AD10
+SW[8] = INPUT();
+
+
+--A1L75 is SW[9]~input at IOIBUF_X2_Y0_N58
+A1L75 = INPUT_BUFFER(.I(SW[9]), );
+
+
+--SW[9] is SW[9] at PIN_AE12
+SW[9] = INPUT();
+
+
+--A1L71 is SW[7]~input at IOIBUF_X4_Y0_N1
+A1L71 = INPUT_BUFFER(.I(SW[7]), );
+
+
+--SW[7] is SW[7] at PIN_AC9
+SW[7] = INPUT();
+
+
+--A1L54 is KEY[1]~input at IOIBUF_X36_Y0_N18
+A1L54 = INPUT_BUFFER(.I(KEY[1]), );
+
+
+--KEY[1] is KEY[1] at PIN_AA15
+KEY[1] = INPUT();
+
+
+--A1L52 is KEY[0]~input at IOIBUF_X36_Y0_N1
+A1L52 = INPUT_BUFFER(.I(KEY[0]), );
+
+
+--KEY[0] is KEY[0] at PIN_AA14
+KEY[0] = INPUT();
+
+
+
+--A1L4 is CLOCK_50~inputCLKENA0 at CLKCTRL_G6
+A1L4 = cyclonev_clkena(.INCLK = A1L3) WITH (clock_type = "Global Clock", ena_register_mode = "always enabled");
+
+
+--E3L4 is add_sub:top_inst|edge_detect:subEdge|PrevDataIn1~feeder at LABCELL_X68_Y12_N3
+E3L4 = ( A1L52 );
+
+
