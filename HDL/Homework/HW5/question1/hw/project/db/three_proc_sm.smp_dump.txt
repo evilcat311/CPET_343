@@ -1,0 +1,11 @@
+
+State Machine - |three_proc_sm|curr_state
+Name curr_state.state_bit_2 curr_state.state_bit_1 curr_state.state_bit_0 
+curr_state.IDLE_BIT_1 0 0 0 
+curr_state.BIT_2 0 0 1 
+curr_state.BIT_3 0 1 1 
+curr_state.BIT_4 0 1 0 
+curr_state.BIT_5 1 1 0 
+curr_state.BIT_6 1 1 1 
+curr_state.BIT_7 1 0 1 
+curr_state.BIT_8 1 0 0 
