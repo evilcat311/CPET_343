@@ -1,0 +1,11 @@
+
+State Machine - |one_hot_fsm|curr_state
+Name curr_state.BIT_8 curr_state.BIT_7 curr_state.BIT_6 curr_state.BIT_5 curr_state.BIT_4 curr_state.BIT_3 curr_state.BIT_2 curr_state.IDLE_BIT_1 
+curr_state.IDLE_BIT_1 0 0 0 0 0 0 0 0 
+curr_state.BIT_2 0 0 0 0 0 0 1 1 
+curr_state.BIT_3 0 0 0 0 0 1 0 1 
+curr_state.BIT_4 0 0 0 0 1 0 0 1 
+curr_state.BIT_5 0 0 0 1 0 0 0 1 
+curr_state.BIT_6 0 0 1 0 0 0 0 1 
+curr_state.BIT_7 0 1 0 0 0 0 0 1 
+curr_state.BIT_8 1 0 0 0 0 0 0 1 

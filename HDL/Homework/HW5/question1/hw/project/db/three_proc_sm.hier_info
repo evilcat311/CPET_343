@@ -1,0 +1,20 @@
+|three_proc_sm
+reset_n => curr_state~3.DATAIN
+clk => curr_state~1.DATAIN
+serial_bit => pattern_found.DATAB
+serial_bit => Selector0.IN7
+serial_bit => next_state.BIT_2.DATAB
+serial_bit => next_state.BIT_3.DATAB
+serial_bit => next_state.BIT_4.DATAB
+serial_bit => next_state.BIT_6.DATAB
+serial_bit => next_state.BIT_8.DATAB
+serial_bit => Selector0.IN1
+serial_bit => Selector0.IN2
+serial_bit => Selector0.IN3
+serial_bit => Selector0.IN4
+serial_bit => Selector0.IN5
+serial_bit => next_state.BIT_5.DATAB
+serial_bit => next_state.BIT_7.DATAB
+pattern_found <= pattern_found.DB_MAX_OUTPUT_PORT_TYPE
+
+
