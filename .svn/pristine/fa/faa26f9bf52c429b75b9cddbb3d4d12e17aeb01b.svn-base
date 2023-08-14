@@ -1,0 +1,213 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/projects/HDL_Course/HDL/testers/lab9_baseline/lab8_baseline/sim/script
+Edj_roomba_3000
+Z1 w1637005498
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8../../src/dj_roomba_3000.vhd
+Z6 F../../src/dj_roomba_3000.vhd
+l0
+L8
+Vk4=28P^]U2U^FI[`zG4[j1
+!s100 GM3[DB:gnT:9cflc5I]710
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1691542885
+!i10b 1
+Z9 !s108 1691542885.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|../../src/dj_roomba_3000.vhd|
+Z11 !s107 ../../src/dj_roomba_3000.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abeh
+R2
+R3
+R4
+DEx4 work 14 dj_roomba_3000 0 22 k4=28P^]U2U^FI[`zG4[j1
+l82
+L19
+VfFl:z[=:BGncELUbhDgV82
+!s100 _EZN=c8@nRI8bQM2GAcOd0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Edj_roomba_3000_tb
+Z14 w1636409112
+R2
+R3
+R4
+R0
+Z15 8../src/dj_roomba_3000_tb.vhd
+Z16 F../src/dj_roomba_3000_tb.vhd
+l0
+L9
+VonaNdhMMfJi3V>loPg@_]0
+!s100 A`=239<Y4BYFM?lMMLkQk2
+R7
+31
+Z17 !s110 1691542886
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|../src/dj_roomba_3000_tb.vhd|
+Z19 !s107 ../src/dj_roomba_3000_tb.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+Z20 DEx4 work 17 dj_roomba_3000_tb 0 22 onaNdhMMfJi3V>loPg@_]0
+l31
+L12
+Z21 Vlmm;JhR9L3U4<jhTDNFM?1
+Z22 !s100 n04d>lOCPdEJl]VKW46G<1
+R7
+31
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Erising_edge_synchronizer
+Z23 w1478989128
+R3
+R4
+R0
+Z24 8../../src/rising_edge_synchronizer.vhd
+Z25 F../../src/rising_edge_synchronizer.vhd
+l0
+L8
+V7^gf[0AcMz;oFDKIj=b3N3
+!s100 8>=9Tc6dAVdENebjXiG<30
+R7
+31
+R8
+!i10b 1
+R9
+Z26 !s90 -reportprogress|300|-93|-work|work|../../src/rising_edge_synchronizer.vhd|
+Z27 !s107 ../../src/rising_edge_synchronizer.vhd|
+!i113 1
+R12
+R13
+Abeh
+R3
+R4
+DEx4 work 24 rising_edge_synchronizer 0 22 7^gf[0AcMz;oFDKIj=b3N3
+l22
+L17
+VDiJNT@9ALH<beU@?[8WYF3
+!s100 bl0g6Z13_?2U69Fj`HUc[2
+R7
+31
+R8
+!i10b 1
+R9
+R26
+R27
+!i113 1
+R12
+R13
+Erom_data
+Z28 w1691542851
+Z29 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R3
+R4
+R0
+Z30 8../../src/rom_data/rom_data.vhd
+Z31 F../../src/rom_data/rom_data.vhd
+l0
+L42
+VHbCRkLHTFd:CQ13FkTiCb0
+!s100 =:6ZXcd[YEPV<mRgHdAVF1
+R7
+31
+R8
+!i10b 1
+R9
+Z32 !s90 -reportprogress|300|-93|-work|work|../../src/rom_data/rom_data.vhd|
+Z33 !s107 ../../src/rom_data/rom_data.vhd|
+!i113 1
+R12
+R13
+Asyn
+R29
+R3
+R4
+DEx4 work 8 rom_data 0 22 HbCRkLHTFd:CQ13FkTiCb0
+l56
+L52
+VciU8ECZaIKE4h;:zEIU8W2
+!s100 ISWZFVckV^61PB=Z8VJ>G0
+R7
+31
+R8
+!i10b 1
+R9
+R32
+R33
+!i113 1
+R12
+R13
+Erom_instructions
+Z34 w1691542875
+R29
+R3
+R4
+R0
+Z35 8../../src/rom_instructions/rom_instructions.vhd
+Z36 F../../src/rom_instructions/rom_instructions.vhd
+l0
+L42
+VK?99>`^^gBdB0ciIlh=Y<1
+!s100 ^7A0NOO57cST57aV1KEV82
+R7
+31
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-93|-work|work|../../src/rom_instructions/rom_instructions.vhd|
+Z38 !s107 ../../src/rom_instructions/rom_instructions.vhd|
+!i113 1
+R12
+R13
+Asyn
+R29
+R3
+R4
+DEx4 work 16 rom_instructions 0 22 K?99>`^^gBdB0ciIlh=Y<1
+l56
+L52
+VR:97G5h;S2fVPfV<7014n1
+!s100 h6el3RgbOKznbM7OoeO8U2
+R7
+31
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+R12
+R13

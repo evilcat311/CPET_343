@@ -1,0 +1,1793 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+--T1_state[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[1]
+--register power-up is low
+
+T1_state[1] = AMPP_FUNCTION(B1_jsm_tck, T1L20, B1_jsm_tms);
+
+
+--T1_state[4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[4]
+--register power-up is low
+
+T1_state[4] = AMPP_FUNCTION(B1_jsm_tck, T1L23, B1_jsm_tms);
+
+
+--T1_state[6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[6]
+--register power-up is low
+
+T1_state[6] = AMPP_FUNCTION(B1_jsm_tck, T1L25, B1_jsm_tms);
+
+
+--T1_state[11] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[11]
+--register power-up is low
+
+T1_state[11] = AMPP_FUNCTION(B1_jsm_tck, T1L29, B1_jsm_tms);
+
+
+--T1_state[13] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[13]
+--register power-up is low
+
+T1_state[13] = AMPP_FUNCTION(B1_jsm_tck, T1L31, B1_jsm_tms);
+
+
+--R1_irf_reg[1][0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]
+--register power-up is low
+
+R1_irf_reg[1][0] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][0], R1_irsr_reg[0], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][1]
+--register power-up is low
+
+R1_irf_reg[1][1] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][1], R1_irsr_reg[1], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][2]
+--register power-up is low
+
+R1_irf_reg[1][2] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][2], R1_irsr_reg[2], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][3]
+--register power-up is low
+
+R1_irf_reg[1][3] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][3], R1_irsr_reg[3], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][4]
+--register power-up is low
+
+R1_irf_reg[1][4] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][4], R1_irsr_reg[4], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][5]
+--register power-up is low
+
+R1_irf_reg[1][5] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][5], R1_irsr_reg[5], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][6]
+--register power-up is low
+
+R1_irf_reg[1][6] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][6], R1_irsr_reg[6], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[1][7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][7]
+--register power-up is low
+
+R1_irf_reg[1][7] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[1][7], R1_irsr_reg[7], !R1_clr_reg, !R1_hub_mode_reg[1], R1L54);
+
+
+--R1_irf_reg[2][0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]
+--register power-up is low
+
+R1_irf_reg[2][0] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][0], R1_irsr_reg[0], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][1]
+--register power-up is low
+
+R1_irf_reg[2][1] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][1], R1_irsr_reg[1], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][2]
+--register power-up is low
+
+R1_irf_reg[2][2] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][2], R1_irsr_reg[2], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][3]
+--register power-up is low
+
+R1_irf_reg[2][3] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][3], R1_irsr_reg[3], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][4]
+--register power-up is low
+
+R1_irf_reg[2][4] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][4], R1_irsr_reg[4], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][5]
+--register power-up is low
+
+R1_irf_reg[2][5] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][5], R1_irsr_reg[5], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][6]
+--register power-up is low
+
+R1_irf_reg[2][6] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][6], R1_irsr_reg[6], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irf_reg[2][7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][7]
+--register power-up is low
+
+R1_irf_reg[2][7] = AMPP_FUNCTION(B1_jsm_tck, R1_shadow_irf_reg[2][7], R1_irsr_reg[7], !R1_clr_reg, !R1_hub_mode_reg[1], R1L65);
+
+
+--R1_irsr_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[0]
+--register power-up is low
+
+R1_irsr_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1L95, R1_irsr_reg[1], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--R1_irsr_reg[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]
+--register power-up is low
+
+R1_irsr_reg[2] = AMPP_FUNCTION(B1_jsm_tck, R1L96, R1_irsr_reg[3], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--R1_irsr_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[1]
+--register power-up is low
+
+R1_irsr_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1L97, R1_irsr_reg[2], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--T1_tms_cnt[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|tms_cnt[2]
+--register power-up is low
+
+T1_tms_cnt[2] = AMPP_FUNCTION(B1_jsm_tck, T1L38, !B1_jsm_tms);
+
+
+--R1_shadow_irf_reg[1][0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]
+--register power-up is low
+
+R1_shadow_irf_reg[1][0] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][0], R1_irsr_reg[0], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_shadow_irf_reg[1][1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][1]
+--register power-up is low
+
+R1_shadow_irf_reg[1][1] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][1], R1_irsr_reg[1], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_shadow_irf_reg[1][2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][2]
+--register power-up is low
+
+R1_shadow_irf_reg[1][2] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][2], R1_irsr_reg[2], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_shadow_irf_reg[1][3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][3]
+--register power-up is low
+
+R1_shadow_irf_reg[1][3] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][3], R1_irsr_reg[3], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_irsr_reg[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[3]
+--register power-up is low
+
+R1_irsr_reg[3] = AMPP_FUNCTION(B1_jsm_tck, R1L98, R1_irsr_reg[4], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--R1_shadow_irf_reg[1][4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][4]
+--register power-up is low
+
+R1_shadow_irf_reg[1][4] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][4], R1_irsr_reg[4], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_shadow_irf_reg[1][5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][5]
+--register power-up is low
+
+R1_shadow_irf_reg[1][5] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][5], R1_irsr_reg[5], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_irsr_reg[5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[5]
+--register power-up is low
+
+R1_irsr_reg[5] = AMPP_FUNCTION(B1_jsm_tck, R1L99, R1_irsr_reg[6], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--R1_shadow_irf_reg[1][6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][6]
+--register power-up is low
+
+R1_shadow_irf_reg[1][6] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][6], R1_irsr_reg[6], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_irsr_reg[6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[6]
+--register power-up is low
+
+R1_irsr_reg[6] = AMPP_FUNCTION(B1_jsm_tck, R1L100, R1_irsr_reg[7], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--R1_shadow_irf_reg[1][7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][7]
+--register power-up is low
+
+R1_shadow_irf_reg[1][7] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[1][7], R1_irsr_reg[7], !R1_clr_reg, !T1_state[3], R1L137);
+
+
+--R1_irsr_reg[7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[7]
+--register power-up is low
+
+R1_irsr_reg[7] = AMPP_FUNCTION(B1_jsm_tck, R1L101, R1_irsr_reg[8], !R1_clr_reg, !T1_state[3], R1L79);
+
+
+--R1_shadow_irf_reg[2][0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]
+--register power-up is low
+
+R1_shadow_irf_reg[2][0] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][0], R1_irsr_reg[0], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][1]
+--register power-up is low
+
+R1_shadow_irf_reg[2][1] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][1], R1_irsr_reg[1], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][2]
+--register power-up is low
+
+R1_shadow_irf_reg[2][2] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][2], R1_irsr_reg[2], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][3]
+--register power-up is low
+
+R1_shadow_irf_reg[2][3] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][3], R1_irsr_reg[3], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][4]
+--register power-up is low
+
+R1_shadow_irf_reg[2][4] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][4], R1_irsr_reg[4], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][5]
+--register power-up is low
+
+R1_shadow_irf_reg[2][5] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][5], R1_irsr_reg[5], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][6]
+--register power-up is low
+
+R1_shadow_irf_reg[2][6] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][6], R1_irsr_reg[6], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--R1_shadow_irf_reg[2][7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][7]
+--register power-up is low
+
+R1_shadow_irf_reg[2][7] = AMPP_FUNCTION(B1_jsm_tck, R1_irf_reg[2][7], R1_irsr_reg[7], !R1_clr_reg, !T1_state[3], R1L148);
+
+
+--T1_tms_cnt[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|tms_cnt[1]
+--register power-up is low
+
+T1_tms_cnt[1] = AMPP_FUNCTION(B1_jsm_tck, T1L40, !B1_jsm_tms);
+
+
+--R1L40 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]~3
+R1L40 = AMPP_FUNCTION(!R1_hub_mode_reg[1], !R1_irsr_reg[1], !R1L23, !R1_irsr_reg[2], !R1_reset_ena_reg, !R1_irsr_reg[0], !R1_hub_mode_reg[2]);
+
+
+--R1L91 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[9]~14
+R1L91 = AMPP_FUNCTION(!B1_send[1][1], !R1_irsr_reg[9], !B1_send[0][1], !R1_virtual_ir_scan_reg, !T1_state[3], !B1_hub_tdi, !T1_state[4]);
+
+
+--B1_hub_tck is sld_hub:auto_hub|hub_tck
+B1_hub_tck = AMPP_FUNCTION();
+
+
+--B1_hub_usr1 is sld_hub:auto_hub|hub_usr1
+B1_hub_usr1 = AMPP_FUNCTION();
+
+
+--B1_hub_rti is sld_hub:auto_hub|hub_rti
+B1_hub_rti = AMPP_FUNCTION();
+
+
+--B1_hub_shift is sld_hub:auto_hub|hub_shift
+B1_hub_shift = AMPP_FUNCTION();
+
+
+--B1_hub_update is sld_hub:auto_hub|hub_update
+B1_hub_update = AMPP_FUNCTION();
+
+
+--B1_hub_tdo is sld_hub:auto_hub|hub_tdo
+B1_hub_tdo = AMPP_FUNCTION();
+
+
+--B1_node_ir_in[1][0] is sld_hub:auto_hub|node_ir_in[1][0]
+B1_node_ir_in[1][0] = AMPP_FUNCTION();
+
+
+--B1_node_tdo[1] is sld_hub:auto_hub|node_tdo[1]
+B1_node_tdo[1] = AMPP_FUNCTION();
+
+
+--B1_node_irq[1] is sld_hub:auto_hub|node_irq[1]
+B1_node_irq[1] = AMPP_FUNCTION();
+
+
+--B1_node_raw_tck is sld_hub:auto_hub|node_raw_tck
+B1_node_raw_tck = AMPP_FUNCTION();
+
+
+--B1_node_raw_tms is sld_hub:auto_hub|node_raw_tms
+B1_node_raw_tms = AMPP_FUNCTION();
+
+
+--B1_node_tdi is sld_hub:auto_hub|node_tdi
+B1_node_tdi = AMPP_FUNCTION();
+
+
+--B1_node_ir_out[1][0] is sld_hub:auto_hub|node_ir_out[1][0]
+B1_node_ir_out[1][0] = AMPP_FUNCTION();
+
+
+--B1_node_ena[1] is sld_hub:auto_hub|node_ena[1]
+B1_node_ena[1] = AMPP_FUNCTION();
+
+
+--B1_node_clr is sld_hub:auto_hub|node_clr
+B1_node_clr = AMPP_FUNCTION();
+
+
+--B1_node_clrn is sld_hub:auto_hub|node_clrn
+B1_node_clrn = AMPP_FUNCTION();
+
+
+--B1_node_usr1 is sld_hub:auto_hub|node_usr1
+B1_node_usr1 = AMPP_FUNCTION();
+
+
+--B1_node_tck is sld_hub:auto_hub|node_tck
+B1_node_tck = AMPP_FUNCTION();
+
+
+--B1_node_rti is sld_hub:auto_hub|node_rti
+B1_node_rti = AMPP_FUNCTION();
+
+
+--B1_node_shift is sld_hub:auto_hub|node_shift
+B1_node_shift = AMPP_FUNCTION();
+
+
+--B1_node_update is sld_hub:auto_hub|node_update
+B1_node_update = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_tlr is sld_hub:auto_hub|node_jtag_state_tlr
+B1_node_jtag_state_tlr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_rti is sld_hub:auto_hub|node_jtag_state_rti
+B1_node_jtag_state_rti = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_sdrs is sld_hub:auto_hub|node_jtag_state_sdrs
+B1_node_jtag_state_sdrs = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_cdr is sld_hub:auto_hub|node_jtag_state_cdr
+B1_node_jtag_state_cdr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_sdr is sld_hub:auto_hub|node_jtag_state_sdr
+B1_node_jtag_state_sdr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_e1dr is sld_hub:auto_hub|node_jtag_state_e1dr
+B1_node_jtag_state_e1dr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_pdr is sld_hub:auto_hub|node_jtag_state_pdr
+B1_node_jtag_state_pdr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_e2dr is sld_hub:auto_hub|node_jtag_state_e2dr
+B1_node_jtag_state_e2dr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_udr is sld_hub:auto_hub|node_jtag_state_udr
+B1_node_jtag_state_udr = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_sirs is sld_hub:auto_hub|node_jtag_state_sirs
+B1_node_jtag_state_sirs = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_cir is sld_hub:auto_hub|node_jtag_state_cir
+B1_node_jtag_state_cir = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_sir is sld_hub:auto_hub|node_jtag_state_sir
+B1_node_jtag_state_sir = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_e1ir is sld_hub:auto_hub|node_jtag_state_e1ir
+B1_node_jtag_state_e1ir = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_pir is sld_hub:auto_hub|node_jtag_state_pir
+B1_node_jtag_state_pir = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_e2ir is sld_hub:auto_hub|node_jtag_state_e2ir
+B1_node_jtag_state_e2ir = AMPP_FUNCTION();
+
+
+--B1_node_jtag_state_uir is sld_hub:auto_hub|node_jtag_state_uir
+B1_node_jtag_state_uir = AMPP_FUNCTION();
+
+
+--B1_reserved_reset_sequencer_clock_input is sld_hub:auto_hub|reserved_reset_sequencer_clock_input
+B1_reserved_reset_sequencer_clock_input = AMPP_FUNCTION();
+
+
+--B1_send[0][10] is sld_hub:auto_hub|send[0][10]
+B1_send[0][10] = AMPP_FUNCTION();
+
+
+--B1_send[0][11] is sld_hub:auto_hub|send[0][11]
+B1_send[0][11] = AMPP_FUNCTION();
+
+
+--B1_send[0][12] is sld_hub:auto_hub|send[0][12]
+B1_send[0][12] = AMPP_FUNCTION();
+
+
+--B1_send[0][13] is sld_hub:auto_hub|send[0][13]
+B1_send[0][13] = AMPP_FUNCTION();
+
+
+--B1_send[0][14] is sld_hub:auto_hub|send[0][14]
+B1_send[0][14] = AMPP_FUNCTION();
+
+
+--B1_send[0][15] is sld_hub:auto_hub|send[0][15]
+B1_send[0][15] = AMPP_FUNCTION();
+
+
+--B1_send[0][16] is sld_hub:auto_hub|send[0][16]
+B1_send[0][16] = AMPP_FUNCTION();
+
+
+--B1_send[0][17] is sld_hub:auto_hub|send[0][17]
+B1_send[0][17] = AMPP_FUNCTION();
+
+
+--B1_send[0][18] is sld_hub:auto_hub|send[0][18]
+B1_send[0][18] = AMPP_FUNCTION();
+
+
+--B1_send[0][19] is sld_hub:auto_hub|send[0][19]
+B1_send[0][19] = AMPP_FUNCTION();
+
+
+--B1_send[0][20] is sld_hub:auto_hub|send[0][20]
+B1_send[0][20] = AMPP_FUNCTION();
+
+
+--B1_send[0][21] is sld_hub:auto_hub|send[0][21]
+B1_send[0][21] = AMPP_FUNCTION();
+
+
+--B1_send[0][22] is sld_hub:auto_hub|send[0][22]
+B1_send[0][22] = AMPP_FUNCTION();
+
+
+--B1_send[0][23] is sld_hub:auto_hub|send[0][23]
+B1_send[0][23] = AMPP_FUNCTION();
+
+
+--B1_send[0][24] is sld_hub:auto_hub|send[0][24]
+B1_send[0][24] = AMPP_FUNCTION();
+
+
+--B1_send[0][25] is sld_hub:auto_hub|send[0][25]
+B1_send[0][25] = AMPP_FUNCTION();
+
+
+--B1_send[0][26] is sld_hub:auto_hub|send[0][26]
+B1_send[0][26] = AMPP_FUNCTION();
+
+
+--B1_send[0][27] is sld_hub:auto_hub|send[0][27]
+B1_send[0][27] = AMPP_FUNCTION();
+
+
+--B1_send[0][28] is sld_hub:auto_hub|send[0][28]
+B1_send[0][28] = AMPP_FUNCTION();
+
+
+--B1_send[0][29] is sld_hub:auto_hub|send[0][29]
+B1_send[0][29] = AMPP_FUNCTION();
+
+
+--B1_send[0][30] is sld_hub:auto_hub|send[0][30]
+B1_send[0][30] = AMPP_FUNCTION();
+
+
+--B1_send[1][10] is sld_hub:auto_hub|send[1][10]
+B1_send[1][10] = AMPP_FUNCTION();
+
+
+--B1_send[1][11] is sld_hub:auto_hub|send[1][11]
+B1_send[1][11] = AMPP_FUNCTION();
+
+
+--B1_send[1][12] is sld_hub:auto_hub|send[1][12]
+B1_send[1][12] = AMPP_FUNCTION();
+
+
+--B1_send[1][13] is sld_hub:auto_hub|send[1][13]
+B1_send[1][13] = AMPP_FUNCTION();
+
+
+--B1_send[1][14] is sld_hub:auto_hub|send[1][14]
+B1_send[1][14] = AMPP_FUNCTION();
+
+
+--B1_send[1][15] is sld_hub:auto_hub|send[1][15]
+B1_send[1][15] = AMPP_FUNCTION();
+
+
+--B1_send[1][16] is sld_hub:auto_hub|send[1][16]
+B1_send[1][16] = AMPP_FUNCTION();
+
+
+--B1_send[1][17] is sld_hub:auto_hub|send[1][17]
+B1_send[1][17] = AMPP_FUNCTION();
+
+
+--B1_send[1][18] is sld_hub:auto_hub|send[1][18]
+B1_send[1][18] = AMPP_FUNCTION();
+
+
+--B1_send[1][19] is sld_hub:auto_hub|send[1][19]
+B1_send[1][19] = AMPP_FUNCTION();
+
+
+--B1_send[1][20] is sld_hub:auto_hub|send[1][20]
+B1_send[1][20] = AMPP_FUNCTION();
+
+
+--B1_send[1][21] is sld_hub:auto_hub|send[1][21]
+B1_send[1][21] = AMPP_FUNCTION();
+
+
+--B1_send[1][22] is sld_hub:auto_hub|send[1][22]
+B1_send[1][22] = AMPP_FUNCTION();
+
+
+--B1_send[1][23] is sld_hub:auto_hub|send[1][23]
+B1_send[1][23] = AMPP_FUNCTION();
+
+
+--B1_send[1][24] is sld_hub:auto_hub|send[1][24]
+B1_send[1][24] = AMPP_FUNCTION();
+
+
+--B1_send[1][25] is sld_hub:auto_hub|send[1][25]
+B1_send[1][25] = AMPP_FUNCTION();
+
+
+--B1_send[1][26] is sld_hub:auto_hub|send[1][26]
+B1_send[1][26] = AMPP_FUNCTION();
+
+
+--B1_send[1][27] is sld_hub:auto_hub|send[1][27]
+B1_send[1][27] = AMPP_FUNCTION();
+
+
+--B1_send[1][28] is sld_hub:auto_hub|send[1][28]
+B1_send[1][28] = AMPP_FUNCTION();
+
+
+--B1_send[1][29] is sld_hub:auto_hub|send[1][29]
+B1_send[1][29] = AMPP_FUNCTION();
+
+
+--B1_send[1][30] is sld_hub:auto_hub|send[1][30]
+B1_send[1][30] = AMPP_FUNCTION();
+
+
+--B1_receive[0][0] is sld_hub:auto_hub|receive[0][0]
+B1_receive[0][0] = AMPP_FUNCTION();
+
+
+--B1_receive[0][1] is sld_hub:auto_hub|receive[0][1]
+B1_receive[0][1] = AMPP_FUNCTION();
+
+
+--B1_receive[0][2] is sld_hub:auto_hub|receive[0][2]
+B1_receive[0][2] = AMPP_FUNCTION();
+
+
+--B1_receive[0][3] is sld_hub:auto_hub|receive[0][3]
+B1_receive[0][3] = AMPP_FUNCTION();
+
+
+--B1_receive[0][4] is sld_hub:auto_hub|receive[0][4]
+B1_receive[0][4] = AMPP_FUNCTION();
+
+
+--B1_receive[0][5] is sld_hub:auto_hub|receive[0][5]
+B1_receive[0][5] = AMPP_FUNCTION();
+
+
+--B1_receive[0][6] is sld_hub:auto_hub|receive[0][6]
+B1_receive[0][6] = AMPP_FUNCTION();
+
+
+--B1_receive[0][7] is sld_hub:auto_hub|receive[0][7]
+B1_receive[0][7] = AMPP_FUNCTION();
+
+
+--B1_receive[0][8] is sld_hub:auto_hub|receive[0][8]
+B1_receive[0][8] = AMPP_FUNCTION();
+
+
+--B1_receive[0][9] is sld_hub:auto_hub|receive[0][9]
+B1_receive[0][9] = AMPP_FUNCTION();
+
+
+--B1_receive[0][10] is sld_hub:auto_hub|receive[0][10]
+B1_receive[0][10] = AMPP_FUNCTION();
+
+
+--B1_receive[0][11] is sld_hub:auto_hub|receive[0][11]
+B1_receive[0][11] = AMPP_FUNCTION();
+
+
+--B1_receive[0][12] is sld_hub:auto_hub|receive[0][12]
+B1_receive[0][12] = AMPP_FUNCTION();
+
+
+--B1_receive[0][13] is sld_hub:auto_hub|receive[0][13]
+B1_receive[0][13] = AMPP_FUNCTION();
+
+
+--B1_receive[0][14] is sld_hub:auto_hub|receive[0][14]
+B1_receive[0][14] = AMPP_FUNCTION();
+
+
+--B1_receive[0][15] is sld_hub:auto_hub|receive[0][15]
+B1_receive[0][15] = AMPP_FUNCTION();
+
+
+--B1_receive[0][16] is sld_hub:auto_hub|receive[0][16]
+B1_receive[0][16] = AMPP_FUNCTION();
+
+
+--B1_receive[0][17] is sld_hub:auto_hub|receive[0][17]
+B1_receive[0][17] = AMPP_FUNCTION();
+
+
+--B1_receive[0][18] is sld_hub:auto_hub|receive[0][18]
+B1_receive[0][18] = AMPP_FUNCTION();
+
+
+--B1_receive[0][19] is sld_hub:auto_hub|receive[0][19]
+B1_receive[0][19] = AMPP_FUNCTION();
+
+
+--B1_receive[0][20] is sld_hub:auto_hub|receive[0][20]
+B1_receive[0][20] = AMPP_FUNCTION();
+
+
+--B1_receive[0][21] is sld_hub:auto_hub|receive[0][21]
+B1_receive[0][21] = AMPP_FUNCTION();
+
+
+--B1_receive[0][22] is sld_hub:auto_hub|receive[0][22]
+B1_receive[0][22] = AMPP_FUNCTION();
+
+
+--B1_receive[0][23] is sld_hub:auto_hub|receive[0][23]
+B1_receive[0][23] = AMPP_FUNCTION();
+
+
+--B1_receive[0][24] is sld_hub:auto_hub|receive[0][24]
+B1_receive[0][24] = AMPP_FUNCTION();
+
+
+--B1_receive[0][25] is sld_hub:auto_hub|receive[0][25]
+B1_receive[0][25] = AMPP_FUNCTION();
+
+
+--B1_receive[0][26] is sld_hub:auto_hub|receive[0][26]
+B1_receive[0][26] = AMPP_FUNCTION();
+
+
+--B1_receive[0][27] is sld_hub:auto_hub|receive[0][27]
+B1_receive[0][27] = AMPP_FUNCTION();
+
+
+--B1_receive[0][28] is sld_hub:auto_hub|receive[0][28]
+B1_receive[0][28] = AMPP_FUNCTION();
+
+
+--B1_receive[0][29] is sld_hub:auto_hub|receive[0][29]
+B1_receive[0][29] = AMPP_FUNCTION();
+
+
+--B1_receive[0][30] is sld_hub:auto_hub|receive[0][30]
+B1_receive[0][30] = AMPP_FUNCTION();
+
+
+--B1_receive[1][0] is sld_hub:auto_hub|receive[1][0]
+B1_receive[1][0] = AMPP_FUNCTION();
+
+
+--B1_receive[1][1] is sld_hub:auto_hub|receive[1][1]
+B1_receive[1][1] = AMPP_FUNCTION();
+
+
+--B1_receive[1][2] is sld_hub:auto_hub|receive[1][2]
+B1_receive[1][2] = AMPP_FUNCTION();
+
+
+--B1_receive[1][3] is sld_hub:auto_hub|receive[1][3]
+B1_receive[1][3] = AMPP_FUNCTION();
+
+
+--B1_receive[1][4] is sld_hub:auto_hub|receive[1][4]
+B1_receive[1][4] = AMPP_FUNCTION();
+
+
+--B1_receive[1][5] is sld_hub:auto_hub|receive[1][5]
+B1_receive[1][5] = AMPP_FUNCTION();
+
+
+--B1_receive[1][6] is sld_hub:auto_hub|receive[1][6]
+B1_receive[1][6] = AMPP_FUNCTION();
+
+
+--B1_receive[1][7] is sld_hub:auto_hub|receive[1][7]
+B1_receive[1][7] = AMPP_FUNCTION();
+
+
+--B1_receive[1][8] is sld_hub:auto_hub|receive[1][8]
+B1_receive[1][8] = AMPP_FUNCTION();
+
+
+--B1_receive[1][9] is sld_hub:auto_hub|receive[1][9]
+B1_receive[1][9] = AMPP_FUNCTION();
+
+
+--B1_receive[1][10] is sld_hub:auto_hub|receive[1][10]
+B1_receive[1][10] = AMPP_FUNCTION();
+
+
+--B1_receive[1][11] is sld_hub:auto_hub|receive[1][11]
+B1_receive[1][11] = AMPP_FUNCTION();
+
+
+--B1_receive[1][12] is sld_hub:auto_hub|receive[1][12]
+B1_receive[1][12] = AMPP_FUNCTION();
+
+
+--B1_receive[1][13] is sld_hub:auto_hub|receive[1][13]
+B1_receive[1][13] = AMPP_FUNCTION();
+
+
+--B1_receive[1][14] is sld_hub:auto_hub|receive[1][14]
+B1_receive[1][14] = AMPP_FUNCTION();
+
+
+--B1_receive[1][15] is sld_hub:auto_hub|receive[1][15]
+B1_receive[1][15] = AMPP_FUNCTION();
+
+
+--B1_receive[1][16] is sld_hub:auto_hub|receive[1][16]
+B1_receive[1][16] = AMPP_FUNCTION();
+
+
+--B1_receive[1][17] is sld_hub:auto_hub|receive[1][17]
+B1_receive[1][17] = AMPP_FUNCTION();
+
+
+--B1_receive[1][18] is sld_hub:auto_hub|receive[1][18]
+B1_receive[1][18] = AMPP_FUNCTION();
+
+
+--B1_receive[1][19] is sld_hub:auto_hub|receive[1][19]
+B1_receive[1][19] = AMPP_FUNCTION();
+
+
+--B1_receive[1][20] is sld_hub:auto_hub|receive[1][20]
+B1_receive[1][20] = AMPP_FUNCTION();
+
+
+--B1_receive[1][21] is sld_hub:auto_hub|receive[1][21]
+B1_receive[1][21] = AMPP_FUNCTION();
+
+
+--B1_receive[1][22] is sld_hub:auto_hub|receive[1][22]
+B1_receive[1][22] = AMPP_FUNCTION();
+
+
+--B1_receive[1][23] is sld_hub:auto_hub|receive[1][23]
+B1_receive[1][23] = AMPP_FUNCTION();
+
+
+--B1_receive[1][24] is sld_hub:auto_hub|receive[1][24]
+B1_receive[1][24] = AMPP_FUNCTION();
+
+
+--B1_receive[1][25] is sld_hub:auto_hub|receive[1][25]
+B1_receive[1][25] = AMPP_FUNCTION();
+
+
+--B1_receive[1][26] is sld_hub:auto_hub|receive[1][26]
+B1_receive[1][26] = AMPP_FUNCTION();
+
+
+--B1_receive[1][27] is sld_hub:auto_hub|receive[1][27]
+B1_receive[1][27] = AMPP_FUNCTION();
+
+
+--B1_receive[1][28] is sld_hub:auto_hub|receive[1][28]
+B1_receive[1][28] = AMPP_FUNCTION();
+
+
+--B1_receive[1][29] is sld_hub:auto_hub|receive[1][29]
+B1_receive[1][29] = AMPP_FUNCTION();
+
+
+--B1_receive[1][30] is sld_hub:auto_hub|receive[1][30]
+B1_receive[1][30] = AMPP_FUNCTION();
+
+
+--R1_tdo is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo
+--register power-up is low
+
+R1_tdo = AMPP_FUNCTION(!B1_jsm_tck, R1L166);
+
+
+--B1_jsm_tck is sld_hub:auto_hub|jsm_tck
+B1_jsm_tck = AMPP_FUNCTION();
+
+
+--B1_jsm_tms is sld_hub:auto_hub|jsm_tms
+B1_jsm_tms = AMPP_FUNCTION();
+
+
+--B1_hub_tdi is sld_hub:auto_hub|hub_tdi
+B1_hub_tdi = AMPP_FUNCTION();
+
+
+--L1_splitter_nodes_receive_0[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_0[3]
+--register power-up is low
+
+L1_splitter_nodes_receive_0[3] = AMPP_FUNCTION(B1_jsm_tck, R1L129, !R1_clr_reg, R1L130);
+
+
+--R1_virtual_ir_scan_reg is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_scan_reg
+--register power-up is low
+
+R1_virtual_ir_scan_reg = AMPP_FUNCTION(B1_jsm_tck, R1L22, T1_state[0], R1L168);
+
+
+--R1_clr_reg is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg
+--register power-up is low
+
+R1_clr_reg = AMPP_FUNCTION(B1_jsm_tck, R1L2);
+
+
+--T1_state[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[0]
+--register power-up is low
+
+T1_state[0] = AMPP_FUNCTION(B1_jsm_tck, T1L19);
+
+
+--T1_state[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[2]
+--register power-up is low
+
+T1_state[2] = AMPP_FUNCTION(B1_jsm_tck, T1L21);
+
+
+--T1_state[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[3]
+--register power-up is low
+
+T1_state[3] = AMPP_FUNCTION(B1_jsm_tck, T1L22);
+
+
+--T1_state[5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[5]
+--register power-up is low
+
+T1_state[5] = AMPP_FUNCTION(B1_jsm_tck, T1L24);
+
+
+--T1_state[7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[7]
+--register power-up is low
+
+T1_state[7] = AMPP_FUNCTION(B1_jsm_tck, T1L26);
+
+
+--T1_state[8] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[8]
+--register power-up is low
+
+T1_state[8] = AMPP_FUNCTION(B1_jsm_tck, T1L27);
+
+
+--T1_state[9] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[9]
+--register power-up is low
+
+T1_state[9] = AMPP_FUNCTION(B1_jsm_tck, R1L127);
+
+
+--T1_state[10] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[10]
+--register power-up is low
+
+T1_state[10] = AMPP_FUNCTION(B1_jsm_tck, T1L28);
+
+
+--T1_state[12] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[12]
+--register power-up is low
+
+T1_state[12] = AMPP_FUNCTION(B1_jsm_tck, T1L30);
+
+
+--T1_state[14] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[14]
+--register power-up is low
+
+T1_state[14] = AMPP_FUNCTION(B1_jsm_tck, T1L32);
+
+
+--T1_state[15] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[15]
+--register power-up is low
+
+T1_state[15] = AMPP_FUNCTION(B1_jsm_tck, R1L168);
+
+
+--L1_splitter_nodes_receive_1[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|splitter_nodes_receive_1[3]
+--register power-up is low
+
+L1_splitter_nodes_receive_1[3] = AMPP_FUNCTION(B1_jsm_tck, R1L131, !R1_clr_reg, R1L130);
+
+
+--R1L24 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_info_reg_ena~0
+R1L24 = AMPP_FUNCTION(!T1_state[3], !T1_state[4]);
+
+
+--B1_send[0][0] is sld_hub:auto_hub|send[0][0]
+B1_send[0][0] = AMPP_FUNCTION();
+
+
+--R1_virtual_ir_tdo_sel_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_tdo_sel_reg[1]
+--register power-up is low
+
+R1_virtual_ir_tdo_sel_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1_irsr_reg[9], !R1_clr_reg, R1L133);
+
+
+--R1_virtual_ir_tdo_sel_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_tdo_sel_reg[0]
+--register power-up is low
+
+R1_virtual_ir_tdo_sel_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1_irsr_reg[8], !R1_clr_reg, R1L133);
+
+
+--R1L159 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~0
+R1L159 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !R1_irsr_reg[0], !B1_send[0][0], !R1_virtual_ir_tdo_sel_reg[1], !R1_virtual_ir_tdo_sel_reg[0]);
+
+
+--R1_irsr_reg[9] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[9]
+--register power-up is low
+
+R1_irsr_reg[9] = AMPP_FUNCTION(B1_jsm_tck, R1L91, !R1_clr_reg);
+
+
+--R1_irsr_reg[8] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[8]
+--register power-up is low
+
+R1_irsr_reg[8] = AMPP_FUNCTION(B1_jsm_tck, R1L89, !R1_clr_reg);
+
+
+--R1L23 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|Equal11~0
+R1L23 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[8]);
+
+
+--S3_WORD_SR[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]
+--register power-up is low
+
+S3_WORD_SR[0] = AMPP_FUNCTION(B1_jsm_tck, S3L21, S3L16);
+
+
+--R1L160 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~1
+R1L160 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1L23, !S3_WORD_SR[0]);
+
+
+--B1_send[1][0] is sld_hub:auto_hub|send[1][0]
+B1_send[1][0] = AMPP_FUNCTION();
+
+
+--R1L161 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~2
+R1L161 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !R1_irsr_reg[9], !R1_irsr_reg[8], !B1_send[0][0], !R1_virtual_ir_tdo_sel_reg[1], !B1_send[1][0]);
+
+
+--R1_tdo_bypass_reg is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_bypass_reg
+--register power-up is low
+
+R1_tdo_bypass_reg = AMPP_FUNCTION(B1_jsm_tck, R1L158);
+
+
+--R1_hub_minor_ver_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[0]
+--register power-up is low
+
+R1_hub_minor_ver_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1L30, R1L24);
+
+
+--R1_design_hash_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]
+--register power-up is low
+
+R1_design_hash_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1L13, R1L8);
+
+
+--R1L162 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~3
+R1L162 = AMPP_FUNCTION(!R1_irsr_reg[0], !R1_hub_minor_ver_reg[0], !R1_design_hash_reg[0]);
+
+
+--R1L163 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~4
+R1L163 = AMPP_FUNCTION(!R1_irsr_reg[2], !R1_irsr_reg[1]);
+
+
+--R1L164 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~5
+R1L164 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1_irsr_reg[9], !R1_irsr_reg[8]);
+
+
+--R1L165 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~6
+R1L165 = AMPP_FUNCTION(!T1_state[8], !R1L24, !R1_tdo_bypass_reg, !R1L162, !R1L163, !R1L164);
+
+
+--R1L166 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_mux_out~7
+R1L166 = AMPP_FUNCTION(!R1L24, !R1L159, !R1L160, !R1L161, !R1L165);
+
+
+--R1_hub_mode_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]
+--register power-up is low
+
+R1_hub_mode_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1L37, !R1_clr_reg);
+
+
+--R1L128 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|node_ena~0
+R1L128 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[2], !R1_hub_mode_reg[1]);
+
+
+--R1L129 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|node_ena~1
+R1L129 = AMPP_FUNCTION(!B1_jsm_tms, !B1_hub_tdi, !T1_state[4], !R1_irsr_reg[9], !R1_irsr_reg[8], !R1L128);
+
+
+--R1_virtual_dr_scan_reg is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_dr_scan_reg
+--register power-up is low
+
+R1_virtual_dr_scan_reg = AMPP_FUNCTION(B1_jsm_tck, R1L21, T1_state[0], R1L168);
+
+
+--R1L130 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|node_ena~2
+R1L130 = AMPP_FUNCTION(!B1_jsm_tms, !R1_virtual_ir_scan_reg, !T1_state[2], !T1_state[4], !T1_state[15], !R1_virtual_dr_scan_reg);
+
+
+--R1_jtag_ir_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1]
+--register power-up is low
+
+R1_jtag_ir_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[2], T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[4]
+--register power-up is low
+
+R1_jtag_ir_reg[4] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[5], T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[3]
+--register power-up is low
+
+R1_jtag_ir_reg[3] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[4], T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2]
+--register power-up is low
+
+R1_jtag_ir_reg[2] = AMPP_FUNCTION(B1_jsm_tck, R1L107, T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[0]
+--register power-up is low
+
+R1_jtag_ir_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1L104, T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[9] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[9]
+--register power-up is low
+
+R1_jtag_ir_reg[9] = AMPP_FUNCTION(B1_jsm_tck, B1_hub_tdi, T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[8] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[8]
+--register power-up is low
+
+R1_jtag_ir_reg[8] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[9], T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[7] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[7]
+--register power-up is low
+
+R1_jtag_ir_reg[7] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[8], T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[6] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[6]
+--register power-up is low
+
+R1_jtag_ir_reg[6] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[7], T1_state[0], T1_state[11]);
+
+
+--R1_jtag_ir_reg[5] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[5]
+--register power-up is low
+
+R1_jtag_ir_reg[5] = AMPP_FUNCTION(B1_jsm_tck, R1_jtag_ir_reg[6], T1_state[0], T1_state[11]);
+
+
+--R1L20 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|Equal0~0
+R1L20 = AMPP_FUNCTION(!R1_jtag_ir_reg[9], !R1_jtag_ir_reg[8], !R1_jtag_ir_reg[7], !R1_jtag_ir_reg[6], !R1_jtag_ir_reg[5]);
+
+
+--R1L22 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|Equal1~0
+R1L22 = AMPP_FUNCTION(!R1_jtag_ir_reg[1], !R1_jtag_ir_reg[4], !R1_jtag_ir_reg[3], !R1_jtag_ir_reg[2], !R1_jtag_ir_reg[0], !R1L20);
+
+
+--R1L168 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|virtual_ir_dr_scan_proc~0
+R1L168 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[12], !T1_state[14]);
+
+
+--R1_hub_mode_reg[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]
+--register power-up is low
+
+R1_hub_mode_reg[2] = AMPP_FUNCTION(B1_jsm_tck, R1L40, R1_virtual_ir_scan_reg);
+
+
+--R1L2 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg_proc~0
+R1L2 = AMPP_FUNCTION(!T1_state[1], !R1_hub_mode_reg[2]);
+
+
+--T1L19 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~0
+T1L19 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[0], !T1_state[9], !T1_tms_cnt[2]);
+
+
+--T1L20 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~1
+T1L20 = AMPP_FUNCTION(!T1_state[0], !T1_state[1], !T1_state[8], !T1_state[15]);
+
+
+--T1L21 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~2
+T1L21 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[1], !T1_state[8], !T1_state[15]);
+
+
+--T1L22 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~3
+T1L22 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[2]);
+
+
+--T1L23 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~4
+T1L23 = AMPP_FUNCTION(!T1_state[3], !T1_state[4], !T1_state[7]);
+
+
+--T1L24 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~5
+T1L24 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[3], !T1_state[4]);
+
+
+--T1L25 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~6
+T1L25 = AMPP_FUNCTION(!T1_state[5], !T1_state[6]);
+
+
+--T1L26 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~7
+T1L26 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[6]);
+
+
+--T1L27 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~8
+T1L27 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[5], !T1_state[7]);
+
+
+--R1L127 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|node_ena_proc~0
+R1L127 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[2]);
+
+
+--T1L28 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~9
+T1L28 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[9]);
+
+
+--T1L29 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~10
+T1L29 = AMPP_FUNCTION(!T1_state[10], !T1_state[11], !T1_state[14]);
+
+
+--T1L30 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~11
+T1L30 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[10], !T1_state[11]);
+
+
+--T1L31 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~12
+T1L31 = AMPP_FUNCTION(!T1_state[12], !T1_state[13]);
+
+
+--T1L32 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~13
+T1L32 = AMPP_FUNCTION(!B1_jsm_tms, !T1_state[13]);
+
+
+--T1L33 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state~14
+T1L33 = AMPP_FUNCTION(!T1_state[5], !T1_state[7]);
+
+
+--R1L53 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]~0
+R1L53 = AMPP_FUNCTION(!R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1_irsr_reg[8], !R1_hub_mode_reg[1]);
+
+
+--R1L54 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[1][0]~1
+R1L54 = AMPP_FUNCTION(!B1_jsm_tms, !R1_virtual_ir_scan_reg, !T1_state[3], !R1_irsr_reg[9], !T1L33, !R1L53);
+
+
+--R1_irsr_reg[4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]
+--register power-up is low
+
+R1_irsr_reg[4] = AMPP_FUNCTION(B1_jsm_tck, R1L84, !R1_clr_reg);
+
+
+--R1L131 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|node_ena~3
+R1L131 = AMPP_FUNCTION(!B1_jsm_tms, !B1_hub_tdi, !T1_state[4], !R1_irsr_reg[9], !R1_irsr_reg[8], !R1L128);
+
+
+--R1L64 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]~2
+R1L64 = AMPP_FUNCTION(!R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1_irsr_reg[9], !R1_irsr_reg[8], !R1_hub_mode_reg[1]);
+
+
+--R1L65 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irf_reg[2][0]~3
+R1L65 = AMPP_FUNCTION(!B1_jsm_tms, !R1_virtual_ir_scan_reg, !T1_state[3], !T1L33, !R1L64);
+
+
+--B1_send[1][2] is sld_hub:auto_hub|send[1][2]
+B1_send[1][2] = AMPP_FUNCTION();
+
+
+--R1_hub_mode_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[0]
+--register power-up is low
+
+R1_hub_mode_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1L44, !R1_clr_reg, R1L133);
+
+
+--B1_send[0][2] is sld_hub:auto_hub|send[0][2]
+B1_send[0][2] = AMPP_FUNCTION();
+
+
+--R1L95 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~0
+R1L95 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !B1_send[1][2], !R1_hub_mode_reg[0], !B1_send[0][2]);
+
+
+--R1L77 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~1
+R1L77 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[8], !R1_irsr_reg[3], !R1_irsr_reg[4], !R1_hub_mode_reg[0]);
+
+
+--R1L147 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]~0
+R1L147 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[3]);
+
+
+--R1L78 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~2
+R1L78 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[3], !T1_state[4]);
+
+
+--R1L79 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[2]~3
+R1L79 = AMPP_FUNCTION(!R1L77, !R1L147, !R1L78);
+
+
+--R1L133 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|reset_ena_reg_proc~0
+R1L133 = AMPP_FUNCTION(!B1_jsm_tms, !R1_virtual_ir_scan_reg, !T1_state[5], !T1_state[7]);
+
+
+--B1_send[1][4] is sld_hub:auto_hub|send[1][4]
+B1_send[1][4] = AMPP_FUNCTION();
+
+
+--B1_send[0][4] is sld_hub:auto_hub|send[0][4]
+B1_send[0][4] = AMPP_FUNCTION();
+
+
+--R1L96 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~4
+R1L96 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[1][4], !B1_send[0][4]);
+
+
+--B1_send[1][3] is sld_hub:auto_hub|send[1][3]
+B1_send[1][3] = AMPP_FUNCTION();
+
+
+--B1_send[0][3] is sld_hub:auto_hub|send[0][3]
+B1_send[0][3] = AMPP_FUNCTION();
+
+
+--R1L97 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~5
+R1L97 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[1][3], !B1_send[0][3]);
+
+
+--B1_send[0][1] is sld_hub:auto_hub|send[0][1]
+B1_send[0][1] = AMPP_FUNCTION();
+
+
+--B1_send[1][1] is sld_hub:auto_hub|send[1][1]
+B1_send[1][1] = AMPP_FUNCTION();
+
+
+--R1L89 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[8]~6
+R1L89 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[3], !T1_state[4], !R1_irsr_reg[9], !R1_irsr_reg[8]);
+
+
+--S3_clear_signal is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|clear_signal
+S3_clear_signal = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[8]);
+
+
+--S3_WORD_SR[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]
+--register power-up is low
+
+S3_WORD_SR[1] = AMPP_FUNCTION(B1_jsm_tck, S3L22, S3L16);
+
+
+--S3_word_counter[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0]
+--register power-up is low
+
+S3_word_counter[0] = AMPP_FUNCTION(B1_jsm_tck, S3L9, S3L4);
+
+
+--S3_word_counter[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[2]
+--register power-up is low
+
+S3_word_counter[2] = AMPP_FUNCTION(B1_jsm_tck, S3L10, S3L4);
+
+
+--S3_word_counter[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[3]
+--register power-up is low
+
+S3_word_counter[3] = AMPP_FUNCTION(B1_jsm_tck, S3L11, S3L4);
+
+
+--S3_word_counter[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[1]
+--register power-up is low
+
+S3_word_counter[1] = AMPP_FUNCTION(B1_jsm_tck, S3L12, S3L4);
+
+
+--S3_word_counter[4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[4]
+--register power-up is low
+
+S3_word_counter[4] = AMPP_FUNCTION(B1_jsm_tck, S3L13, S3L4);
+
+
+--S3L20 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR~0
+S3L20 = AMPP_FUNCTION(!S3_word_counter[0], !S3_word_counter[2], !S3_word_counter[3], !S3_word_counter[1], !S3_word_counter[4]);
+
+
+--S3L21 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR~1
+S3L21 = AMPP_FUNCTION(!T1_state[4], !S3_clear_signal, !S3_WORD_SR[1], !S3L20);
+
+
+--S3L16 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]~2
+S3L16 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[3], !T1_state[4], !T1_state[8], !R1_virtual_dr_scan_reg);
+
+
+--R1L158 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|tdo_bypass_reg~0
+R1L158 = AMPP_FUNCTION(!B1_hub_tdi, !T1_state[4], !R1_tdo_bypass_reg);
+
+
+--R1_hub_minor_ver_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[1]
+--register power-up is low
+
+R1_hub_minor_ver_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1L31, R1L24);
+
+
+--R1L30 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~0
+R1L30 = AMPP_FUNCTION(!T1_state[3], !R1_hub_minor_ver_reg[1]);
+
+
+--R1L4 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_proc~0
+R1L4 = AMPP_FUNCTION(!T1_state[3], !R1_virtual_dr_scan_reg);
+
+
+--R1_mixer_addr_reg_internal[4] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]
+--register power-up is low
+
+R1_mixer_addr_reg_internal[4] = AMPP_FUNCTION(B1_jsm_tck, R1L122, R1L121);
+
+
+--R1_mixer_addr_reg_internal[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[0]
+--register power-up is low
+
+R1_mixer_addr_reg_internal[0] = AMPP_FUNCTION(B1_jsm_tck, R1L123, R1L121);
+
+
+--R1_mixer_addr_reg_internal[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[1]
+--register power-up is low
+
+R1_mixer_addr_reg_internal[1] = AMPP_FUNCTION(B1_jsm_tck, R1L124, R1L121);
+
+
+--R1_mixer_addr_reg_internal[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[2]
+--register power-up is low
+
+R1_mixer_addr_reg_internal[2] = AMPP_FUNCTION(B1_jsm_tck, R1L125, R1L121);
+
+
+--R1_mixer_addr_reg_internal[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[3]
+--register power-up is low
+
+R1_mixer_addr_reg_internal[3] = AMPP_FUNCTION(B1_jsm_tck, R1L126, R1L121);
+
+
+--R1L7 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]~0
+R1L7 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[4], !R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3]);
+
+
+--R1L12 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~1
+R1L12 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[4], !R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3]);
+
+
+--R1_design_hash_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[1]
+--register power-up is low
+
+R1_design_hash_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1L15, R1L8);
+
+
+--L1_sldfabric_ident_writedata[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[0]
+--register power-up is low
+
+L1_sldfabric_ident_writedata[0] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[0], L1L3);
+
+
+--R1L13 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~2
+R1L13 = AMPP_FUNCTION(!R1L4, !R1L7, !R1L12, !R1_design_hash_reg[1], !L1_sldfabric_ident_writedata[0]);
+
+
+--R1L8 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]~3
+R1L8 = AMPP_FUNCTION(!T1_state[3], !T1_state[4], !R1_virtual_dr_scan_reg);
+
+
+--R1L37 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[1]~0
+R1L37 = AMPP_FUNCTION(!R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1L23, !R1_hub_mode_reg[1], !R1L133);
+
+
+--R1L21 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|Equal0~1
+R1L21 = AMPP_FUNCTION(!R1_jtag_ir_reg[1], !R1_jtag_ir_reg[4], !R1_jtag_ir_reg[3], !R1_jtag_ir_reg[2], !R1_jtag_ir_reg[0], !R1L20);
+
+
+--R1_reset_ena_reg is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|reset_ena_reg
+--register power-up is low
+
+R1_reset_ena_reg = AMPP_FUNCTION(B1_jsm_tck, R1L133);
+
+
+--T1_tms_cnt[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|tms_cnt[0]
+--register power-up is low
+
+T1_tms_cnt[0] = AMPP_FUNCTION(B1_jsm_tck, T1L39);
+
+
+--T1L38 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|tms_cnt~0
+T1L38 = AMPP_FUNCTION(!T1_tms_cnt[2], !T1_tms_cnt[0], !T1_tms_cnt[1]);
+
+
+--R1L136 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]~1
+R1L136 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[8]);
+
+
+--R1L137 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[1][0]~2
+R1L137 = AMPP_FUNCTION(!B1_jsm_tms, !R1_virtual_ir_scan_reg, !T1_state[3], !R1L136, !R1_hub_mode_reg[1], !T1L33);
+
+
+--B1_send[1][5] is sld_hub:auto_hub|send[1][5]
+B1_send[1][5] = AMPP_FUNCTION();
+
+
+--B1_send[0][5] is sld_hub:auto_hub|send[0][5]
+B1_send[0][5] = AMPP_FUNCTION();
+
+
+--R1L98 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~7
+R1L98 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[1][5], !B1_send[0][5]);
+
+
+--B1_send[0][6] is sld_hub:auto_hub|send[0][6]
+B1_send[0][6] = AMPP_FUNCTION();
+
+
+--R1L82 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]~8
+R1L82 = AMPP_FUNCTION(!T1_state[3], !R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[0][6]);
+
+
+--B1_send[1][6] is sld_hub:auto_hub|send[1][6]
+B1_send[1][6] = AMPP_FUNCTION();
+
+
+--R1L83 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]~9
+R1L83 = AMPP_FUNCTION(!T1_state[3], !R1_irsr_reg[9], !R1_irsr_reg[4], !R1_irsr_reg[5], !R1_hub_mode_reg[0], !B1_send[1][6]);
+
+
+--R1L84 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[4]~10
+R1L84 = AMPP_FUNCTION(!R1_irsr_reg[4], !R1L77, !R1L147, !R1L78, !R1L82, !R1L83);
+
+
+--B1_send[1][7] is sld_hub:auto_hub|send[1][7]
+B1_send[1][7] = AMPP_FUNCTION();
+
+
+--B1_send[0][7] is sld_hub:auto_hub|send[0][7]
+B1_send[0][7] = AMPP_FUNCTION();
+
+
+--R1L99 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~11
+R1L99 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[1][7], !B1_send[0][7]);
+
+
+--B1_send[1][8] is sld_hub:auto_hub|send[1][8]
+B1_send[1][8] = AMPP_FUNCTION();
+
+
+--B1_send[0][8] is sld_hub:auto_hub|send[0][8]
+B1_send[0][8] = AMPP_FUNCTION();
+
+
+--R1L100 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~12
+R1L100 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[1][8], !B1_send[0][8]);
+
+
+--B1_send[1][9] is sld_hub:auto_hub|send[1][9]
+B1_send[1][9] = AMPP_FUNCTION();
+
+
+--B1_send[0][9] is sld_hub:auto_hub|send[0][9]
+B1_send[0][9] = AMPP_FUNCTION();
+
+
+--R1L101 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg~13
+R1L101 = AMPP_FUNCTION(!R1_irsr_reg[9], !R1_irsr_reg[4], !R1_hub_mode_reg[0], !B1_send[1][9], !B1_send[0][9]);
+
+
+--R1L148 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|shadow_irf_reg[2][0]~3
+R1L148 = AMPP_FUNCTION(!B1_jsm_tms, !R1_virtual_ir_scan_reg, !T1_state[3], !R1_irsr_reg[9], !R1_hub_mode_reg[1], !T1L33);
+
+
+--R1L44 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg~1
+R1L44 = AMPP_FUNCTION(!R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1_irsr_reg[9], !R1_irsr_reg[8]);
+
+
+--S3_WORD_SR[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[2]
+--register power-up is low
+
+S3_WORD_SR[2] = AMPP_FUNCTION(B1_jsm_tck, S3L23, S3L16);
+
+
+--S3L22 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR~3
+S3L22 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[4], !T1_state[8], !S3_word_counter[2], !S3_word_counter[1], !S3_WORD_SR[2]);
+
+
+--S3L9 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter~0
+S3L9 = AMPP_FUNCTION(!S3_word_counter[0], !S3_word_counter[2], !S3_word_counter[3], !S3_word_counter[1], !S3_word_counter[4], !S3_clear_signal);
+
+
+--S3L4 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0]~1
+S3L4 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[3], !T1_state[4], !T1_state[8], !R1_virtual_dr_scan_reg);
+
+
+--S3L10 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter~2
+S3L10 = AMPP_FUNCTION(!S3_word_counter[0], !S3_word_counter[2], !S3_word_counter[1], !S3_clear_signal);
+
+
+--S3L11 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter~3
+S3L11 = AMPP_FUNCTION(!S3_word_counter[0], !S3_word_counter[2], !S3_word_counter[3], !S3_word_counter[1], !S3_word_counter[4], !S3_clear_signal);
+
+
+--S3L12 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter~4
+S3L12 = AMPP_FUNCTION(!S3_word_counter[0], !S3_word_counter[1], !S3_clear_signal);
+
+
+--S3L13 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter~5
+S3L13 = AMPP_FUNCTION(!S3_word_counter[0], !S3_word_counter[2], !S3_word_counter[3], !S3_word_counter[1], !S3_word_counter[4], !S3_clear_signal);
+
+
+--R1_hub_minor_ver_reg[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[2]
+--register power-up is low
+
+R1_hub_minor_ver_reg[2] = AMPP_FUNCTION(B1_jsm_tck, R1L32, R1L24);
+
+
+--R1L31 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~1
+R1L31 = AMPP_FUNCTION(!T1_state[3], !R1_hub_minor_ver_reg[2]);
+
+
+--R1L122 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~0
+R1L122 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[4], !R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3], !S3_clear_signal);
+
+
+--R1L121 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]~1
+R1L121 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[3], !T1_state[8], !R1_virtual_dr_scan_reg);
+
+
+--R1L123 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~2
+R1L123 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[0], !S3_clear_signal);
+
+
+--R1L124 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~3
+R1L124 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !S3_clear_signal);
+
+
+--R1L125 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~4
+R1L125 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !S3_clear_signal);
+
+
+--R1L126 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal~5
+R1L126 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3], !S3_clear_signal);
+
+
+--R1_design_hash_reg[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[2]
+--register power-up is low
+
+R1_design_hash_reg[2] = AMPP_FUNCTION(B1_jsm_tck, R1L17, R1L8);
+
+
+--L1_sldfabric_ident_writedata[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[1]
+--register power-up is low
+
+L1_sldfabric_ident_writedata[1] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[1], L1L3);
+
+
+--R1L14 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~4
+R1L14 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[4], !R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3]);
+
+
+--R1L15 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~5
+R1L15 = AMPP_FUNCTION(!R1L4, !R1L7, !R1_design_hash_reg[2], !L1_sldfabric_ident_writedata[1], !R1L14);
+
+
+--R1_identity_contrib_shift_reg[0] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[0]
+--register power-up is low
+
+R1_identity_contrib_shift_reg[0] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[1], R1L47);
+
+
+--R1L39 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_mode_reg[2]~2
+R1L39 = AMPP_FUNCTION(!R1_irsr_reg[2], !R1_irsr_reg[1], !R1_irsr_reg[9], !R1_irsr_reg[8]);
+
+
+--L1L3 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[0]~0
+L1L3 = AMPP_FUNCTION(!T1_state[4], !T1_state[8], !R1_irsr_reg[0], !R1_virtual_dr_scan_reg, !R1L39);
+
+
+--T1L39 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|tms_cnt~1
+T1L39 = AMPP_FUNCTION(!B1_jsm_tms, !T1_tms_cnt[0]);
+
+
+--T1L40 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|tms_cnt~2
+T1L40 = AMPP_FUNCTION(!T1_tms_cnt[0], !T1_tms_cnt[1]);
+
+
+--S3_WORD_SR[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[3]
+--register power-up is low
+
+S3_WORD_SR[3] = AMPP_FUNCTION(B1_jsm_tck, S3L25, S3L16);
+
+
+--S3L23 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR~4
+S3L23 = AMPP_FUNCTION(!R1_virtual_ir_scan_reg, !T1_state[4], !T1_state[8], !S3_word_counter[2], !S3_word_counter[1], !S3_WORD_SR[3]);
+
+
+--R1_hub_minor_ver_reg[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[3]
+--register power-up is low
+
+R1_hub_minor_ver_reg[3] = AMPP_FUNCTION(B1_jsm_tck, R1L33, R1L24);
+
+
+--R1L32 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~2
+R1L32 = AMPP_FUNCTION(!T1_state[3], !R1_hub_minor_ver_reg[3]);
+
+
+--R1L16 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~6
+R1L16 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[4], !R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3]);
+
+
+--R1_design_hash_reg[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[3]
+--register power-up is low
+
+R1_design_hash_reg[3] = AMPP_FUNCTION(B1_jsm_tck, R1L19, R1L8);
+
+
+--L1_sldfabric_ident_writedata[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[2]
+--register power-up is low
+
+L1_sldfabric_ident_writedata[2] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[2], L1L3);
+
+
+--R1L17 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~7
+R1L17 = AMPP_FUNCTION(!R1L4, !R1L7, !R1L16, !R1_design_hash_reg[3], !L1_sldfabric_ident_writedata[2]);
+
+
+--R1_identity_contrib_shift_reg[1] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[1]
+--register power-up is low
+
+R1_identity_contrib_shift_reg[1] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[2], R1L47);
+
+
+--R1L47 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[0]~0
+R1L47 = AMPP_FUNCTION(!T1_state[4], !R1_irsr_reg[0], !R1_irsr_reg[2], !R1_irsr_reg[1], !R1L23, !R1_virtual_dr_scan_reg);
+
+
+--S3L24 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR~5
+S3L24 = AMPP_FUNCTION(!S3_word_counter[2], !S3_word_counter[3], !S3_word_counter[1], !S3_word_counter[4]);
+
+
+--S3L25 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR~6
+S3L25 = AMPP_FUNCTION(!B1_hub_tdi, !T1_state[4], !S3_word_counter[0], !S3_clear_signal, !S3L24);
+
+
+--R1L33 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg~3
+R1L33 = AMPP_FUNCTION(!B1_hub_tdi, !T1_state[3]);
+
+
+--L1_sldfabric_ident_writedata[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|sldfabric_ident_writedata[3]
+--register power-up is low
+
+L1_sldfabric_ident_writedata[3] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[3], L1L3);
+
+
+--R1L18 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~8
+R1L18 = AMPP_FUNCTION(!R1_mixer_addr_reg_internal[4], !R1_mixer_addr_reg_internal[0], !R1_mixer_addr_reg_internal[1], !R1_mixer_addr_reg_internal[2], !R1_mixer_addr_reg_internal[3]);
+
+
+--R1L19 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg~9
+R1L19 = AMPP_FUNCTION(!B1_hub_tdi, !R1L4, !R1L7, !L1_sldfabric_ident_writedata[3], !R1L18);
+
+
+--R1_identity_contrib_shift_reg[2] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[2]
+--register power-up is low
+
+R1_identity_contrib_shift_reg[2] = AMPP_FUNCTION(B1_jsm_tck, R1_identity_contrib_shift_reg[3], R1L47);
+
+
+--R1_identity_contrib_shift_reg[3] is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|identity_contrib_shift_reg[3]
+--register power-up is low
+
+R1_identity_contrib_shift_reg[3] = AMPP_FUNCTION(B1_jsm_tck, B1_hub_tdi, R1L47);
+
+
+--R1L107 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2]~0
+R1L107 = AMPP_FUNCTION(!R1_jtag_ir_reg[3]);
+
+
+--R1L104 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[0]~1
+R1L104 = AMPP_FUNCTION(!R1_jtag_ir_reg[1]);
+
+
+--B1L175 is sld_hub:auto_hub|~GND
+B1L175 = AMPP_FUNCTION();
+
+
+--R1L3 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|clr_reg~_wirecell
+R1L3 = AMPP_FUNCTION(!R1_clr_reg);
+
+
+--T1L3 is sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm|state[0]~_wirecell
+T1L3 = AMPP_FUNCTION(!T1_state[0]);
+
+

@@ -1,0 +1,641 @@
+m255
+K4
+z2
+!s11e vcom 2019.2 2019.04, Apr 17 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dS:/Documents/CPET343/Lab8/toPost/lab8_baseline/sim/script
+T_opt
+!s110 1670870555
+VOomclPCU4HK89S]8agGhO0
+04 17 4 work dj_roomba_3000_tb arch 1
+=1-b07b251b0651-6397761b-16d-4124
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2019.2;69
+R0
+Pcontrol_parts
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 w1670950305
+Z5 dC:/projects/HDL_Course/HDL/testers/lab 9 test/Lab8/toPost/lab8_baseline/sim/script
+8../../src/controller/control_parts.vhd
+F../../src/controller/control_parts.vhd
+l0
+L9
+VR<Z>]:d8`cDF2leoZdMb?2
+!s100 <azBkOM]g?DZ4ERPozdfk3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1691613972
+!i10b 1
+Z8 !s108 1691613972.000000
+!s90 -reportprogress|300|-93|-work|work|../../src/controller/control_parts.vhd|
+!s107 ../../src/controller/control_parts.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Econtroller
+R4
+R1
+Z11 DPx4 work 13 control_parts 0 22 R<Z>]:d8`cDF2leoZdMb?2
+R2
+R3
+R5
+Z12 8../../src/controller/controller.vhd
+Z13 F../../src/controller/controller.vhd
+l0
+L9
+V`7Kza_]mU22o85Pj3hX`W3
+!s100 dKdVX4Z8e_nM@]:FV0`752
+R6
+31
+R7
+!i10b 1
+R8
+Z14 !s90 -reportprogress|300|-93|-work|work|../../src/controller/controller.vhd|
+Z15 !s107 ../../src/controller/controller.vhd|
+!i113 1
+R9
+R10
+Abeh
+R1
+R11
+R2
+R3
+DEx4 work 10 controller 0 22 `7Kza_]mU22o85Pj3hX`W3
+l37
+L18
+VPEN4Hc><n;3b^0lmLXC:]1
+!s100 V7fVYT6nJ?eW1MkXRd]cE3
+R6
+31
+R7
+!i10b 1
+R8
+R14
+R15
+!i113 1
+R9
+R10
+Edj_roomba_3000
+R4
+Z16 DPx4 work 9 pro_parts 0 22 i5MOd30UYm33RIEnh]2iM0
+R11
+R1
+R2
+R3
+R5
+Z17 8../../src/dj_roomba_3000.vhd
+Z18 F../../src/dj_roomba_3000.vhd
+l0
+L10
+VcV=5W<Lg1AL>^MbXm_fPA0
+!s100 7Om72KMMICQj[4h:jRTgk3
+R6
+31
+Z19 !s110 1691613973
+!i10b 1
+Z20 !s108 1691613973.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|../../src/dj_roomba_3000.vhd|
+Z22 !s107 ../../src/dj_roomba_3000.vhd|
+!i113 1
+R9
+R10
+Abeh
+R16
+R11
+R1
+R2
+R3
+DEx4 work 14 dj_roomba_3000 0 22 cV=5W<Lg1AL>^MbXm_fPA0
+l44
+L21
+V;N0Q>;eeD3zLD@cIQBENH1
+!s100 ;UZS1TU@;QA5o:MDeb0WQ1
+R6
+31
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R9
+R10
+Edj_roomba_3000_tb
+R4
+R1
+R2
+R3
+R5
+Z23 8../src/dj_roomba_3000_tb.vhd
+Z24 F../src/dj_roomba_3000_tb.vhd
+l0
+L9
+VonaNdhMMfJi3V>loPg@_]0
+!s100 A`=239<Y4BYFM?lMMLkQk2
+R6
+31
+Z25 !s110 1691613974
+!i10b 1
+Z26 !s108 1691613974.000000
+Z27 !s90 -reportprogress|300|-93|-work|work|../src/dj_roomba_3000_tb.vhd|
+Z28 !s107 ../src/dj_roomba_3000_tb.vhd|
+!i113 1
+R9
+R10
+Aarch
+R1
+R2
+R3
+Z29 DEx4 work 17 dj_roomba_3000_tb 0 22 onaNdhMMfJi3V>loPg@_]0
+l31
+L12
+Z30 Vb?33f77]SUfdUeCCa<9[a3
+Z31 !s100 51UJ:oSKRTYNo1=h<Bh0U0
+R6
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R9
+R10
+Egeneric_2x1_mux
+R4
+R2
+R3
+R5
+Z32 8../../src/controller/generic_2x1_mux.vhd
+Z33 F../../src/controller/generic_2x1_mux.vhd
+l0
+L8
+Vh107TTCnm<_WR2A=9f><C1
+!s100 8GGD2[FkEG5So@H2XXSAD1
+R6
+31
+R7
+!i10b 1
+R8
+Z34 !s90 -reportprogress|300|-93|-work|work|../../src/controller/generic_2x1_mux.vhd|
+Z35 !s107 ../../src/controller/generic_2x1_mux.vhd|
+!i113 1
+R9
+R10
+Abeh
+R2
+R3
+DEx4 work 15 generic_2x1_mux 0 22 h107TTCnm<_WR2A=9f><C1
+l21
+L20
+V6ZfH`TkT8L5oj26Sa3a770
+!s100 Ha1nTn4VBSSNfBYjSHGPM1
+R6
+31
+R7
+!i10b 1
+R8
+R34
+R35
+!i113 1
+R9
+R10
+Egeneric_adder_beh
+R4
+R1
+R2
+R3
+R5
+Z36 8../../src/program_counter/src/generic_adder_beh/src/generic_adder_beh.vhd
+Z37 F../../src/program_counter/src/generic_adder_beh/src/generic_adder_beh.vhd
+l0
+L9
+VZM:m22W6n_OU0[flII;@<2
+!s100 OOaH7j]OJo2FNLlk`2n1j2
+R6
+31
+R19
+!i10b 1
+R20
+Z38 !s90 -reportprogress|300|-93|-work|work|../../src/program_counter/src/generic_adder_beh/src/generic_adder_beh.vhd|
+Z39 !s107 ../../src/program_counter/src/generic_adder_beh/src/generic_adder_beh.vhd|
+!i113 1
+R9
+R10
+Abeh
+R1
+R2
+R3
+DEx4 work 17 generic_adder_beh 0 22 ZM:m22W6n_OU0[flII;@<2
+l27
+L22
+VXiACzM[7Kd];V;iL`X2`K1
+!s100 J0QDzX5NX;aLCSO9EOMGC0
+R6
+31
+R19
+!i10b 1
+R20
+R38
+R39
+!i113 1
+R9
+R10
+Egeneric_laterial_shift
+R4
+R2
+R3
+R5
+Z40 8../../src/controller/generic_laterial_shift.vhd
+Z41 F../../src/controller/generic_laterial_shift.vhd
+l0
+L9
+V:V5=3l>VVj=mdO2^eo5^Z0
+!s100 doz[l1PPZbW:_N^[:kQ]T1
+R6
+31
+R7
+!i10b 1
+R8
+Z42 !s90 -reportprogress|300|-93|-work|work|../../src/controller/generic_laterial_shift.vhd|
+Z43 !s107 ../../src/controller/generic_laterial_shift.vhd|
+!i113 1
+R9
+R10
+Abeh
+R2
+R3
+DEx4 work 22 generic_laterial_shift 0 22 :V5=3l>VVj=mdO2^eo5^Z0
+l24
+L23
+V9AP9cDXO<F_4kESJ7YZzQ0
+!s100 Q?_1B?Q6LjkR=ND3j`Udm2
+R6
+31
+R7
+!i10b 1
+R8
+R42
+R43
+!i113 1
+R9
+R10
+Egeneric_nzero
+R4
+R2
+R3
+R5
+Z44 8../../src/controller/generic_nzero.vhd
+Z45 F../../src/controller/generic_nzero.vhd
+l0
+L8
+VV8H7]kOJkRNff3a]0BSdM2
+!s100 l2GeQPInz9OLEPT`29OVj3
+R6
+31
+R7
+!i10b 1
+R8
+Z46 !s90 -reportprogress|300|-93|-work|work|../../src/controller/generic_nzero.vhd|
+Z47 !s107 ../../src/controller/generic_nzero.vhd|
+!i113 1
+R9
+R10
+Abeh
+R2
+R3
+DEx4 work 13 generic_nzero 0 22 V8H7]kOJkRNff3a]0BSdM2
+l21
+L18
+VZY[TZX`@89LLg>@SFN9DO2
+!s100 1@WC]Mb26gF>2`FUUfdi@3
+R6
+31
+R7
+!i10b 1
+R8
+R46
+R47
+!i113 1
+R9
+R10
+Emachine
+R4
+R1
+R11
+R2
+R3
+R5
+Z48 8../../src/controller/machine.vhd
+Z49 F../../src/controller/machine.vhd
+l0
+L9
+V_<`GDbW=bgS[DUVdF_`cc1
+!s100 Lg3k]19RQ0d8@?NTTJSg?2
+R6
+31
+R7
+!i10b 1
+R8
+Z50 !s90 -reportprogress|300|-93|-work|work|../../src/controller/machine.vhd|
+Z51 !s107 ../../src/controller/machine.vhd|
+!i113 1
+R9
+R10
+Abeh
+R1
+R11
+R2
+R3
+DEx4 work 7 machine 0 22 _<`GDbW=bgS[DUVdF_`cc1
+l36
+L20
+VDXO272iYzW4SP2W1mZkWf1
+!s100 G@U`fG_4N?NfgCIgUjZfP3
+R6
+31
+R7
+!i10b 1
+R8
+R50
+R51
+!i113 1
+R9
+R10
+Epro_machine
+R4
+R1
+R16
+R2
+R3
+R5
+Z52 8../../src/processor/pro_machine.vhd
+Z53 F../../src/processor/pro_machine.vhd
+l0
+L9
+V;ZjfkFk[:z4hV3MnZZeUg1
+!s100 ln`k]LbVa:nj?dVKXoR@A3
+R6
+31
+R19
+!i10b 1
+R20
+Z54 !s90 -reportprogress|300|-93|-work|work|../../src/processor/pro_machine.vhd|
+Z55 !s107 ../../src/processor/pro_machine.vhd|
+!i113 1
+R9
+R10
+Abeh
+R1
+R16
+R2
+R3
+DEx4 work 11 pro_machine 0 22 ;ZjfkFk[:z4hV3MnZZeUg1
+l34
+L20
+V>6@XE;3>V9N:M4zdG]h781
+!s100 `8L3GL854Cn9@lmf_5FlF2
+R6
+31
+R19
+!i10b 1
+R20
+R54
+R55
+!i113 1
+R9
+R10
+Ppro_parts
+R1
+R2
+R3
+R4
+R5
+8../../src/processor/pro_parts.vhd
+F../../src/processor/pro_parts.vhd
+l0
+L9
+Vi5MOd30UYm33RIEnh]2iM0
+!s100 9kzdn[MLcakS9UT]4kh[_1
+R6
+31
+R19
+!i10b 1
+R20
+!s90 -reportprogress|300|-93|-work|work|../../src/processor/pro_parts.vhd|
+!s107 ../../src/processor/pro_parts.vhd|
+!i113 1
+R9
+R10
+Eprocessor
+R4
+R11
+R1
+R16
+R2
+R3
+R5
+Z56 8../../src/processor/processor.vhd
+Z57 F../../src/processor/processor.vhd
+l0
+L10
+VhPOWkEVG?ze48z5Y>zklg3
+!s100 Gj^k]o[b7Ro<YlR7kZKS]0
+R6
+31
+R19
+!i10b 1
+R20
+Z58 !s90 -reportprogress|300|-93|-work|work|../../src/processor/processor.vhd|
+Z59 !s107 ../../src/processor/processor.vhd|
+!i113 1
+R9
+R10
+Abeh
+R11
+R1
+R16
+R2
+R3
+DEx4 work 9 processor 0 22 hPOWkEVG?ze48z5Y>zklg3
+l28
+L20
+VEfM`l@OeRGD^=h=RR^?dX1
+!s100 ^9Gao9WPPbZY61d_:lnPR0
+R6
+31
+R19
+!i10b 1
+R20
+R58
+R59
+!i113 1
+R9
+R10
+Eprogram_counter
+R4
+R2
+R3
+R5
+Z60 8../../src/program_counter/src/program_counter.vhd
+Z61 F../../src/program_counter/src/program_counter.vhd
+l0
+L8
+V=_`GzzQ_?7jIi=SegNXFg2
+!s100 Y[RCLYK<T>=R>jgcil>SD1
+R6
+31
+R19
+!i10b 1
+R20
+Z62 !s90 -reportprogress|300|-93|-work|work|../../src/program_counter/src/program_counter.vhd|
+Z63 !s107 ../../src/program_counter/src/program_counter.vhd|
+!i113 1
+R9
+R10
+Abeh
+R2
+R3
+DEx4 work 15 program_counter 0 22 =_`GzzQ_?7jIi=SegNXFg2
+l43
+L21
+V30TzQccZ5gb=H>HDkoPLo2
+!s100 c787kM<9ECJAl]g_R[e`d0
+R6
+31
+R19
+!i10b 1
+R20
+R62
+R63
+!i113 1
+R9
+R10
+Erising_edge_synchronizer
+R4
+R2
+R3
+R5
+Z64 8../../src/rising_edge_synchronizer.vhd
+Z65 F../../src/rising_edge_synchronizer.vhd
+l0
+L8
+V7^gf[0AcMz;oFDKIj=b3N3
+!s100 8>=9Tc6dAVdENebjXiG<30
+R6
+31
+R19
+!i10b 1
+R20
+Z66 !s90 -reportprogress|300|-93|-work|work|../../src/rising_edge_synchronizer.vhd|
+Z67 !s107 ../../src/rising_edge_synchronizer.vhd|
+!i113 1
+R9
+R10
+Abeh
+R2
+R3
+DEx4 work 24 rising_edge_synchronizer 0 22 7^gf[0AcMz;oFDKIj=b3N3
+l23
+L17
+V3[Zc:cd7cKK`Uk6V^JOA[0
+!s100 @e1I9@Enc4[;L5b`c?VdR2
+R6
+31
+R19
+!i10b 1
+R20
+R66
+R67
+!i113 1
+R9
+R10
+Erom_data
+R4
+Z68 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R2
+R3
+R5
+Z69 8../../src/rom_data/rom_data.vhd
+Z70 F../../src/rom_data/rom_data.vhd
+l0
+L43
+VRWR7CG@@f0P:aP`WJCG@S3
+!s100 3OF@?0zK=gZ@:TQ3ckXiW3
+R6
+31
+R19
+!i10b 1
+R20
+Z71 !s90 -reportprogress|300|-93|-work|work|../../src/rom_data/rom_data.vhd|
+Z72 !s107 ../../src/rom_data/rom_data.vhd|
+!i113 1
+R9
+R10
+Asyn
+R68
+R2
+R3
+DEx4 work 8 rom_data 0 22 RWR7CG@@f0P:aP`WJCG@S3
+l57
+L53
+VJ@gmg^mE170P8g@oDCY<D0
+!s100 FWA@ePhK:Fh]O9UQ4m<QH3
+R6
+31
+R19
+!i10b 1
+R20
+R71
+R72
+!i113 1
+R9
+R10
+Erom_instructions
+R4
+R2
+R3
+R5
+Z73 8../../src/rom_instructions/rom_instructions.vhd
+Z74 F../../src/rom_instructions/rom_instructions.vhd
+l0
+L42
+VZ@nnYiG2GX?m0AihC]Zg40
+!s100 gzW;2@`;P`NkEI3ie7>EZ3
+R6
+31
+R19
+!i10b 1
+R20
+Z75 !s90 -reportprogress|300|-93|-work|work|../../src/rom_instructions/rom_instructions.vhd|
+Z76 !s107 ../../src/rom_instructions/rom_instructions.vhd|
+!i113 1
+R9
+R10
+Asyn
+R2
+R3
+DEx4 work 16 rom_instructions 0 22 Z@nnYiG2GX?m0AihC]Zg40
+l82
+L52
+VKDXL2^izN:J?d71zhWPaG3
+!s100 @Y3^M>dFUk5JfjhKHWBU00
+R6
+31
+R19
+!i10b 1
+R20
+R75
+R76
+!i113 1
+R9
+R10
